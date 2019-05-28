@@ -10,8 +10,11 @@ import Foundation
 import SpriteKit
 
 class Result: SKScene {
+    
+    var mainMenuButton = SKLabelNode()
+    
     override func didMove(to view: SKView) {
-        
+        mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -20,7 +23,7 @@ class Result: SKScene {
             let touchedLocation = self.atPoint(location)
             
             switch touchedLocation.name {
-            case Button.MAIN_MENU_BUTTON:
+            case mainMenuButton.name:
                 switchScene()
             default:
                 break
@@ -34,10 +37,13 @@ class Result: SKScene {
     
     func switchScene() {
         if let view = self.view {
-            if let mainMenuScene = SKScene(fileNamed: "MainMenu") {
+            if let mainMenuScene = SKScene(fileNamed: Scene.MAIN_MENU) {
                 mainMenuScene.scaleMode = .aspectFill
                 view.presentScene(mainMenuScene)
             }
         }
     }
+    
+    //have a func that has a switch case where if the user scores within a certain range:
+    //e.g. 85 - 100, comment on their good sense of judgement on managing time, etc.. and their circumstances
 }

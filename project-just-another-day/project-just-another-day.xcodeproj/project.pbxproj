@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,18 +18,22 @@
 		D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AAE229BDBAD00815540 /* MainMenu.swift */; };
 		D6841AB1229BDBD700815540 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB0229BDBD700815540 /* Prelude.swift */; };
 		D6841AB3229BDBE500815540 /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB2229BDBE500815540 /* Morning.swift */; };
-		D6841AB7229BDC1500815540 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB6229BDC1500815540 /* School.swift */; };
+		D6841AB7229BDC1500815540 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB6229BDC1500815540 /* Class.swift */; };
 		D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB8229BDC4200815540 /* Afternoon.swift */; };
 		D6841ABB229BDC5E00815540 /* Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ABA229BDC5E00815540 /* Night.swift */; };
 		D6841ABD229BDC7200815540 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ABC229BDC7200815540 /* Result.swift */; };
 		D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ABF229BDFE200815540 /* MainMenu.sks */; };
 		D6841AC2229BDFF800815540 /* Prelude.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC1229BDFF800815540 /* Prelude.sks */; };
 		D6841AC4229BE10900815540 /* Morning.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC3229BE10900815540 /* Morning.sks */; };
-		D6841AC6229BE12100815540 /* School.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC5229BE12100815540 /* School.sks */; };
+		D6841AC6229BE12100815540 /* Class.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC5229BE12100815540 /* Class.sks */; };
 		D6841AC8229BE13600815540 /* Afternoon.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC7229BE13600815540 /* Afternoon.sks */; };
 		D6841ACA229BE14F00815540 /* Night.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC9229BE14F00815540 /* Night.sks */; };
 		D6841ACC229BE16300815540 /* Result.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ACB229BE16300815540 /* Result.sks */; };
 		D6841ACE229BEC2200815540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ACD229BEC2200815540 /* Constants.swift */; };
+		D6BDC386229D673300373FBA /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC385229D673300373FBA /* Choice.swift */; };
+		D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */; };
+		D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC389229D78D800373FBA /* ScenarioMenu.swift */; };
+		D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,18 +50,22 @@
 		D6841AAE229BDBAD00815540 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		D6841AB0229BDBD700815540 /* Prelude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prelude.swift; sourceTree = "<group>"; };
 		D6841AB2229BDBE500815540 /* Morning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morning.swift; sourceTree = "<group>"; };
-		D6841AB6229BDC1500815540 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		D6841AB6229BDC1500815540 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		D6841AB8229BDC4200815540 /* Afternoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afternoon.swift; sourceTree = "<group>"; };
 		D6841ABA229BDC5E00815540 /* Night.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Night.swift; sourceTree = "<group>"; };
 		D6841ABC229BDC7200815540 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D6841ABF229BDFE200815540 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		D6841AC1229BDFF800815540 /* Prelude.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Prelude.sks; sourceTree = "<group>"; };
 		D6841AC3229BE10900815540 /* Morning.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Morning.sks; sourceTree = "<group>"; };
-		D6841AC5229BE12100815540 /* School.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = School.sks; sourceTree = "<group>"; };
+		D6841AC5229BE12100815540 /* Class.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Class.sks; sourceTree = "<group>"; };
 		D6841AC7229BE13600815540 /* Afternoon.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Afternoon.sks; sourceTree = "<group>"; };
 		D6841AC9229BE14F00815540 /* Night.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Night.sks; sourceTree = "<group>"; };
 		D6841ACB229BE16300815540 /* Result.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Result.sks; sourceTree = "<group>"; };
 		D6841ACD229BEC2200815540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D6BDC385229D673300373FBA /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceValue.swift; sourceTree = "<group>"; };
+		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
+		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 				D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */,
 				D6841AA7229BDB2600815540 /* Info.plist */,
 				D6841ACD229BEC2200815540 /* Constants.swift */,
+				D6BDC385229D673300373FBA /* Choice.swift */,
+				D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */,
 			);
 			path = "project-just-another-day";
 			sourceTree = "<group>";
@@ -110,12 +120,14 @@
 			children = (
 				D6841AAE229BDBAD00815540 /* MainMenu.swift */,
 				D6841ABF229BDFE200815540 /* MainMenu.sks */,
+				D6BDC389229D78D800373FBA /* ScenarioMenu.swift */,
+				D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */,
 				D6841AB0229BDBD700815540 /* Prelude.swift */,
 				D6841AC1229BDFF800815540 /* Prelude.sks */,
 				D6841AB2229BDBE500815540 /* Morning.swift */,
 				D6841AC3229BE10900815540 /* Morning.sks */,
-				D6841AB6229BDC1500815540 /* School.swift */,
-				D6841AC5229BE12100815540 /* School.sks */,
+				D6841AB6229BDC1500815540 /* Class.swift */,
+				D6841AC5229BE12100815540 /* Class.sks */,
 				D6841AB8229BDC4200815540 /* Afternoon.swift */,
 				D6841AC7229BE13600815540 /* Afternoon.sks */,
 				D6841ABA229BDC5E00815540 /* Night.swift */,
@@ -162,7 +174,7 @@
 				};
 			};
 			buildConfigurationList = D6841A8D229BDB2300815540 /* Build configuration list for PBXProject "project-just-another-day" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -184,12 +196,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */,
 				D6841AA1229BDB2400815540 /* Main.storyboard in Resources */,
 				D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */,
 				D6841A98229BDB2400815540 /* GameScene.sks in Resources */,
 				D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */,
 				D6841AC4229BE10900815540 /* Morning.sks in Resources */,
-				D6841AC6229BE12100815540 /* School.sks in Resources */,
+				D6841AC6229BE12100815540 /* Class.sks in Resources */,
 				D6841AC2229BDFF800815540 /* Prelude.sks in Resources */,
 				D6841ACA229BE14F00815540 /* Night.sks in Resources */,
 				D6841ACC229BE16300815540 /* Result.sks in Resources */,
@@ -208,15 +221,18 @@
 			files = (
 				D6841A9C229BDB2400815540 /* GameScene.swift in Sources */,
 				D6841ACE229BEC2200815540 /* Constants.swift in Sources */,
+				D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */,
+				D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */,
 				D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */,
 				D6841ABB229BDC5E00815540 /* Night.swift in Sources */,
 				D6841ABD229BDC7200815540 /* Result.swift in Sources */,
 				D6841AB3229BDBE500815540 /* Morning.swift in Sources */,
+				D6BDC386229D673300373FBA /* Choice.swift in Sources */,
 				D6841AB1229BDBD700815540 /* Prelude.swift in Sources */,
 				D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */,
 				D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */,
 				D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */,
-				D6841AB7229BDC1500815540 /* School.swift in Sources */,
+				D6841AB7229BDC1500815540 /* Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6JJ96HFC2;
 				INFOPLIST_FILE = "project-just-another-day/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6JJ96HFC2;
 				INFOPLIST_FILE = "project-just-another-day/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

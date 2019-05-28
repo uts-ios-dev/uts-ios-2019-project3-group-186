@@ -43,7 +43,7 @@ class Afternoon: SKScene {
     
     func switchScene() {
         if let view = self.view {
-            if let nightScene = SKScene(fileNamed: "Night") {
+            if let nightScene = SKScene(fileNamed: Scene.NIGHT_SCENE) {
                 nightScene.scaleMode = .aspectFill
                 view.presentScene(nightScene)
             }

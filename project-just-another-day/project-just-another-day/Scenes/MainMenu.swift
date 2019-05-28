@@ -11,12 +11,12 @@ import SpriteKit
 
 class MainMenu: SKScene {
     
-    var title: SKLabelNode!
-    var startButton: SKLabelNode!
-    var exitButton: SKLabelNode!
+    var startButton = SKLabelNode()
+    var exitButton = SKLabelNode()
     
     override func didMove(to view: SKView) {
-       
+        startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
+        exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -25,9 +25,9 @@ class MainMenu: SKScene {
             let touchedLocation = self.atPoint(location)
     
             switch touchedLocation.name {
-            case Button.MENU_START_BUTTON:
+            case startButton.name:
                 switchScene()
-            case Button.MENU_EXIT_BUTTON:
+            case exitButton.name:
                 exit(1)
             default:
                 break
@@ -36,7 +36,7 @@ class MainMenu: SKScene {
     }
     func switchScene() {
         if let view = self.view {
-            if let preludeScene = SKScene(fileNamed: "Prelude") {
+            if let preludeScene = SKScene(fileNamed: Scene.SCENARIO_MENU) {
                 preludeScene.scaleMode = .aspectFill
                 view.presentScene(preludeScene)
             }

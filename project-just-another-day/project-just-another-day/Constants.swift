@@ -17,36 +17,37 @@ struct Background {
 
 struct Interactable {
     //Morning
-    static let BACKPACK = "//Backpack"
-    static let MORNING_ALARM = "//Morning Alarm"
-    static let MORNING_PHONE = "//Morning Phone"
+    static let BACKPACK = "backpack"
+    static let MORNING_ALARM = "morningAlarm"
+    static let MORNING_PHONE = "morningPhone"
     //School
-    static let BLACKBOARD = "//Blackboard"
-    static let CLASSROOM_DOOR = "//Classroom Door"
-    static let CLASSROOM_PHONE = "//Classroom Phone"
-    static let CLASSROOM_TEXTBOOK = "//Classroom Textbook"
-    static let CLASSROOM_SNACKS = "//Classroom Snacks"
-    static let FRIEND = "//Friend"
-    static let TEACHER = "//Teacher"
+    static let BLACKBOARD = "blackboard"
+    static let CLASSROOM_DOOR = "classRoomDoor"
+    static let CLASSROOM_PHONE = "classroomPhone"
+    static let CLASSROOM_TEXTBOOK = "classroomTextbook"
+    static let CLASSROOM_SNACKS = "classroomSnacks"
+    static let FRIEND = "friend"
+    static let TEACHER = "teacher"
     //Afternoon
-    static let KITCHEN_TABLE = "//Kitchen Table"
-    static let LIVING_ROOM_DOOR = "//Living Room Door"
-    static let LIVING_ROOM_TEXTBOOK = "//Living Room Textbook"
-    static let SOFA = "//Sofa"
-    static let SPORT_EQUIPMENT = "//Sport Equipment"
+    static let KITCHEN_TABLE = "kitchenTable"
+    static let LIVING_ROOM_DOOR = "livingRoomDoor"
+    static let LIVING_ROOM_TEXTBOOK = "livingRoomTextbook"
+    static let SOFA = "sofa"
+    static let SPORT_EQUIPMENT = "sportEquipment"
     //Night
-    static let BED = "//Bed"
-    static let LAPTOP = "//Laptop"
-    static let NIGHT_PHONE = "//Night Phone"
-    static let NIGHT_SNACKS = "//Night Snacks"
-    static let NIGHT_TEXTBOOK = "//Night Textbook"
+    static let BED = "bed"
+    static let LAPTOP = "laptop"
+    static let NIGHT_PHONE = "nightPhone"
+    static let NIGHT_SNACKS = "nightSnacks"
+    static let NIGHT_TEXTBOOK = "nightTextbook"
 }
 
 struct Scene {
     static let MAIN_MENU = "MainMenu"
+    static let SCENARIO_MENU = "ScenarioMenu"
     static let PRELUDE_SCENE = "Prelude"
     static let MORNING_SCENE = "Morning"
-    static let SCHOOL_SCENE = "School"
+    static let CLASS_SCENE = "Class"
     static let AFTERNOON_SCENE = "Afternoon"
     static let NIGHT_SCENE = "Night"
     static let RESULT_SCENE = "Result"
@@ -56,11 +57,18 @@ struct Label {
     static let TITLE = "title"
 }
 
+struct Scenario {
+    static let TIME_MANAGEMENT = "timeManagement"
+    static let COURTESY = "courtesy"
+}
+
 struct Button {
     static let MENU_START_BUTTON = "menuStartButton"
     static let MENU_EXIT_BUTTON = "menuExitButton"
-    static let START_BUTTON = "//Start Button"
-    static let MAIN_MENU_BUTTON = "//Main Menu Button"
+    static let START_BUTTON = "startButton"
+    static let MAIN_MENU_BUTTON = "mainMenuButton"
+    static let BACK_TO_MAIN_MENU_BUTTON = "backToMainMenuButton"
+    static let BACK_TO_SCENARIO_MENU_BUTTON = "backToScenarioMenuButton"
 }
 
 
