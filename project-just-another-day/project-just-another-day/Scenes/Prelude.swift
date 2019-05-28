@@ -18,10 +18,11 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
-            
+            print("you touched screen in prelude")
             switch touchedLocation.name {
             case Button.START_BUTTON:
-               switchScene()
+                print("you touched start")
+                switchScene()
             default:
                 break
             }
@@ -33,8 +34,12 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
     }
     
     func switchScene() {
-        let morningScene = Morning(fileNamed: Scene.MORNING_SCENE)
-        morningScene?.scaleMode = .aspectFit
-        self.scene?.view?.presentScene(morningScene)
+        if let view = self.view {
+            if let morningScene = SKScene(fileNamed: "Morning") {
+                print("loading morning scene")
+                morningScene.scaleMode = .aspectFill
+                view.presentScene(morningScene)
+            }
+        }
     }
 }

@@ -26,13 +26,19 @@ class MainMenu: SKScene {
     
             switch touchedLocation.name {
             case Button.MENU_START_BUTTON:
-                let preludeScene = Prelude(size: self.size)
-                preludeScene.scaleMode = .aspectFit
-                self.view?.presentScene(preludeScene)
+                switchScene()
             case Button.MENU_EXIT_BUTTON:
                 exit(1)
             default:
                 break
+            }
+        }
+    }
+    func switchScene() {
+        if let view = self.view {
+            if let preludeScene = SKScene(fileNamed: "Prelude") {
+                preludeScene.scaleMode = .aspectFill
+                view.presentScene(preludeScene)
             }
         }
     }
@@ -41,3 +47,6 @@ class MainMenu: SKScene {
         // Called before each frame is rendered
     }
 }
+
+
+

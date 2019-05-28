@@ -33,8 +33,11 @@ class Result: SKScene {
     }
     
     func switchScene() {
-        let mainMenuScene = MainMenu(fileNamed: Scene.MAIN_MENU)
-        mainMenuScene?.scaleMode = .aspectFit
-        self.scene?.view?.presentScene(mainMenuScene)
+        if let view = self.view {
+            if let mainMenuScene = SKScene(fileNamed: "MainMenu") {
+                mainMenuScene.scaleMode = .aspectFill
+                view.presentScene(mainMenuScene)
+            }
+        }
     }
 }

@@ -37,8 +37,11 @@ class Morning: SKScene { //7am?
     }
     
     func switchScene() {
-        let schoolScene = School(fileNamed: Scene.SCHOOL_SCENE)
-        schoolScene?.scaleMode = .aspectFit
-        self.scene?.view?.presentScene(schoolScene)
+        if let view = self.view {
+            if let schoolScene = SKScene(fileNamed: "School") {
+                schoolScene.scaleMode = .aspectFill
+                view.presentScene(schoolScene)
+            }
+        }
     }
 }
