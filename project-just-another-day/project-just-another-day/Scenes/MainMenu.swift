@@ -8,7 +8,7 @@
 
 import Foundation
 import SpriteKit
-
+var game = ChoiceController()
 class MainMenu: SKScene {
     
     var startButton = SKLabelNode()
