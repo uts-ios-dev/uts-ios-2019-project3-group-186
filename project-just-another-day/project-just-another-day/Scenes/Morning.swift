@@ -14,12 +14,21 @@ class Morning: SKScene { //7am?
     var backpack: SKSpriteNode = SKSpriteNode()
     var morningAlarm: SKSpriteNode = SKSpriteNode()
     var morningPhone: SKSpriteNode = SKSpriteNode()
+    var alarmPopUp: SKSpriteNode = SKSpriteNode()
     var timeLabel:SKLabelNode = SKLabelNode()
+    var snooze: SKLabelNode = SKLabelNode()
+    var turnAlarmOff: SKLabelNode = SKLabelNode()
     
     public var choiceValue = ChoiceValue(points: 0)
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
+        turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
+        
+        snooze.isHidden = true
+        turnAlarmOff.isHidden = true
+        
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
         
@@ -37,6 +46,13 @@ class Morning: SKScene { //7am?
             morningPhone = morningPhoneNode
             self.addChild(morningPhone)
         }
+        
+        if let alarmPopUpNode: SKSpriteNode = self.childNode(withName: Alarm.CHOICE) as? SKSpriteNode {
+            alarmPopUp = alarmPopUpNode
+            alarmPopUp.isHidden = true
+            self.addChild(alarmPopUp)
+        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,9 +71,21 @@ class Morning: SKScene { //7am?
                 game.updateTime(addMinutes: 10)
                 //snooze or ignore (timer?)
                 choiceValue.points += 5
+                alarmPopUp.isHidden = false
+                snooze.isHidden = false
+                turnAlarmOff.isHidden = false
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 20)
                 choiceValue.points += 5
+            case Alarm.SNOOZE:
+                  game.updateTime(addMinutes: 30)
+                  snooze.isHidden = true
+                print("You've decided to snooze the alarm!")
+            case Alarm.TURN_ALARM_OFF:
+                //add points
+                turnAlarmOff.removeFromParent()
+                alarmPopUp.removeFromParent()
+                print("You've decided to turn off the alarm!")
             default:
                 break
             }

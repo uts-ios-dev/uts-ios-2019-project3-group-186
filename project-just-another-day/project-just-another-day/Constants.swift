@@ -68,6 +68,12 @@ struct Scenario {
     static let COURTESY = "courtesy"
 }
 
+struct Alarm {
+    static let CHOICE = "morningAlarmChoice"
+    static let SNOOZE = "//snooze"
+    static let TURN_ALARM_OFF = "//turnAlarmOff"
+}
+
 struct Button {
     static let MENU_START_BUTTON = "menuStartButton"
     static let MENU_EXIT_BUTTON = "menuExitButton"
