@@ -33,8 +33,6 @@ class Morning: SKScene { //7am?
             morningPhone = morningPhoneNode
             self.addChild(morningPhone)
         }
-        
-        //morningTime = self.childNode(withName: "morningTime") as! SKLabelNode
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -46,9 +44,11 @@ class Morning: SKScene { //7am?
             switch touchedLocation.name {
             case Interactable.BACKPACK:
                 choiceValue.points += 10
-                
+                //the time updates
+                //we store what you pressed
+                //
                 //save the name of what was pressed into an array[0]
-                switchScene()
+                //switchScene()
             case Interactable.MORNING_ALARM:
                 //snooze or ignore (timer?)
                 choiceValue.points += 5

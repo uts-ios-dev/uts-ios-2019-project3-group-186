@@ -51,10 +51,15 @@ struct Scene {
     static let AFTERNOON_SCENE = "Afternoon"
     static let NIGHT_SCENE = "Night"
     static let RESULT_SCENE = "Result"
+    
 }
 
 struct Label {
     static let TITLE = "title"
+}
+
+struct Font {
+    static let CLOCK_FONT = "digital-7.ttf"
 }
 
 struct Scenario {

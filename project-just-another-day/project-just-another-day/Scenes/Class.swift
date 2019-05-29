@@ -23,6 +23,7 @@ class Class: SKScene {
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
+            
             self.addChild(blackboard)
         }
         

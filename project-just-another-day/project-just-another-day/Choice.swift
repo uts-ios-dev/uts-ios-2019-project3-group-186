@@ -8,22 +8,7 @@
 
 import Foundation
 
-enum Choice {
-    case Morning
-    case Class
-    case Afternoon
-    case Night
-    
-    var chosenOption: String {
-        switch self {
-        case .Morning:
-            return ""
-        case .Class:
-            return ""
-        case .Afternoon:
-            return ""
-        case .Night:
-            return ""
-        }
-    }
+struct Choice {
+    var points: Int
+    var time: Int
 }
