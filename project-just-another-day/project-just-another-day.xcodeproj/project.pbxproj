@@ -11,9 +11,7 @@
 		B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9779048229E81D900BD8E04 /* digital-7.ttf */; };
 		B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B977904A229E820100BD8E04 /* kindergarten.ttf */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
-		D6841A98229BDB2400815540 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A97229BDB2400815540 /* GameScene.sks */; };
 		D6841A9A229BDB2400815540 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
-		D6841A9C229BDB2400815540 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9B229BDB2400815540 /* GameScene.swift */; };
 		D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9D229BDB2400815540 /* GameViewController.swift */; };
 		D6841AA1229BDB2400815540 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841A9F229BDB2400815540 /* Main.storyboard */; };
 		D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA2229BDB2600815540 /* Assets.xcassets */; };
@@ -45,9 +43,7 @@
 		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6841A97229BDB2400815540 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D6841A99229BDB2400815540 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		D6841A9B229BDB2400815540 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D6841A9D229BDB2400815540 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D6841AA0229BDB2400815540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6841AA2229BDB2600815540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 				D6841A95229BDB2400815540 /* AppDelegate.swift */,
 				D6841A99229BDB2400815540 /* Actions.sks */,
 				B9779048229E81D900BD8E04 /* digital-7.ttf */,
-				D6841A9B229BDB2400815540 /* GameScene.swift */,
-				D6841A97229BDB2400815540 /* GameScene.sks */,
 				D6841A9D229BDB2400815540 /* GameViewController.swift */,
 				B977904A229E820100BD8E04 /* kindergarten.ttf */,
 				B9779045229E80BF00BD8E04 /* ChoiceController.swift */,
@@ -210,7 +204,6 @@
 				D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */,
 				D6841AA1229BDB2400815540 /* Main.storyboard in Resources */,
 				D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */,
-				D6841A98229BDB2400815540 /* GameScene.sks in Resources */,
 				D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */,
 				D6841AC4229BE10900815540 /* Morning.sks in Resources */,
 				D6841AC6229BE12100815540 /* Class.sks in Resources */,
@@ -230,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6841A9C229BDB2400815540 /* GameScene.swift in Sources */,
 				D6841ACE229BEC2200815540 /* Constants.swift in Sources */,
 				D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */,
 				D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */,
