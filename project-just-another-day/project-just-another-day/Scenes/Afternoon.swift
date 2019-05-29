@@ -25,16 +25,18 @@ class Afternoon: SKScene {
             
             switch touchedLocation.name {
             case Interactable.KITCHEN_TABLE:
-                //do something
-                switchScene()
+                game.updateTime(addMinutes: 20)
             case Interactable.LIVING_ROOM_DOOR:
-                switchScene()
+                game.updateTime(addMinutes: 60)
             case Interactable.LIVING_ROOM_TEXTBOOK:
-                switchScene()
+                game.updateTime(addMinutes: 60)
+                //add points 5?
             case Interactable.SOFA:
-                switchScene()
+                game.updateTime(addMinutes: 30)
+                //add points 5?
             case Interactable.SPORT_EQUIPMENT:
-                switchScene()
+                game.updateTime(addMinutes: 45)
+                //add points 5?
             default:
                 break
             }
@@ -43,7 +45,9 @@ class Afternoon: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 1830 {
+            print("Dinner Time~")
             switchScene()
         }
     }

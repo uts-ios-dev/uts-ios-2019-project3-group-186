@@ -19,15 +19,15 @@ class Class: SKScene {
     var friend: SKSpriteNode = SKSpriteNode()
     var teacher: SKSpriteNode = SKSpriteNode()
     var timeLabel:SKLabelNode = SKLabelNode()
+    var hadLunch = false
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 900)
-        timeLabel.text = game.getCurrentTime()
+        
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
-            
             self.addChild(blackboard)
         }
         
@@ -72,19 +72,22 @@ class Class: SKScene {
             
             switch touchedLocation.name {
             case Interactable.BLACKBOARD:
-                switchScene()
+                game.updateTime(addMinutes: 100)
+                // add points
             case Interactable.CLASSROOM_DOOR:
-                switchScene()
+                game.updateTime(addMinutes: 35)
             case Interactable.CLASSROOM_PHONE:
-                switchScene()
+                game.updateTime(addMinutes: 20)
             case Interactable.CLASSROOM_SNACKS:
-                switchScene()
+                game.updateTime(addMinutes: 20)
             case Interactable.CLASSROOM_TEXTBOOK:
-                switchScene()
+                game.updateTime(addMinutes: 100)
+                // add points
             case Interactable.FRIEND:
-                switchScene()
+                game.updateTime(addMinutes: 100)
             case Interactable.TEACHER:
-                switchScene()
+                game.updateTime(addMinutes: 100)
+                // add points
             default:
                 break
             }
@@ -93,8 +96,19 @@ class Class: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        timeLabel.text = game.getCurrentTime()
+        if (!hadLunch && game.getTimeRaw() >= 1200){
+            //lunch time~
+            game.updateTime(addMinutes: 60)
+            hadLunch = true
+            print("lunch time")
+        }
+        
         if game.getTimeRaw() >= 1500 {
+            // TODO
+            // tranisition to afterschool?
             switchScene()
+            print("school finished")
         }
     }
     

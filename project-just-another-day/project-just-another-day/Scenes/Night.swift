@@ -15,26 +15,27 @@ class Night: SKScene {
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 1930)
-        timeLabel.text = game.getCurrentTime()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        game.updateTime(addMinutes: 5)
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
             
             switch touchedLocation.name {
             case Interactable.BED:
+                print("Bed time~ ZZZzzz")
                 //do something
                 switchScene()
             case Interactable.LAPTOP:
-                switchScene()
+                game.updateTime(addMinutes: 45)
             case Interactable.NIGHT_PHONE:
-                switchScene()
+                game.updateTime(addMinutes: 20)
             case Interactable.NIGHT_SNACKS:
-                switchScene()
+                game.updateTime(addMinutes: 20)
             case Interactable.NIGHT_TEXTBOOK:
-                switchScene()
+                game.updateTime(addMinutes: 60)
             default:
                 break
             }
@@ -43,7 +44,9 @@ class Night: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 2300 {
+            print("Bed time~ ZZZzzz")
             switchScene()
         }
     }
