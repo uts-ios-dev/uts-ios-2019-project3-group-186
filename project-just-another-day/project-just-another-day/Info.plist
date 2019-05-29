@@ -40,6 +40,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>digital-7.ttf</string>
+		<string>kindergarten.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
