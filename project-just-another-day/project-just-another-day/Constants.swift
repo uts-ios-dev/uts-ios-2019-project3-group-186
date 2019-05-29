@@ -70,8 +70,8 @@ struct Scenario {
 
 struct Alarm {
     static let CHOICE = "morningAlarmChoice"
-    static let SNOOZE = "snooze"
-    static let TURN_ALARM_OFF = "turnAlarmOff"
+    static let SNOOZE = "//snooze"
+    static let TURN_ALARM_OFF = "//turnAlarmOff"
 }
 
 struct Button {
