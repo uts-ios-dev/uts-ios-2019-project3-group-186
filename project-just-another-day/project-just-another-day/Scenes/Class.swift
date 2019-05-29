@@ -18,8 +18,12 @@ class Class: SKScene {
     var classroomTextbook: SKSpriteNode = SKSpriteNode()
     var friend: SKSpriteNode = SKSpriteNode()
     var teacher: SKSpriteNode = SKSpriteNode()
+    var timeLabel:SKLabelNode = SKLabelNode()
     
     override func didMove(to view: SKView) {
+        timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        game.setTimeRaw(time: 900)
+        timeLabel.text = game.getCurrentTime()
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
@@ -89,6 +93,9 @@ class Class: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if game.getTimeRaw() >= 1500 {
+            switchScene()
+        }
     }
     
     func switchScene() {

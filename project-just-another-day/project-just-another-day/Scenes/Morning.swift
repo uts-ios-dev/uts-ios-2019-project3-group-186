@@ -20,6 +20,9 @@ class Morning: SKScene { //7am?
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        game.setTimeRaw(time: 730)
+        timeLabel.text = game.getCurrentTime()
+        
         if let backpackNode: SKSpriteNode = self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode {
             backpack = backpackNode
             self.addChild(backpack)
@@ -37,27 +40,24 @@ class Morning: SKScene { //7am?
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        game.updateTime(addMinutes: 5)
-        timeLabel.text = game.getCurrentTime()
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
             print(touchedLocation)
             switch touchedLocation.name {
             case Interactable.BACKPACK:
+                game.updateTime(addMinutes: 20)
                 choiceValue.points += 10
-                //the time updates
                 //we store what you pressed
                 //
                 //save the name of what was pressed into an array[0]
-                //switchScene()
             case Interactable.MORNING_ALARM:
+                game.updateTime(addMinutes: 10)
                 //snooze or ignore (timer?)
                 choiceValue.points += 5
-                switchScene()
             case Interactable.MORNING_PHONE:
+                game.updateTime(addMinutes: 20)
                 choiceValue.points += 5
-                switchScene()
             default:
                 break
             }
@@ -65,7 +65,12 @@ class Morning: SKScene { //7am?
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        timeLabel.text = game.getCurrentTime()
+        if game.getTimeRaw() >= 830 {
+            // do something
+            // maybe something to say it is time for school?
+            switchScene()
+        }
     }
     
     func switchScene() {

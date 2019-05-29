@@ -10,8 +10,12 @@ import Foundation
 import SpriteKit
 
 class Night: SKScene {
+    var timeLabel:SKLabelNode = SKLabelNode()
+    
     override func didMove(to view: SKView) {
-
+        timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        game.setTimeRaw(time: 1930)
+        timeLabel.text = game.getCurrentTime()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,6 +43,9 @@ class Night: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if game.getTimeRaw() >= 2300 {
+            switchScene()
+        }
     }
     
     func switchScene() {
