@@ -14,11 +14,12 @@ class Morning: SKScene { //7am?
     var backpack: SKSpriteNode = SKSpriteNode()
     var morningAlarm: SKSpriteNode = SKSpriteNode()
     var morningPhone: SKSpriteNode = SKSpriteNode()
+    var timeLabel:SKLabelNode = SKLabelNode()
     
     public var choiceValue = ChoiceValue(points: 0)
     
     override func didMove(to view: SKView) {
-        
+        timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         if let backpackNode: SKSpriteNode = self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode {
             backpack = backpackNode
             self.addChild(backpack)
@@ -36,7 +37,8 @@ class Morning: SKScene { //7am?
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-      
+        game.updateTime(addMinutes: 5)
+        timeLabel.text = game.getCurrentTime()
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)

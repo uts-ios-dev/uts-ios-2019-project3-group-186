@@ -55,6 +55,7 @@ struct Scene {
 }
 
 struct Label {
+    static let TIME = "//timeLabel"
     static let TITLE = "title"
 }
 

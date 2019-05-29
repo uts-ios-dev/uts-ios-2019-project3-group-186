@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9779045229E80BF00BD8E04 /* ChoiceController.swift */; };
+		B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9779048229E81D900BD8E04 /* digital-7.ttf */; };
+		B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B977904A229E820100BD8E04 /* kindergarten.ttf */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A98229BDB2400815540 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A97229BDB2400815540 /* GameScene.sks */; };
 		D6841A9A229BDB2400815540 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
@@ -34,11 +37,12 @@
 		D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */; };
 		D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC389229D78D800373FBA /* ScenarioMenu.swift */; };
 		D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */; };
-		D6E34242229E608F0028003E /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6E34241229E608F0028003E /* digital-7.ttf */; };
-		D6FFDAA8229E756A00A97A33 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D6FFDAA7229E756A00A97A33 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9779045229E80BF00BD8E04 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
+		B9779048229E81D900BD8E04 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6841A97229BDB2400815540 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,8 +72,6 @@
 		D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceValue.swift; sourceTree = "<group>"; };
 		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
-		D6E34241229E608F0028003E /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
-		D6FFDAA7229E756A00A97A33 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,16 +104,17 @@
 		D6841A94229BDB2400815540 /* project-just-another-day */ = {
 			isa = PBXGroup;
 			children = (
-				D6FFDAA7229E756A00A97A33 /* Fonts */,
 				D6841AAD229BDB7100815540 /* Scenes */,
 				D6841A95229BDB2400815540 /* AppDelegate.swift */,
 				D6841A99229BDB2400815540 /* Actions.sks */,
+				B9779048229E81D900BD8E04 /* digital-7.ttf */,
 				D6841A9B229BDB2400815540 /* GameScene.swift */,
 				D6841A97229BDB2400815540 /* GameScene.sks */,
 				D6841A9D229BDB2400815540 /* GameViewController.swift */,
+				B977904A229E820100BD8E04 /* kindergarten.ttf */,
+				B9779045229E80BF00BD8E04 /* ChoiceController.swift */,
 				D6841A9F229BDB2400815540 /* Main.storyboard */,
 				D6841AA2229BDB2600815540 /* Assets.xcassets */,
-				D6E34241229E608F0028003E /* digital-7.ttf */,
 				D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */,
 				D6841AA7229BDB2600815540 /* Info.plist */,
 				D6841ACD229BEC2200815540 /* Constants.swift */,
@@ -202,11 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6FFDAA8229E756A00A97A33 /* Fonts in Resources */,
+				B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */,
+				B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */,
 				D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */,
 				D6841AA1229BDB2400815540 /* Main.storyboard in Resources */,
 				D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */,
-				D6E34242229E608F0028003E /* digital-7.ttf in Resources */,
 				D6841A98229BDB2400815540 /* GameScene.sks in Resources */,
 				D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */,
 				D6841AC4229BE10900815540 /* Morning.sks in Resources */,
@@ -233,6 +236,7 @@
 				D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */,
 				D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */,
 				D6841ABB229BDC5E00815540 /* Night.swift in Sources */,
+				B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */,
 				D6841ABD229BDC7200815540 /* Result.swift in Sources */,
 				D6841AB3229BDBE500815540 /* Morning.swift in Sources */,
 				D6BDC386229D673300373FBA /* Choice.swift in Sources */,
