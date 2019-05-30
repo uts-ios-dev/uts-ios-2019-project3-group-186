@@ -52,7 +52,7 @@ class Morning: SKScene { //7am?
             alarmPopUp.isHidden = true
             self.addChild(alarmPopUp)
         }
-
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,30 +66,35 @@ class Morning: SKScene { //7am?
                 choiceValue.points += 10
                 //we store what you pressed
                 //
-                //save the name of what was pressed into an array[0]
+            //save the name of what was pressed into an array[0]
             case Interactable.MORNING_ALARM:
                 game.updateTime(addMinutes: 10)
                 //snooze or ignore (timer?)
                 choiceValue.points += 5
-                alarmPopUp.isHidden = false
-                snooze.isHidden = false
-                turnAlarmOff.isHidden = false
+                hideAlarmChoice(false)
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 20)
                 choiceValue.points += 5
-            case Alarm.SNOOZE:
-                  game.updateTime(addMinutes: 30)
-                  snooze.isHidden = true
+            case "snooze":
+                game.updateTime(addMinutes: 30)
+                snooze.isHidden = true
                 print("You've decided to snooze the alarm!")
-            case Alarm.TURN_ALARM_OFF:
+            case "turnAlarmOff":
                 //add points
-                turnAlarmOff.removeFromParent()
-                alarmPopUp.removeFromParent()
+                hideAlarmChoice(true)
                 print("You've decided to turn off the alarm!")
             default:
+                hideAlarmChoice(true)
                 break
             }
-       }
+        }
+    }
+    
+    func hideAlarmChoice(_ hide : Bool){
+        print("hide the alarm choice? ")
+        alarmPopUp.isHidden = hide
+        snooze.isHidden = hide
+        turnAlarmOff.isHidden = hide
     }
     
     override func update(_ currentTime: TimeInterval) {
