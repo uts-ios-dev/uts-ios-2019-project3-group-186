@@ -32,6 +32,7 @@
 		C22E82C022A1EB5A00BDDFD5 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */; };
 		C22E82C122A1EB5A00BDDFD5 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */; };
 		C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C24E527222A12DAE001132C6 /* MainMenuBg.atlas */; };
+		C2DB416622A1F06300B060FA /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB2229BDBE500815540 /* Morning.swift */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A9A229BDB2400815540 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
 		D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9D229BDB2400815540 /* GameViewController.swift */; };
@@ -379,6 +380,7 @@
 				D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */,
 				D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */,
 				D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */,
+				C2DB416622A1F06300B060FA /* Morning.swift in Sources */,
 				D6841AB7229BDC1500815540 /* Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

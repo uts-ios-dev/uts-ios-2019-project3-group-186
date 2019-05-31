@@ -36,24 +36,22 @@ class Morning: SKScene { //7am?
         snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
         turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
         
-        createBackpack()
-        animateBackpack()
         snooze.isHidden = true
         turnAlarmOff.isHidden = true
         
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
-        backpack = self.childNode(withName: "backpack") as! SKSpriteNode
+        //backpack = self.childNode(withName: Interactable.BACKPACK) as! SKSpriteNode
         createBackpack()
         animateBackpack()
         
-        /*if let backpackNode = (self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode) { //<-Does Not Work
+        if let backpackNode = (self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode) { //<-Does Not Work
         backpack = backpackNode
             self.addChild(backpack)
             print("backpack added")
             createBackpack()
             animateBackpack()
-        }*/
+        }
         
         
         if let morningAlarmNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_ALARM) as? SKSpriteNode {
@@ -130,6 +128,7 @@ class Morning: SKScene { //7am?
     }
     
     func animateBackpack() {
+        print("animatsed")
         backpack.run(SKAction.repeatForever(
             SKAction.animate(with: backpackFrames, timePerFrame: 0.3, resize: false, restore: true)))
     }
