@@ -16,6 +16,7 @@ class ScenarioMenu: SKScene {
     var backButton = SKLabelNode()
     var scenarioBg = SKSpriteNode()
     var scenarioBgFrames: [SKTexture] = []
+    var menuaudio = MainMenu()
     
     override func didMove(to view: SKView) {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
@@ -67,6 +68,7 @@ class ScenarioMenu: SKScene {
     }
     
     func switchToTimeManagementScenario() {
+        menuaudio.backgroundFx?.setVolume(0, fadeDuration: 5)
         if let view = self.view {
             if let preludeScene = SKScene(fileNamed: Scene.PRELUDE_SCENE) {
                 preludeScene.scaleMode = .aspectFill

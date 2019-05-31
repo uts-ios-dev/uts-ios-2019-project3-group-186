@@ -29,6 +29,8 @@
 		C22E82B722A1B7A400BDDFD5 /* tvBed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82B422A1B7A400BDDFD5 /* tvBed.atlas */; };
 		C22E82B822A1B7A400BDDFD5 /* laptop.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82B522A1B7A400BDDFD5 /* laptop.atlas */; };
 		C22E82BC22A1D1E500BDDFD5 /* Resultsbg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BB22A1D1E400BDDFD5 /* Resultsbg.atlas */; };
+		C22E82C022A1EB5A00BDDFD5 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */; };
+		C22E82C122A1EB5A00BDDFD5 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */; };
 		C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C24E527222A12DAE001132C6 /* MainMenuBg.atlas */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A9A229BDB2400815540 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
@@ -38,7 +40,6 @@
 		D6841AA6229BDB2600815540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */; };
 		D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AAE229BDBAD00815540 /* MainMenu.swift */; };
 		D6841AB1229BDBD700815540 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB0229BDBD700815540 /* Prelude.swift */; };
-		D6841AB3229BDBE500815540 /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB2229BDBE500815540 /* Morning.swift */; };
 		D6841AB7229BDC1500815540 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB6229BDC1500815540 /* Class.swift */; };
 		D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB8229BDC4200815540 /* Afternoon.swift */; };
 		D6841ABB229BDC5E00815540 /* Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ABA229BDC5E00815540 /* Night.swift */; };
@@ -80,6 +81,8 @@
 		C22E82B422A1B7A400BDDFD5 /* tvBed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tvBed.atlas; sourceTree = "<group>"; };
 		C22E82B522A1B7A400BDDFD5 /* laptop.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = laptop.atlas; sourceTree = "<group>"; };
 		C22E82BB22A1D1E400BDDFD5 /* Resultsbg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Resultsbg.atlas; sourceTree = "<group>"; };
+		C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
+		C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 		C24E527222A12DAE001132C6 /* MainMenuBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenuBg.atlas; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,16 +124,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C24E525822A11ECD001132C6 /* Images */ = {
+		C22E82BD22A1EB2700BDDFD5 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */,
+				C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */,
+			);
+			name = Audio;
+			path = "../Images/New Group";
+			sourceTree = "<group>";
+		};
+		C24E525822A11ECD001132C6 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C22E82BD22A1EB2700BDDFD5 /* Audio */,
 				C24E527122A12D9F001132C6 /* Backdrops */,
 				C24E525A22A11EDD001132C6 /* Bedroom */,
 				C24E525B22A11EE3001132C6 /* Classroom */,
 				C24E525C22A11EE8001132C6 /* LivingRoom */,
 				C24E525D22A11EED001132C6 /* StudyRoom */,
 			);
-			path = Images;
+			path = assets;
 			sourceTree = "<group>";
 		};
 		C24E525A22A11EDD001132C6 /* Bedroom */ = {
@@ -207,7 +221,7 @@
 		D6841A94229BDB2400815540 /* project-just-another-day */ = {
 			isa = PBXGroup;
 			children = (
-				C24E525822A11ECD001132C6 /* Images */,
+				C24E525822A11ECD001132C6 /* assets */,
 				D6841AAD229BDB7100815540 /* Scenes */,
 				D6841A95229BDB2400815540 /* AppDelegate.swift */,
 				D6841A99229BDB2400815540 /* Actions.sks */,
@@ -315,12 +329,14 @@
 				C22E829E22A1B6B100BDDFD5 /* phone.atlas in Resources */,
 				C22E82B022A1B79C00BDDFD5 /* TvLivingRoom.atlas in Resources */,
 				C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */,
+				C22E82C022A1EB5A00BDDFD5 /* music1.mp3 in Resources */,
 				B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */,
 				C22E82BC22A1D1E500BDDFD5 /* Resultsbg.atlas in Resources */,
 				B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */,
 				D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */,
 				D6841AA1229BDB2400815540 /* Main.storyboard in Resources */,
 				C22E82A722A1B79300BDDFD5 /* textbook.atlas in Resources */,
+				C22E82C122A1EB5A00BDDFD5 /* music2.mp3 in Resources */,
 				D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */,
 				C22E82B622A1B7A400BDDFD5 /* bed.atlas in Resources */,
 				D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */,
@@ -358,7 +374,6 @@
 				D6841ABB229BDC5E00815540 /* Night.swift in Sources */,
 				B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */,
 				D6841ABD229BDC7200815540 /* Result.swift in Sources */,
-				D6841AB3229BDBE500815540 /* Morning.swift in Sources */,
 				D6BDC386229D673300373FBA /* Choice.swift in Sources */,
 				D6841AB1229BDBD700815540 /* Prelude.swift in Sources */,
 				D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */,

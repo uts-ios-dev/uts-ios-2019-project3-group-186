@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import AVFoundation
 
 var game = ChoiceController()
 
@@ -18,7 +19,7 @@ class MainMenu: SKScene {
     var mainmenuBg = SKSpriteNode()
     var mainemnuBgFrames: [SKTexture] = []
     
-    
+    public var backgroundFx: AVAudioPlayer?
     
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
@@ -29,6 +30,9 @@ class MainMenu: SKScene {
         animateBackdrop()
     }
     
+    override func sceneDidLoad() {
+        playBackgroundMusic()
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -73,6 +77,18 @@ class MainMenu: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+    }
+    
+    func playBackgroundMusic() {
+        let backgroudAudio = Bundle.main.url(forResource: "music1", withExtension: "mp3")
+        
+        do {
+            try backgroundFx = AVAudioPlayer(contentsOf: backgroudAudio!)
+            backgroundFx?.play()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
     }
 }
 
