@@ -50,7 +50,7 @@ class Result: SKScene {
     
     func aniationBackDrop() {
         resultsBg.run(SKAction.repeatForever(
-            SKAction.animate(with: resultBgFrames, timePerFrame: 0.025, resize: false, restore: true)))
+            SKAction.animate(with: resultBgFrames, timePerFrame: 0.3, resize: false, restore: true)))
     }
     
     override func update(_ currentTime: TimeInterval) {

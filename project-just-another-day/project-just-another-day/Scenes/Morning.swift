@@ -32,8 +32,6 @@ class Morning: SKScene { //7am?
     var alarmOff: Bool = false
     
     override func didMove(to view: SKView) {
-        createBackPack()
-        animateBackPack()
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
         turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
@@ -43,11 +41,14 @@ class Morning: SKScene { //7am?
         
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
-
+        //backpack = self.childNode(withName: "backpack") as! SKSpriteNodeß
         
-        if let backpackNode: SKSpriteNode = self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode {
+        if let backpackNode = (self.childNode(withName: "backpack") as? SKSpriteNode) {
             backpack = backpackNode
             self.addChild(backpack)
+            print("backpack added")
+            createBackpack()
+            animateBackpack()
         }
         
         if let morningAlarmNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_ALARM) as? SKSpriteNode {
@@ -70,7 +71,7 @@ class Morning: SKScene { //7am?
             //keep it at 10
             choiceValue.points = 10
         }
-  
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -111,21 +112,21 @@ class Morning: SKScene { //7am?
         }
     }
     
-    func createBackPack() {
+    func createBackpack() {
         let backpackAtlas = SKTextureAtlas(named: "backpack")
         var backpackAllFrames: [SKTexture] = []
         
         let noOfFrames = backpackAtlas.textureNames.count
         for i in 1...noOfFrames {
             let backpackTextureNames = "backpack\(i)"
-            
             backpackAllFrames.append(backpackAtlas.textureNamed(backpackTextureNames))
         }
         backpackFrames = backpackAllFrames
     }
     
-    func animateBackPack() {
-        backpack.run(SKAction.repeatForever(SKAction.animate(with: backpackFrames, timePerFrame: 0.5, resize: false, restore: true)))
+    func animateBackpack() {
+        backpack.run(SKAction.repeatForever(
+            SKAction.animate(with: backpackFrames, timePerFrame: 0.3, resize: false, restore: true)))
     }
     
     
