@@ -10,6 +10,7 @@
 		B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9779045229E80BF00BD8E04 /* ChoiceController.swift */; };
 		B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9779048229E81D900BD8E04 /* digital-7.ttf */; };
 		B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B977904A229E820100BD8E04 /* kindergarten.ttf */; };
+		C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C24E527222A12DAE001132C6 /* MainMenuBg.atlas */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A9A229BDB2400815540 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
 		D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9D229BDB2400815540 /* GameViewController.swift */; };
@@ -41,6 +42,7 @@
 		B9779045229E80BF00BD8E04 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		B9779048229E81D900BD8E04 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
+		C24E527222A12DAE001132C6 /* MainMenuBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenuBg.atlas; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6841A99229BDB2400815540 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -81,6 +83,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C24E525822A11ECD001132C6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C24E527122A12D9F001132C6 /* Backdrops */,
+				C24E525A22A11EDD001132C6 /* Bedroom */,
+				C24E525B22A11EE3001132C6 /* Classroom */,
+				C24E525C22A11EE8001132C6 /* LivingRoom */,
+				C24E525D22A11EED001132C6 /* StudyRoom */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C24E525A22A11EDD001132C6 /* Bedroom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bedroom;
+			sourceTree = "<group>";
+		};
+		C24E525B22A11EE3001132C6 /* Classroom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classroom;
+			sourceTree = "<group>";
+		};
+		C24E525C22A11EE8001132C6 /* LivingRoom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LivingRoom;
+			sourceTree = "<group>";
+		};
+		C24E525D22A11EED001132C6 /* StudyRoom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StudyRoom;
+			sourceTree = "<group>";
+		};
+		C24E527122A12D9F001132C6 /* Backdrops */ = {
+			isa = PBXGroup;
+			children = (
+				C24E527222A12DAE001132C6 /* MainMenuBg.atlas */,
+			);
+			path = Backdrops;
+			sourceTree = "<group>";
+		};
 		D6841A89229BDB2300815540 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +150,7 @@
 		D6841A94229BDB2400815540 /* project-just-another-day */ = {
 			isa = PBXGroup;
 			children = (
+				C24E525822A11ECD001132C6 /* Images */,
 				D6841AAD229BDB7100815540 /* Scenes */,
 				D6841A95229BDB2400815540 /* AppDelegate.swift */,
 				D6841A99229BDB2400815540 /* Actions.sks */,
@@ -199,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */,
 				B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */,
 				B9779049229E81D900BD8E04 /* digital-7.ttf in Resources */,
 				D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */,
