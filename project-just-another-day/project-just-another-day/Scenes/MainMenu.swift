@@ -57,8 +57,8 @@ class MainMenu: SKScene {
         }
         mainemnuBgFrames = menuFrames
         
-        let firstFrameTxt = mainemnuBgFrames[0]
-        mainmenuBg = SKSpriteNode(texture: firstFrameTxt)
+        //let firstFrameTxt = mainemnuBgFrames[0]
+        //mainmenuBg = SKSpriteNode(texture: firstFrameTxt)
     }
     
     func animateBackdrop() {
