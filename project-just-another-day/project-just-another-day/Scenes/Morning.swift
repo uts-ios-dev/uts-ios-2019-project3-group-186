@@ -12,17 +12,28 @@ import SpriteKit
 class Morning: SKScene { //7am?
     
     var backpack: SKSpriteNode = SKSpriteNode()
+    var backpackFrames: [SKTexture] = []
+    
     var morningAlarm: SKSpriteNode = SKSpriteNode()
-    var morningPhone: SKSpriteNode = SKSpriteNode()
+    var morningAlarmFrames: [SKTexture] = []
+    
     var alarmPopUp: SKSpriteNode = SKSpriteNode()
-    var timeLabel:SKLabelNode = SKLabelNode()
     var snooze: SKLabelNode = SKLabelNode()
     var turnAlarmOff: SKLabelNode = SKLabelNode()
+    
+    var phone: SKSpriteNode = SKSpriteNode()
+    var phoneFrames: [SKTexture] = []
+
+    
+    var timeLabel:SKLabelNode = SKLabelNode()
+    
     
     public var choiceValue = ChoiceValue(points: 0)
     var alarmOff: Bool = false
     
     override func didMove(to view: SKView) {
+        createBackPack()
+        animateBackPack()
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
         turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
@@ -32,6 +43,7 @@ class Morning: SKScene { //7am?
         
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
+
         
         if let backpackNode: SKSpriteNode = self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode {
             backpack = backpackNode
@@ -43,9 +55,9 @@ class Morning: SKScene { //7am?
             self.addChild(morningAlarm)
         }
         
-        if let morningPhoneNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_PHONE) as? SKSpriteNode {
-            morningPhone = morningPhoneNode
-            self.addChild(morningPhone)
+        if let phoneNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_PHONE) as? SKSpriteNode {
+            phone = phoneNode
+            self.addChild(phone)
         }
         
         if let alarmPopUpNode: SKSpriteNode = self.childNode(withName: Alarm.CHOICE) as? SKSpriteNode {
@@ -58,7 +70,7 @@ class Morning: SKScene { //7am?
             //keep it at 10
             choiceValue.points = 10
         }
-        
+  
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -98,6 +110,24 @@ class Morning: SKScene { //7am?
             }
         }
     }
+    
+    func createBackPack() {
+        let backpackAtlas = SKTextureAtlas(named: "backpack")
+        var backpackAllFrames: [SKTexture] = []
+        
+        let noOfFrames = backpackAtlas.textureNames.count
+        for i in 1...noOfFrames {
+            let backpackTextureNames = "backpack\(i)"
+            
+            backpackAllFrames.append(backpackAtlas.textureNamed(backpackTextureNames))
+        }
+        backpackFrames = backpackAllFrames
+    }
+    
+    func animateBackPack() {
+        backpack.run(SKAction.repeatForever(SKAction.animate(with: backpackFrames, timePerFrame: 0.5, resize: false, restore: true)))
+    }
+    
     
     func hideAlarmChoice(_ hide : Bool){
         print("hide the alarm choice? ")

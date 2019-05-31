@@ -19,7 +19,7 @@ struct Interactable {
     //Morning
     static let BACKPACK = "backpack"
     static let MORNING_ALARM = "morningAlarm"
-    static let MORNING_PHONE = "morningPhone"
+    static let MORNING_PHONE = "phone"
     //School
     static let BLACKBOARD = "blackboard"
     static let CLASSROOM_DOOR = "classRoomDoor"

@@ -14,11 +14,17 @@ class ScenarioMenu: SKScene {
     var timeManagement = SKLabelNode()
     var courtesy = SKLabelNode()
     var backButton = SKLabelNode()
+    var scenarioBg = SKSpriteNode()
+    var scenarioBgFrames: [SKTexture] = []
     
     override func didMove(to view: SKView) {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
         courtesy = self.childNode(withName: Scenario.COURTESY) as! SKLabelNode
         backButton = self.childNode(withName: Button.BACK_TO_MAIN_MENU_BUTTON) as! SKLabelNode
+        scenarioBg = self.childNode(withName: "scenarioBg") as! SKSpriteNode
+        
+        createBackdrop()
+        animateBackdrop()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -37,6 +43,23 @@ class ScenarioMenu: SKScene {
                 break
             }
         }
+    }
+    
+    func createBackdrop(){
+        let scenarioAtlas = SKTextureAtlas(named: "ScenarioBg")
+        var scenarioFrames: [SKTexture] = []
+        
+        let noOfFrames = scenarioAtlas.textureNames.count
+        for i in 1...noOfFrames {
+            let scenarioTextureNames = "scenario\(i)"
+            scenarioFrames.append(scenarioAtlas.textureNamed(scenarioTextureNames))
+        }
+        scenarioBgFrames = scenarioFrames
+    }
+    
+    func animateBackdrop() {
+        scenarioBg.run(SKAction.repeatForever(
+            SKAction.animate(with: scenarioBgFrames, timePerFrame: 0.05, resize: false, restore: true)))
     }
     
     override func update(_ currentTime: TimeInterval) {

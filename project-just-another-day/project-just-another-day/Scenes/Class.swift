@@ -18,13 +18,15 @@ class Class: SKScene {
     var classroomTextbook: SKSpriteNode = SKSpriteNode()
     var friend: SKSpriteNode = SKSpriteNode()
     var teacher: SKSpriteNode = SKSpriteNode()
+    var teacherFrames: [SKTexture] = []
     var timeLabel:SKLabelNode = SKLabelNode()
     var hadLunch = false
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 900)
-        
+        createBackdrop()
+        animateBackdrop()
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
@@ -92,6 +94,23 @@ class Class: SKScene {
                 break
             }
         }
+    }
+    
+    func createBackdrop() {
+        let mainmenuAtlas = SKTextureAtlas(named: "teacher")
+        var menuFrames: [SKTexture] = []
+        
+        let noOfFrames = mainmenuAtlas.textureNames.count
+        for i in 1...noOfFrames {
+            let menuTextureNames = "teacher\(i)"
+            menuFrames.append(mainmenuAtlas.textureNamed(menuTextureNames))
+        }
+        teacherFrames = menuFrames
+    }
+    
+    func animateBackdrop() {
+        teacher.run(SKAction.repeatForever(
+            SKAction.animate(with: teacherFrames, timePerFrame: 0.025, resize: false, restore: true)))
     }
     
     override func update(_ currentTime: TimeInterval) {

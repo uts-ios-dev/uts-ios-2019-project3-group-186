@@ -12,9 +12,14 @@ import SpriteKit
 class Result: SKScene {
     
     var mainMenuButton = SKLabelNode()
+    var resultsBg = SKSpriteNode()
+    var resultBgFrames: [SKTexture] = []
     
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
+        resultsBg = self.childNode(withName: "Backdrop") as! SKSpriteNode
+        createBackdrop()
+        aniationBackDrop()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,6 +34,23 @@ class Result: SKScene {
                 break
             }
         }
+    }
+    
+    func createBackdrop() {
+        let backdropAtlas = SKTextureAtlas(named: "Resultsbg")
+        var backdropFrames: [SKTexture] = []
+        
+        let noOfFrames = backdropAtlas.textureNames.count
+        for i in 1...noOfFrames {
+            let backdropTextureNames = "r\(i)"
+            backdropFrames.append(backdropAtlas.textureNamed(backdropTextureNames))
+        }
+        resultBgFrames = backdropFrames
+    }
+    
+    func aniationBackDrop() {
+        resultsBg.run(SKAction.repeatForever(
+            SKAction.animate(with: resultBgFrames, timePerFrame: 0.025, resize: false, restore: true)))
     }
     
     override func update(_ currentTime: TimeInterval) {

@@ -24,6 +24,7 @@ class MainMenu: SKScene {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
         mainmenuBg = self.childNode(withName: "mainmenuBg") as! SKSpriteNode
+        
         createBackdrop()
         animateBackdrop()
     }
@@ -49,21 +50,16 @@ class MainMenu: SKScene {
         var menuFrames: [SKTexture] = []
         
         let noOfFrames = mainmenuAtlas.textureNames.count
-        print("\(noOfFrames)")
         for i in 1...noOfFrames {
             let menuTextureNames = "menu\(i)"
-            print(i)
             menuFrames.append(mainmenuAtlas.textureNamed(menuTextureNames))
         }
         mainemnuBgFrames = menuFrames
-        
-        //let firstFrameTxt = mainemnuBgFrames[0]
-        //mainmenuBg = SKSpriteNode(texture: firstFrameTxt)
     }
     
     func animateBackdrop() {
         mainmenuBg.run(SKAction.repeatForever(
-            SKAction.animate(with: mainemnuBgFrames, timePerFrame: 0.05, resize: false, restore: true)))
+            SKAction.animate(with: mainemnuBgFrames, timePerFrame: 0.025, resize: false, restore: true)))
     }
     
     func switchScene() {
