@@ -94,7 +94,6 @@ class Morning: SKScene { //7am?
                 actionLabel.run(SKAction.fadeOut(withDuration: 1))
             case "snooze":
                 snoozeCounter = +1
-                if snoozeCounter >= 3{ endgame()}
                 game.updateTime(addMinutes: 25)
                 hideAlarmChoice(true)
                 
@@ -132,6 +131,7 @@ class Morning: SKScene { //7am?
     
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
+        if snoozeCounter >= 3{ endgame()}
         if game.getTimeRaw() >= 830 {
             // do something
             // maybe something to say it is time for school?
