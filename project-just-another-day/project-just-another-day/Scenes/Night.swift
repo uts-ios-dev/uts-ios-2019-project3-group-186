@@ -65,17 +65,21 @@ class Night: SKScene {
             
             switch touchedLocation.name {
             case Interactable.BED:
+                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 print("Bed time~ ZZZzzz")
                 //do something
                 switchScene()
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
+                game.addPoints(numberOfPoints: 6, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
             case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
+                game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_BACKPACK)
             case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
             case Interactable.NIGHT_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
+                game.addPoints(numberOfPoints: 7, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_TEXTBOOK)
             default:
                 break
             }
@@ -92,6 +96,7 @@ class Night: SKScene {
     }
     
     func switchScene() {
+        print(game.getPoints(sceneNumber: SceneNumber.NIGHT))
         if let view = self.view {
             if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
                 resultScene.scaleMode = .aspectFill
