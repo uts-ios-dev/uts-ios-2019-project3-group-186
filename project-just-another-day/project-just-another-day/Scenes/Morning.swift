@@ -80,7 +80,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to pack your bag for school! +30 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -91,7 +91,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to check your phone! +30 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case "snooze":
                 snoozeCounter = +1
                 game.updateTime(addMinutes: 25)
@@ -100,7 +100,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to snooze the alarm! +25 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
                 
             case "turnAlarmOff":
                 hideAlarmChoice(true)
@@ -113,7 +113,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to turn off the alarm! +10 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
                 
             default:
                 hideAlarmChoice(true)
@@ -131,7 +131,7 @@ class Morning: SKScene { //7am?
     
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
-        if snoozeCounter >= 3{ endgame()}
+        if snoozeCounter >= 3{ endGame() }
         if game.getTimeRaw() >= 830 {
             // do something
             // maybe something to say it is time for school?
@@ -147,7 +147,7 @@ class Morning: SKScene { //7am?
             }
         }
     }
-    func endgame(){
+    func endGame(){
         print("you have overslept")
         if let view = self.view {
             if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
