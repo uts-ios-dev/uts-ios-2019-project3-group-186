@@ -73,6 +73,9 @@ class ChoiceController {
         
         return points
     }
+    func getPoints(sceneNumber: Int)->Int {
+        return points[sceneNumber]
+    }
     
     func getTimeRaw()-> Int { return currentTime }
     

@@ -26,7 +26,7 @@ class Morning: SKScene { //7am?
 
     var timeLabel:SKLabelNode = SKLabelNode()
     
-    public var choiceValue = ChoiceValue(points: 0)
+    public var snoozeCounter = 0
     var alarmOff: Bool = false
     
     override func didMove(to view: SKView) {
@@ -63,23 +63,17 @@ class Morning: SKScene { //7am?
             alarmPopUp = alarmPopUpNode
             alarmPopUp.isHidden = true
         }
-        
-        //For ling to integrate with choice controller?
-        if (choiceValue.points == 10) {
-            choiceValue.points = 10
-        }
-
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
-            print(touchedLocation)
+            print(touchedLocation.name!)
             switch touchedLocation.name {
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
-                choiceValue.points += 5
+                game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
                 
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
@@ -87,29 +81,32 @@ class Morning: SKScene { //7am?
                 }
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 30)
-                choiceValue.points += 1
+                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
             case "snooze":
-                game.updateTime(addMinutes: 30)
+                game.updateTime(addMinutes: 25)
+                snoozeCounter = +1
+                if snoozeCounter >= 3{
+                    endgame()
+                }
                 hideAlarmChoice(true)
                 print("You've decided to snooze the alarm!")
             case "turnAlarmOff":
                 hideAlarmChoice(true)
                 //stop this from being interactable
                 game.updateTime(addMinutes: 10)
-                choiceValue.points += 3
+                game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
                 alarmOff = true
                 print("You've decided to turn off the alarm!")
             default:
                 hideAlarmChoice(true)
-                print(choiceValue.points)
                 break
             }
+            print(game.getPoints(sceneNumber: SceneNumber.MORNING))
         }
     }
     
     func hideAlarmChoice(_ hide : Bool){
-        print("hide the alarm choice? ")
         alarmPopUp.isHidden = hide
         snooze.isHidden = hide
         turnAlarmOff.isHidden = hide
@@ -128,9 +125,18 @@ class Morning: SKScene { //7am?
         if let view = self.view {
             if let schoolScene = SKScene(fileNamed: Scene.CLASS_SCENE) {
                 schoolScene.scaleMode = .aspectFill
-                print(choiceValue.points)
                 view.presentScene(schoolScene)
             }
         }
     }
+    func endgame(){
+        print("you have overslept")
+        if let view = self.view {
+            if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
+                resultScene.scaleMode = .aspectFill
+                view.presentScene(resultScene)
+            }
+        }
+    }
+    
 }
