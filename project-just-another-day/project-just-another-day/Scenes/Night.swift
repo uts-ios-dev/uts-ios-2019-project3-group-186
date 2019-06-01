@@ -123,7 +123,7 @@ class Night: SKScene {
     }
     
     func switchScene() {
-        print(game.getPoints(sceneNumber: SceneNumber.NIGHT))
+        print("Score for Night Scene= " + String(game.getPoints(sceneNumber: SceneNumber.NIGHT)))
         if let view = self.view {
             if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
                 resultScene.scaleMode = .aspectFill

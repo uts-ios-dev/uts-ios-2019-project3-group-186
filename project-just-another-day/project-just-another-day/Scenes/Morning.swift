@@ -140,6 +140,7 @@ class Morning: SKScene { //7am?
     }
     
     func switchScene() {
+        print("Score for Morning Scene= " + String(game.getPoints(sceneNumber: SceneNumber.MORNING)))
         if let view = self.view {
             if let schoolScene = SKScene(fileNamed: Scene.CLASS_SCENE) {
                 schoolScene.scaleMode = .aspectFill

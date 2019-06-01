@@ -159,12 +159,12 @@ class Class: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         timeLabel.text = game.getCurrentTime()
-        if (!hadLunch && game.getTimeRaw() >= 1200){
-            //lunch time~
-            game.updateTime(addMinutes: 60)
-            hadLunch = true
-            print("lunch time")
-        }
+//        if (!hadLunch && game.getTimeRaw() >= 1200){
+//            //lunch time~
+//            game.updateTime(addMinutes: 60)
+//            hadLunch = true
+//            print("lunch time")
+//        }
         
         if game.getTimeRaw() >= 1500 {
             // TODO
@@ -175,7 +175,7 @@ class Class: SKScene {
     }
     
     func switchScene() {
-        print("Score for Class = " + String(game.getPoints(sceneNumber: SceneNumber.CLASS)))
+        print("Score for Class Scene = " + String(game.getPoints(sceneNumber: SceneNumber.CLASS)))
         if let view = self.view {
             if let afternoonScene = SKScene(fileNamed: Scene.AFTERNOON_SCENE) {
                 afternoonScene.scaleMode = .aspectFill
