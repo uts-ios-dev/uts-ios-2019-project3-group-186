@@ -22,7 +22,7 @@ struct Interactable {
     static let MORNING_PHONE = "phone"
     //School
     static let BLACKBOARD = "blackboard"
-    static let CLASSROOM_DOOR = "classRoomDoor"
+    static let CLASSROOM_DOOR = "classroomDoor"
     static let CLASSROOM_PHONE = "classroomPhone"
     static let CLASSROOM_TEXTBOOK = "classroomTextbook"
     static let CLASSROOM_SNACKS = "classroomSnacks"
@@ -88,7 +88,7 @@ struct SpriteAtlas {
     static let ALARM = "alarm"
     static let PHONE = "phone"
     static let BACKPACK = "backpack"
-    static let CLASSROOM_DOOR = "Door"
+    static let CLASSROOM_DOOR = "classroomdoor"
     static let CLASSROOM_SNACKS = "snack"
     static let CLASSROOM_TEXTBOOK = "textbook"
     static let TEACHER = "teacher"
@@ -100,7 +100,7 @@ struct SpriteAtlas {
     static let TELEVISION = "Tvlivingroom"
     static let BED = "bed"
     static let LAPTOP = "laptop"
-    static let TV_BED = "tvBed"
+    static let TV_BED = "tvbed"
 }
 
 struct SceneNumber {

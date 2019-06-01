@@ -58,7 +58,7 @@ class Night: SKScene {
         
         if let televisionNode = self.childNode(withName: Interactable.NIGHT_TELEVISION) as? SKSpriteNode {
             television = televisionNode
-            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TELEVISION, interactableFrames: &televisionFrames)
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TV_BED, interactableFrames: &televisionFrames)
             SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.0025)
         }
         
