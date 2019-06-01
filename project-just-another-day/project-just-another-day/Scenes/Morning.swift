@@ -24,9 +24,7 @@ class Morning: SKScene { //7am?
     var phone: SKSpriteNode = SKSpriteNode()
     var phoneFrames: [SKTexture] = []
 
-    
     var timeLabel:SKLabelNode = SKLabelNode()
-    
     
     public var choiceValue = ChoiceValue(points: 0)
     var alarmOff: Bool = false
@@ -38,40 +36,36 @@ class Morning: SKScene { //7am?
         
         snooze.isHidden = true
         turnAlarmOff.isHidden = true
-        
+        backpack.isHidden = false
+
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
-        //backpack = self.childNode(withName: Interactable.BACKPACK) as! SKSpriteNode
-        createBackpack()
-        animateBackpack()
         
-        if let backpackNode = (self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode) { //<-Does Not Work
-        backpack = backpackNode
-            self.addChild(backpack)
-            print("backpack added")
-            createBackpack()
-            animateBackpack()
-        }
-        
-        
+        if let backpackNode = self.childNode(withName: Interactable.BACKPACK) as? SKSpriteNode {
+            backpack = backpackNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BACKPACK, interactableFrames: &backpackFrames)
+            SpriteController.animateInteractable(interactable: backpack, interactableFrames: backpackFrames, timeInterval: 0.025)
+       }
+
         if let morningAlarmNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_ALARM) as? SKSpriteNode {
             morningAlarm = morningAlarmNode
-            self.addChild(morningAlarm)
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.ALARM, interactableFrames: &morningAlarmFrames)
+            SpriteController.animateInteractable(interactable: morningAlarm, interactableFrames: morningAlarmFrames, timeInterval: 0.025)
         }
         
         if let phoneNode: SKSpriteNode = self.childNode(withName: Interactable.MORNING_PHONE) as? SKSpriteNode {
             phone = phoneNode
-            self.addChild(phone)
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.PHONE, interactableFrames: &phoneFrames)
+            SpriteController.animateInteractable(interactable: phone, interactableFrames: phoneFrames, timeInterval: 0.025)
         }
-        
+
         if let alarmPopUpNode: SKSpriteNode = self.childNode(withName: Alarm.CHOICE) as? SKSpriteNode {
             alarmPopUp = alarmPopUpNode
             alarmPopUp.isHidden = true
-            self.addChild(alarmPopUp)
         }
         
+        //For ling to integrate with choice controller?
         if (choiceValue.points == 10) {
-            //keep it at 10
             choiceValue.points = 10
         }
 
@@ -86,9 +80,7 @@ class Morning: SKScene { //7am?
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
                 choiceValue.points += 5
-                //we store what you pressed
-                //
-            //save the name of what was pressed into an array[0]
+                
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -97,7 +89,7 @@ class Morning: SKScene { //7am?
                 game.updateTime(addMinutes: 30)
                 choiceValue.points += 1
             case "snooze":
-                game.updateTime(addMinutes: 20)
+                game.updateTime(addMinutes: 30)
                 hideAlarmChoice(true)
                 print("You've decided to snooze the alarm!")
             case "turnAlarmOff":
@@ -105,6 +97,7 @@ class Morning: SKScene { //7am?
                 //stop this from being interactable
                 game.updateTime(addMinutes: 10)
                 choiceValue.points += 3
+                morningAlarm.removeAllActions()
                 alarmOff = true
                 print("You've decided to turn off the alarm!")
             default:
@@ -114,25 +107,6 @@ class Morning: SKScene { //7am?
             }
         }
     }
-    
-    func createBackpack() {
-        let backpackAtlas = SKTextureAtlas(named: "backpack")
-        var backpackAllFrames: [SKTexture] = []
-        
-        let noOfFrames = backpackAtlas.textureNames.count
-        for i in 1...noOfFrames {
-            let backpackTextureNames = "backpack\(i)"
-            backpackAllFrames.append(backpackAtlas.textureNamed(backpackTextureNames))
-        }
-        backpackFrames = backpackAllFrames
-    }
-    
-    func animateBackpack() {
-        print("animatsed")
-        backpack.run(SKAction.repeatForever(
-            SKAction.animate(with: backpackFrames, timePerFrame: 0.3, resize: false, restore: true)))
-    }
-    
     
     func hideAlarmChoice(_ hide : Bool){
         print("hide the alarm choice? ")

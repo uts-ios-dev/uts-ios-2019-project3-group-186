@@ -11,11 +11,8 @@ import Foundation
 
 class ChoiceController {
     
-    
     var currentTime:Int
     var currentScore:Int
-    
-    
     
     init() {
         currentTime = 700

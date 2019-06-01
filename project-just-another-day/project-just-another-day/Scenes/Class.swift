@@ -19,51 +19,60 @@ class Class: SKScene {
     var friend: SKSpriteNode = SKSpriteNode()
     var teacher: SKSpriteNode = SKSpriteNode()
     var teacherFrames: [SKTexture] = []
+    var classroomDoorFrames: [SKTexture] = []
+    var classroomPhoneFrames: [SKTexture] = []
+    var classroomSnacksFrames: [SKTexture] = []
+    var classroomTextbookFrames: [SKTexture] = []
+    var friendFrames: [SKTexture] = []
     var timeLabel:SKLabelNode = SKLabelNode()
     var hadLunch = false
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 900)
-        createBackdrop()
-        animateBackdrop()
+     
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
-            self.addChild(blackboard)
         }
         
         if let classroomDoorNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_DOOR) as? SKSpriteNode {
             classroomDoor = classroomDoorNode
-            self.addChild(classroomDoor)
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_DOOR, interactableFrames: &classroomDoorFrames)
+             SpriteController.animateInteractable(interactable: classroomDoor, interactableFrames: classroomDoorFrames, timeInterval: 0.025)
         }
         
         
         if let classroomPhoneNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_PHONE) as? SKSpriteNode {
             classroomPhone = classroomPhoneNode
-            self.addChild(classroomPhone)
+             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.PHONE, interactableFrames: &classroomPhoneFrames)
+             SpriteController.animateInteractable(interactable: classroomPhone, interactableFrames: classroomPhoneFrames, timeInterval: 0.025)
         }
         
         
         if let classroomSnacksNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_SNACKS) as? SKSpriteNode {
             classroomSnacks = classroomSnacksNode
-            self.addChild(classroomSnacks)
+             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_SNACKS, interactableFrames: &classroomSnacksFrames)
+             SpriteController.animateInteractable(interactable: classroomSnacks, interactableFrames: classroomSnacksFrames, timeInterval: 0.025)
         }
         
         
         if let classroomTextbookNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_TEXTBOOK) as? SKSpriteNode {
             classroomTextbook = classroomTextbookNode
-            self.addChild(classroomTextbook)
+             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_TEXTBOOK, interactableFrames: &classroomTextbookFrames)
+            SpriteController.animateInteractable(interactable: classroomTextbook, interactableFrames: classroomTextbookFrames, timeInterval: 0.025)
         }
         
         if let friendNode: SKSpriteNode = self.childNode(withName: Interactable.FRIEND) as? SKSpriteNode {
             friend = friendNode
-            self.addChild(friend)
+             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FRIEND, interactableFrames: &friendFrames)
+             SpriteController.animateInteractable(interactable: friend, interactableFrames: friendFrames, timeInterval: 0.025)
         }
         
         if let teacherNode: SKSpriteNode = self.childNode(withName: Interactable.TEACHER) as? SKSpriteNode {
             teacher = teacherNode
-            self.addChild(teacher)
+             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TEACHER, interactableFrames: &teacherFrames)
+             SpriteController.animateInteractable(interactable: teacher, interactableFrames: teacherFrames, timeInterval: 0.025)
         }
     }
     
@@ -81,7 +90,7 @@ class Class: SKScene {
             case Interactable.CLASSROOM_PHONE:
                 game.updateTime(addMinutes: 20)
             case Interactable.CLASSROOM_SNACKS:
-                game.updateTime(addMinutes: 20)
+                game.updateTime(addMinutes: 25)
             case Interactable.CLASSROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 100)
                 // add points
@@ -94,23 +103,6 @@ class Class: SKScene {
                 break
             }
         }
-    }
-    
-    func createBackdrop() {
-        let mainmenuAtlas = SKTextureAtlas(named: "teacher")
-        var menuFrames: [SKTexture] = []
-        
-        let noOfFrames = mainmenuAtlas.textureNames.count
-        for i in 1...noOfFrames {
-            let menuTextureNames = "teacher\(i)"
-            menuFrames.append(mainmenuAtlas.textureNamed(menuTextureNames))
-        }
-        teacherFrames = menuFrames
-    }
-    
-    func animateBackdrop() {
-        teacher.run(SKAction.repeatForever(
-            SKAction.animate(with: teacherFrames, timePerFrame: 0.025, resize: false, restore: true)))
     }
     
     override func update(_ currentTime: TimeInterval) {

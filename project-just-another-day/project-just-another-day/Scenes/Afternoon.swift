@@ -10,12 +10,61 @@ import Foundation
 import SpriteKit
 
 class Afternoon: SKScene {
+    
+    var basketball: SKSpriteNode = SKSpriteNode()
+    var basketballFrames: [SKTexture] = []
+    var sofa: SKSpriteNode = SKSpriteNode()
+    var sofaFrames: [SKTexture] = []
+    var food: SKSpriteNode = SKSpriteNode()
+    var foodFrames: [SKTexture] = []
+    var frontDoor: SKSpriteNode = SKSpriteNode()
+    var frontDoorFrames: [SKTexture] = []
+    var television: SKSpriteNode = SKSpriteNode()
+    var televisionFrames: [SKTexture] = []
+    var textbook: SKSpriteNode = SKSpriteNode()
+    var textbookFrames: [SKTexture] = []
+    
     var timeLabel:SKLabelNode = SKLabelNode()
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 1600)
         timeLabel.text = game.getCurrentTime()
+        
+        if let basketballNode = self.childNode(withName: Interactable.SPORT_EQUIPMENT) as? SKSpriteNode {
+            basketball = basketballNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BASKETBALL, interactableFrames: &basketballFrames)
+            SpriteController.animateInteractable(interactable: basketball, interactableFrames:basketballFrames, timeInterval: 0.0025)
+        }
+        
+        if let sofaNode = self.childNode(withName: Interactable.SOFA) as? SKSpriteNode {
+            sofa = sofaNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.SOFA, interactableFrames: &sofaFrames)
+            SpriteController.animateInteractable(interactable: sofa, interactableFrames:sofaFrames, timeInterval: 0.0025)
+        }
+        
+        if let foodNode = self.childNode(withName: Interactable.KITCHEN_TABLE) as? SKSpriteNode {
+            food = foodNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FOOD, interactableFrames: &foodFrames)
+            SpriteController.animateInteractable(interactable: food, interactableFrames:foodFrames, timeInterval: 0.0025)
+        }
+        
+        if let frontDoorNode = self.childNode(withName: Interactable.LIVING_ROOM_DOOR) as? SKSpriteNode {
+            frontDoor = frontDoorNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FRONT_DOOR, interactableFrames: &frontDoorFrames)
+            SpriteController.animateInteractable(interactable: frontDoor, interactableFrames:frontDoorFrames, timeInterval: 0.0025)
+        }
+        
+        if let televisionNode = self.childNode(withName: Interactable.LIVING_ROOM_TEXTBOOK) as? SKSpriteNode {
+            television = televisionNode
+        }
+        
+        if let textbookNode = self.childNode(withName: Interactable.LIVING_ROOM_TEXTBOOK) as? SKSpriteNode {
+            textbook = textbookNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_TEXTBOOK, interactableFrames: &textbookFrames)
+            SpriteController.animateInteractable(interactable: textbook, interactableFrames:textbookFrames, timeInterval: 0.0025)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

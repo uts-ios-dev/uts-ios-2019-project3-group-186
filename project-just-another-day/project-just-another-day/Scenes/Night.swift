@@ -10,11 +10,51 @@ import Foundation
 import SpriteKit
 
 class Night: SKScene {
+    
+    var bed: SKSpriteNode = SKSpriteNode()
+    var bedFrames: [SKTexture] = []
+    var laptop: SKSpriteNode = SKSpriteNode()
+    var laptopFrames: [SKTexture] = []
+    var backpack: SKSpriteNode = SKSpriteNode()
+    var backpackFrames: [SKTexture] = []
+    var television: SKSpriteNode = SKSpriteNode()
+    var televisionFrames: [SKTexture] = []
     var timeLabel:SKLabelNode = SKLabelNode()
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         game.setTimeRaw(time: 1930)
+        
+        if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
+            bed = bedNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BED, interactableFrames: &bedFrames)
+            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.0025)
+        }
+        
+        if let laptopNode = self.childNode(withName: Interactable.LAPTOP) as? SKSpriteNode {
+            laptop = laptopNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.LAPTOP, interactableFrames: &laptopFrames)
+            SpriteController.animateInteractable(interactable: laptop, interactableFrames:laptopFrames, timeInterval: 0.0025)
+        }
+        
+        if let backpackNode = self.childNode(withName: Interactable.NIGHT_BACKPACK) as? SKSpriteNode {
+            backpack = backpackNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BACKPACK, interactableFrames: &backpackFrames)
+            SpriteController.animateInteractable(interactable: backpack, interactableFrames:backpackFrames, timeInterval: 0.0025)
+        }
+        
+        if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
+            bed = bedNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BED, interactableFrames: &bedFrames)
+            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.0025)
+        }
+        
+        if let televisionNode = self.childNode(withName: Interactable.NIGHT_TELEVISION) as? SKSpriteNode {
+            television = televisionNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TELEVISION, interactableFrames: &televisionFrames)
+            SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.0025)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,9 +70,9 @@ class Night: SKScene {
                 switchScene()
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
-            case Interactable.NIGHT_PHONE:
+            case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
-            case Interactable.NIGHT_SNACKS:
+            case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
             case Interactable.NIGHT_TEXTBOOK:
                 game.updateTime(addMinutes: 60)

@@ -37,8 +37,8 @@ struct Interactable {
     //Night
     static let BED = "bed"
     static let LAPTOP = "laptop"
-    static let NIGHT_PHONE = "nightPhone"
-    static let NIGHT_SNACKS = "nightSnacks"
+    static let NIGHT_BACKPACK = "nightBackpack"
+    static let NIGHT_TELEVISION = "nightTelevision"
     static let NIGHT_TEXTBOOK = "nightTextbook"
 }
 
@@ -81,6 +81,25 @@ struct Button {
     static let MAIN_MENU_BUTTON = "mainMenuButton"
     static let BACK_TO_MAIN_MENU_BUTTON = "backToMainMenuButton"
     static let BACK_TO_SCENARIO_MENU_BUTTON = "backToScenarioMenuButton"
+}
+
+struct SpriteAtlas {
+    static let ALARM = "alarm"
+    static let PHONE = "phone"
+    static let BACKPACK = "backpack"
+    static let CLASSROOM_DOOR = "Door"
+    static let CLASSROOM_SNACKS = "snack"
+    static let CLASSROOM_TEXTBOOK = "textbook"
+    static let TEACHER = "teacher"
+    static let FRIEND = "pencilcase"
+    static let BASKETBALL = "basketball"
+    static let SOFA = "couch"
+    static let FOOD = "food"
+    static let FRONT_DOOR = "frontdoor"
+    static let TELEVISION = "TvLivingRoom"
+    static let BED = "bed"
+    static let LAPTOP = "laptop"
+    static let TV_BED = "tvBed"
 }
 
 

@@ -19,7 +19,7 @@ class Result: SKScene {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
         resultsBg = self.childNode(withName: "Backdrop") as! SKSpriteNode
         createBackdrop()
-        aniationBackDrop()
+        animationBackDrop()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,7 +48,7 @@ class Result: SKScene {
         resultBgFrames = backdropFrames
     }
     
-    func aniationBackDrop() {
+    func animationBackDrop() {
         resultsBg.run(SKAction.repeatForever(
             SKAction.animate(with: resultBgFrames, timePerFrame: 0.3, resize: false, restore: true)))
     }
