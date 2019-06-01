@@ -24,16 +24,22 @@ class Class: SKScene {
     var classroomSnacksFrames: [SKTexture] = []
     var classroomTextbookFrames: [SKTexture] = []
     var friendFrames: [SKTexture] = []
-    var timeLabel:SKLabelNode = SKLabelNode()
+    var timeLabel: SKLabelNode = SKLabelNode()
+    var actionLabel: SKLabelNode = SKLabelNode()
     var hadLunch = false
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
+        
+        actionLabel.isHidden = true
+        
         game.setTimeRaw(time: 900)
      
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
+            
         }
         
         if let classroomDoorNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_DOOR) as? SKSpriteNode {
@@ -84,20 +90,56 @@ class Class: SKScene {
             switch touchedLocation.name {
             case Interactable.BLACKBOARD:
                 game.updateTime(addMinutes: 100)
-                // add points
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to write down important notes from the blackboard! +100 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                
             case Interactable.CLASSROOM_DOOR:
                 game.updateTime(addMinutes: 35)
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to go outside for a toilet break! + 35 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                
             case Interactable.CLASSROOM_PHONE:
                 game.updateTime(addMinutes: 20)
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to play on your phone during class! +20 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                
             case Interactable.CLASSROOM_SNACKS:
                 game.updateTime(addMinutes: 25)
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to eat your snacks during class! +25 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                
             case Interactable.CLASSROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 100)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to read and make notes from your textbook! +25 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
                 // add points
             case Interactable.FRIEND:
                 game.updateTime(addMinutes: 100)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to play Pokemon Go with your friend! +100 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.TEACHER:
                 game.updateTime(addMinutes: 100)
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to ask the teacher for some exam tips! +100 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
                 // add points
             default:
                 break
