@@ -19,11 +19,18 @@ class Night: SKScene {
     var backpackFrames: [SKTexture] = []
     var television: SKSpriteNode = SKSpriteNode()
     var televisionFrames: [SKTexture] = []
-    var timeLabel:SKLabelNode = SKLabelNode()
+    
+    var actionLabel: SKLabelNode = SKLabelNode()
+    var timeLabel: SKLabelNode = SKLabelNode()
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
+        actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
+        
+        actionLabel.isHidden = true
+
         game.setTimeRaw(time: 1930)
+
         
         if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
             bed = bedNode
@@ -68,18 +75,38 @@ class Night: SKScene {
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 print("Bed time~ ZZZzzz")
                 //do something
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to go to sleep!"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
                 switchScene()
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
                 game.addPoints(numberOfPoints: 6, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to go on your laptop! +45 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_BACKPACK)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to pack your bag for tomorrow! +20 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to Netflix and chill! +20 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.NIGHT_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 7, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_TEXTBOOK)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to revise from your textbook! +60 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 3))
             default:
                 break
             }
