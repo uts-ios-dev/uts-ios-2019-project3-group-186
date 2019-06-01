@@ -102,4 +102,9 @@ struct SpriteAtlas {
     static let TV_BED = "tvBed"
 }
 
-
+struct SceneNumber {
+    static let MORNING = 0
+    static let CLASS = 1
+    static let AFTERNOON = 2
+    static let NIGHT = 3
+}
