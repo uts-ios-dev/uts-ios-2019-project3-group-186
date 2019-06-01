@@ -71,21 +71,22 @@ class Afternoon: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
-            
             switch touchedLocation.name {
             case Interactable.KITCHEN_TABLE:
                 game.updateTime(addMinutes: 20)
+                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.KITCHEN_TABLE)
             case Interactable.LIVING_ROOM_DOOR:
                 game.updateTime(addMinutes: 60)
+                game.addPoints(numberOfPoints: 2, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.LIVING_ROOM_DOOR)
             case Interactable.LIVING_ROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
-                //add points 5?
+                game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.LIVING_ROOM_TEXTBOOK)
             case Interactable.SOFA:
                 game.updateTime(addMinutes: 30)
-                //add points 5?
+                game.addPoints(numberOfPoints: 2, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SOFA)
             case Interactable.SPORT_EQUIPMENT:
-                game.updateTime(addMinutes: 45)
-                //add points 5?
+                game.updateTime(addMinutes: 90)
+                game.addPoints(numberOfPoints: 4, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SPORT_EQUIPMENT)
             default:
                 break
             }
@@ -102,6 +103,7 @@ class Afternoon: SKScene {
     }
     
     func switchScene() {
+        print("Score for afternoon Scene= " + String(game.getPoints(sceneNumber: SceneNumber.AFTERNOON)))
         if let view = self.view {
             if let nightScene = SKScene(fileNamed: Scene.NIGHT_SCENE) {
                 nightScene.scaleMode = .aspectFill

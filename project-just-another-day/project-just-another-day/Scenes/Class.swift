@@ -90,6 +90,7 @@ class Class: SKScene {
             switch touchedLocation.name {
             case Interactable.BLACKBOARD:
                 game.updateTime(addMinutes: 100)
+                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.BLACKBOARD)
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to write down important notes from the blackboard! +100 mins"
@@ -98,6 +99,7 @@ class Class: SKScene {
                 
             case Interactable.CLASSROOM_DOOR:
                 game.updateTime(addMinutes: 35)
+                game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_DOOR)
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to go outside for a toilet break! + 35 mins"
@@ -106,6 +108,7 @@ class Class: SKScene {
                 
             case Interactable.CLASSROOM_PHONE:
                 game.updateTime(addMinutes: 20)
+                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_PHONE)
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to play on your phone during class! +20 mins"
@@ -114,6 +117,7 @@ class Class: SKScene {
                 
             case Interactable.CLASSROOM_SNACKS:
                 game.updateTime(addMinutes: 25)
+                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_SNACKS)
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to eat your snacks during class! +25 mins"
@@ -122,6 +126,8 @@ class Class: SKScene {
                 
             case Interactable.CLASSROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 100)
+                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_TEXTBOOK)
+                
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to read and make notes from your textbook! +25 mins"
                 actionLabel.isHidden = false
@@ -129,12 +135,15 @@ class Class: SKScene {
                 // add points
             case Interactable.FRIEND:
                 game.updateTime(addMinutes: 100)
+                game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.CLASS, object: Interactable.FRIEND)
+                
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to play Pokemon Go with your friend! +100 mins"
                 actionLabel.isHidden = false
                 actionLabel.run(SKAction.fadeOut(withDuration: 3))
             case Interactable.TEACHER:
                 game.updateTime(addMinutes: 100)
+                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.TEACHER)
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to ask the teacher for some exam tips! +100 mins"
@@ -166,6 +175,7 @@ class Class: SKScene {
     }
     
     func switchScene() {
+        print("Score for Class = " + String(game.getPoints(sceneNumber: SceneNumber.CLASS)))
         if let view = self.view {
             if let afternoonScene = SKScene(fileNamed: Scene.AFTERNOON_SCENE) {
                 afternoonScene.scaleMode = .aspectFill
