@@ -25,6 +25,7 @@ class Morning: SKScene { //7am?
     var phoneFrames: [SKTexture] = []
 
     var timeLabel:SKLabelNode = SKLabelNode()
+    var actionLabel: SKLabelNode = SKLabelNode()
     
     public var snoozeCounter = 0
     var alarmOff: Bool = false
@@ -33,10 +34,12 @@ class Morning: SKScene { //7am?
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
         turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
+        actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
         
         snooze.isHidden = true
         turnAlarmOff.isHidden = true
         backpack.isHidden = false
+        actionLabel.isHidden = true
 
         game.setTimeRaw(time: 730)
         timeLabel.text = game.getCurrentTime()
@@ -74,7 +77,10 @@ class Morning: SKScene { //7am?
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
-                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to pack your bag for school! +30 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 1))
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -82,12 +88,21 @@ class Morning: SKScene { //7am?
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to check your phone! +30 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 1))
             case "snooze":
                 snoozeCounter = +1
                 if snoozeCounter >= 3{ endgame()}
                 game.updateTime(addMinutes: 25)
                 hideAlarmChoice(true)
-                print("You've decided to snooze the alarm!")
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to snooze the alarm! +25 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                
             case "turnAlarmOff":
                 hideAlarmChoice(true)
                 //stop this from being interactable
@@ -95,7 +110,12 @@ class Morning: SKScene { //7am?
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
                 alarmOff = true
-                print("You've decided to turn off the alarm!")
+                
+                actionLabel.alpha = 1.0
+                actionLabel.text = "You've decided to turn off the alarm! +10 mins"
+                actionLabel.isHidden = false
+                actionLabel.run(SKAction.fadeOut(withDuration: 1))
+                
             default:
                 hideAlarmChoice(true)
                 break

@@ -18,9 +18,8 @@
 		C22E82A622A1B79300BDDFD5 /* teacher.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A222A1B79200BDDFD5 /* teacher.atlas */; };
 		C22E82A722A1B79300BDDFD5 /* textbook.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A322A1B79200BDDFD5 /* textbook.atlas */; };
 		C22E82A822A1B79300BDDFD5 /* snack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A422A1B79300BDDFD5 /* snack.atlas */; };
-		C22E82AE22A1B79C00BDDFD5 /* Bball.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A922A1B79B00BDDFD5 /* Bball.atlas */; };
-		C22E82AF22A1B79C00BDDFD5 /* frontDoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AA22A1B79B00BDDFD5 /* frontDoor.atlas */; };
-		C22E82B022A1B79C00BDDFD5 /* TvLivingRoom.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AB22A1B79B00BDDFD5 /* TvLivingRoom.atlas */; };
+		C22E82AF22A1B79C00BDDFD5 /* frontdoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AA22A1B79B00BDDFD5 /* frontdoor.atlas */; };
+		C22E82B022A1B79C00BDDFD5 /* Tvlivingroom.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AB22A1B79B00BDDFD5 /* Tvlivingroom.atlas */; };
 		C22E82B122A1B79C00BDDFD5 /* food.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AC22A1B79B00BDDFD5 /* food.atlas */; };
 		C22E82B222A1B79C00BDDFD5 /* couch.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82AD22A1B79C00BDDFD5 /* couch.atlas */; };
 		C22E82B622A1B7A400BDDFD5 /* bed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82B322A1B7A400BDDFD5 /* bed.atlas */; };
@@ -57,6 +56,8 @@
 		D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */; };
 		D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC389229D78D800373FBA /* ScenarioMenu.swift */; };
 		D6BDC38C229D7C2600373FBA /* ScenarioMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */; };
+		D6E15AD922A2A3B2002692FD /* SpriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E15AD822A2A3B0002692FD /* SpriteController.swift */; };
+		D6E15ADB22A2A48D002692FD /* basketball.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D6E15ADA22A2A48D002692FD /* basketball.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,9 +72,8 @@
 		C22E82A222A1B79200BDDFD5 /* teacher.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = teacher.atlas; sourceTree = "<group>"; };
 		C22E82A322A1B79200BDDFD5 /* textbook.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = textbook.atlas; sourceTree = "<group>"; };
 		C22E82A422A1B79300BDDFD5 /* snack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snack.atlas; sourceTree = "<group>"; };
-		C22E82A922A1B79B00BDDFD5 /* Bball.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bball.atlas; sourceTree = "<group>"; };
-		C22E82AA22A1B79B00BDDFD5 /* frontDoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = frontDoor.atlas; sourceTree = "<group>"; };
-		C22E82AB22A1B79B00BDDFD5 /* TvLivingRoom.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = TvLivingRoom.atlas; sourceTree = "<group>"; };
+		C22E82AA22A1B79B00BDDFD5 /* frontdoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = frontdoor.atlas; sourceTree = "<group>"; };
+		C22E82AB22A1B79B00BDDFD5 /* Tvlivingroom.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Tvlivingroom.atlas; sourceTree = "<group>"; };
 		C22E82AC22A1B79B00BDDFD5 /* food.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = food.atlas; sourceTree = "<group>"; };
 		C22E82AD22A1B79C00BDDFD5 /* couch.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = couch.atlas; sourceTree = "<group>"; };
 		C22E82B322A1B7A400BDDFD5 /* bed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bed.atlas; sourceTree = "<group>"; };
@@ -112,6 +112,8 @@
 		D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceValue.swift; sourceTree = "<group>"; };
 		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
+		D6E15AD822A2A3B0002692FD /* SpriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteController.swift; sourceTree = "<group>"; };
+		D6E15ADA22A2A48D002692FD /* basketball.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = basketball.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +176,11 @@
 		C24E525C22A11EE8001132C6 /* LivingRoom */ = {
 			isa = PBXGroup;
 			children = (
-				C22E82A922A1B79B00BDDFD5 /* Bball.atlas */,
+				D6E15ADA22A2A48D002692FD /* basketball.atlas */,
 				C22E82AD22A1B79C00BDDFD5 /* couch.atlas */,
 				C22E82AC22A1B79B00BDDFD5 /* food.atlas */,
-				C22E82AA22A1B79B00BDDFD5 /* frontDoor.atlas */,
-				C22E82AB22A1B79B00BDDFD5 /* TvLivingRoom.atlas */,
+				C22E82AA22A1B79B00BDDFD5 /* frontdoor.atlas */,
+				C22E82AB22A1B79B00BDDFD5 /* Tvlivingroom.atlas */,
 			);
 			path = LivingRoom;
 			sourceTree = "<group>";
@@ -234,6 +236,7 @@
 				D6841AA2229BDB2600815540 /* Assets.xcassets */,
 				D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */,
 				D6841AA7229BDB2600815540 /* Info.plist */,
+				D6E15AD822A2A3B0002692FD /* SpriteController.swift */,
 				D6841ACD229BEC2200815540 /* Constants.swift */,
 				D6BDC385229D673300373FBA /* Choice.swift */,
 				D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */,
@@ -328,7 +331,7 @@
 				C22E824E22A161A800BDDFD5 /* ScenarioBg.atlas in Resources */,
 				C22E829E22A1B6B100BDDFD5 /* phone.atlas in Resources */,
 				C2601BBD22A216D700093629 /* backpack.atlas in Resources */,
-				C22E82B022A1B79C00BDDFD5 /* TvLivingRoom.atlas in Resources */,
+				C22E82B022A1B79C00BDDFD5 /* Tvlivingroom.atlas in Resources */,
 				C24E527322A12DAE001132C6 /* MainMenuBg.atlas in Resources */,
 				C22E82C022A1EB5A00BDDFD5 /* music1.mp3 in Resources */,
 				B977904B229E820100BD8E04 /* kindergarten.ttf in Resources */,
@@ -341,6 +344,7 @@
 				C22E82C122A1EB5A00BDDFD5 /* music2.mp3 in Resources */,
 				D6841AC0229BDFE200815540 /* MainMenu.sks in Resources */,
 				C22E82B622A1B7A400BDDFD5 /* bed.atlas in Resources */,
+				D6E15ADB22A2A48D002692FD /* basketball.atlas in Resources */,
 				D6841AA3229BDB2600815540 /* Assets.xcassets in Resources */,
 				D6841AC4229BE10900815540 /* Morning.sks in Resources */,
 				C22E82B822A1B7A400BDDFD5 /* laptop.atlas in Resources */,
@@ -350,8 +354,7 @@
 				D6841ACA229BE14F00815540 /* Night.sks in Resources */,
 				D6841ACC229BE16300815540 /* Result.sks in Resources */,
 				C22E82A022A1B78200BDDFD5 /* Door.atlas in Resources */,
-				C22E82AE22A1B79C00BDDFD5 /* Bball.atlas in Resources */,
-				C22E82AF22A1B79C00BDDFD5 /* frontDoor.atlas in Resources */,
+				C22E82AF22A1B79C00BDDFD5 /* frontdoor.atlas in Resources */,
 				C22E82B122A1B79C00BDDFD5 /* food.atlas in Resources */,
 				D6841AA6229BDB2600815540 /* LaunchScreen.storyboard in Resources */,
 				D6841AC8229BE13600815540 /* Afternoon.sks in Resources */,
@@ -382,6 +385,7 @@
 				D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */,
 				C2DB416622A1F06300B060FA /* Morning.swift in Sources */,
 				D6841AB7229BDC1500815540 /* Class.swift in Sources */,
+				D6E15AD922A2A3B2002692FD /* SpriteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6JJ96HFC2;
 				INFOPLIST_FILE = "project-just-another-day/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6JJ96HFC2;
 				INFOPLIST_FILE = "project-just-another-day/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

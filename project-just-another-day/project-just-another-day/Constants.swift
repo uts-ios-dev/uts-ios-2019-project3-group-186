@@ -57,6 +57,7 @@ struct Scene {
 struct Label {
     static let TIME = "//timeLabel"
     static let TITLE = "title"
+    static let ACTION = "//actionNotifier"
 }
 
 struct Font {
@@ -96,7 +97,7 @@ struct SpriteAtlas {
     static let SOFA = "couch"
     static let FOOD = "food"
     static let FRONT_DOOR = "frontdoor"
-    static let TELEVISION = "TvLivingRoom"
+    static let TELEVISION = "Tvlivingroom"
     static let BED = "bed"
     static let LAPTOP = "laptop"
     static let TV_BED = "tvBed"
