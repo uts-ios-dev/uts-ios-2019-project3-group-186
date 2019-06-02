@@ -24,24 +24,19 @@ class MainMenu: SKScene {
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
-        mainmenuBg = self.childNode(withName: "mainmenubg") as! SKSpriteNode
-        
-        createBackdrop()
-        animateBackdrop()
-        
-    /* if let mainMenuNode = self.childNode(withName: Interactable.MAINMENU) as? SKSpriteNode {
+     if let mainMenuNode = self.childNode(withName: Interactable.MAINMENU) as? SKSpriteNode {
             mainmenuBg = mainMenuNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.MAINMENU, interactableFrames: &mainemnuBgFrames)
             SpriteController.animateInteractable(interactable: mainmenuBg, interactableFrames: mainemnuBgFrames, timeInterval: 0.025)
-        }*/
-    }
-    
-    override func sceneDidLoad() {
-        playBackgroundMusic()
-        if let mainMenuNode = self.childNode(withName:  Interactable.MAINMENU) as? SKSpriteNode {
-            mainmenuBg = mainMenuNode
         }
     }
+
+    override func sceneDidLoad() {
+        AudioController.playAudio(audioFX: Audios.mainmenufx, audioName: AudioNams.mainmenuNm)
+        //playBackgroundMusic()
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -58,28 +53,11 @@ class MainMenu: SKScene {
         }
     }
     
-    func createBackdrop() {
-        let mainmenuAtlas = SKTextureAtlas(named: "mainmenubg")
-        var menuFrames: [SKTexture] = []
-        
-        let noOfFrames = mainmenuAtlas.textureNames.count
-        for i in 1...noOfFrames {
-            let menuTextureNames = "mainmenubg\(i)"
-            menuFrames.append(mainmenuAtlas.textureNamed(menuTextureNames))
-        }
-        mainemnuBgFrames = menuFrames
-    }
-    
-    func animateBackdrop() {
-        mainmenuBg.run(SKAction.repeatForever(
-            SKAction.animate(with: mainemnuBgFrames, timePerFrame: 0.025, resize: false, restore: true)))
-    }
-    
     func switchScene() {
         if let view = self.view {
             if let preludeScene = SKScene(fileNamed: Scene.SCENARIO_MENU) {
                 preludeScene.scaleMode = .aspectFill
-                view.presentScene(preludeScene)
+                view.presentScene(preludeScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }

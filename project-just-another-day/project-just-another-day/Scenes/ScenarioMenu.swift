@@ -22,16 +22,12 @@ class ScenarioMenu: SKScene {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
         courtesy = self.childNode(withName: Scenario.COURTESY) as! SKLabelNode
         backButton = self.childNode(withName: Button.BACK_TO_MAIN_MENU_BUTTON) as! SKLabelNode
-        scenarioBg = self.childNode(withName: "scenarioBg") as! SKSpriteNode
         
-        createBackdrop()
-        animateBackdrop()
-        
-        /* if let scenarioNode = self.childNode(withName: Interactable.SCENARIO) as? SKSpriteNode {
+        if let scenarioNode = self.childNode(withName: Interactable.SCENARIO) as? SKSpriteNode {
          scenarioBg = scenarioNode
          SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.SCENARIO, interactableFrames: &scenarioBgFrames)
          SpriteController.animateInteractable(interactable: scenarioBg, interactableFrames: scenarioBgFrames, timeInterval: 0.025)
-         }*/
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -69,6 +65,8 @@ class ScenarioMenu: SKScene {
             SKAction.animate(with: scenarioBgFrames, timePerFrame: 0.05, resize: false, restore: true)))
     }
     
+    
+    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
@@ -78,7 +76,7 @@ class ScenarioMenu: SKScene {
         if let view = self.view {
             if let preludeScene = SKScene(fileNamed: Scene.PRELUDE_SCENE) {
                 preludeScene.scaleMode = .aspectFill
-                view.presentScene(preludeScene)
+                view.presentScene(preludeScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }
@@ -93,7 +91,7 @@ class ScenarioMenu: SKScene {
         if let view = self.view {
             if let mainMenuScene = SKScene(fileNamed: Scene.MAIN_MENU) {
                 mainMenuScene.scaleMode = .aspectFill
-                view.presentScene(mainMenuScene)
+                view.presentScene(mainMenuScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }

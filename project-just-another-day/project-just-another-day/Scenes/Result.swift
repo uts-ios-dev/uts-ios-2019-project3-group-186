@@ -23,9 +23,6 @@ class Result: SKScene {
     
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
-        resultsBg = self.childNode(withName: "Backdrop") as! SKSpriteNode
-        createBackdrop()
-        animationBackDrop()
         
         resultLabelTotal = self.childNode(withName: "resultScoreTotal") as! SKLabelNode
         resultLabel1 = self.childNode(withName: "resultScore1") as! SKLabelNode
@@ -33,6 +30,12 @@ class Result: SKScene {
         resultLabel3 = self.childNode(withName: "resultScore3") as! SKLabelNode
         resultLabel4 = self.childNode(withName: "resultScore4") as! SKLabelNode
         loadScores()
+        
+        if let resultNode = self.childNode(withName: Interactable.RESULTS) as? SKSpriteNode {
+            resultsBg = resultNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.RESULTS, interactableFrames: &resultBgFrames)
+            SpriteController.animateInteractable(interactable: resultsBg, interactableFrames: resultBgFrames, timeInterval: 0.1)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,23 +52,6 @@ class Result: SKScene {
         }
     }
     
-    func createBackdrop() {
-        let backdropAtlas = SKTextureAtlas(named: "Resultsbg")
-        var backdropFrames: [SKTexture] = []
-        
-        let noOfFrames = backdropAtlas.textureNames.count
-        for i in 1...noOfFrames {
-            let backdropTextureNames = "r\(i)"
-            backdropFrames.append(backdropAtlas.textureNamed(backdropTextureNames))
-        }
-        resultBgFrames = backdropFrames
-    }
-    
-    func animationBackDrop() {
-        resultsBg.run(SKAction.repeatForever(
-            SKAction.animate(with: resultBgFrames, timePerFrame: 0.3, resize: false, restore: true)))
-    }
-    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
@@ -74,7 +60,7 @@ class Result: SKScene {
         if let view = self.view {
             if let mainMenuScene = SKScene(fileNamed: Scene.MAIN_MENU) {
                 mainMenuScene.scaleMode = .aspectFill
-                view.presentScene(mainMenuScene)
+                view.presentScene(mainMenuScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }

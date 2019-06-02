@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9779045229E80BF00BD8E04 /* ChoiceController.swift */; };
+		C2535D3522A3B7690064B0B6 /* scenario.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2535D3422A3B7690064B0B6 /* scenario.atlas */; };
+		C2535D3722A3B8ED0064B0B6 /* r.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2535D3622A3B8ED0064B0B6 /* r.atlas */; };
+		C2535D3922A3C1490064B0B6 /* blackboard.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2535D3822A3C1490064B0B6 /* blackboard.atlas */; };
+		C2535D3B22A3C62C0064B0B6 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2535D3A22A3C62C0064B0B6 /* AudioController.swift */; };
 		C2A8733422A3A6BA002ADE95 /* mainmenubg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8733122A3A624002ADE95 /* mainmenubg.atlas */; };
-		C2A8733522A3A6BA002ADE95 /* ResultsBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */; };
-		C2A8733622A3A6BA002ADE95 /* ScenarioBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */; };
 		C2A8733722A3A6BA002ADE95 /* alarm.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730722A396E9002ADE95 /* alarm.atlas */; };
 		C2A8733822A3A6BA002ADE95 /* backpack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730822A396EA002ADE95 /* backpack.atlas */; };
 		C2A8733922A3A6BA002ADE95 /* phone.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730922A396EB002ADE95 /* phone.atlas */; };
@@ -63,6 +65,10 @@
 		B9779045229E80BF00BD8E04 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		B9779048229E81D900BD8E04 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
+		C2535D3422A3B7690064B0B6 /* scenario.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = scenario.atlas; path = "../../../../../../Desktop/Animated Sprites/scenario.atlas"; sourceTree = "<group>"; };
+		C2535D3622A3B8ED0064B0B6 /* r.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = r.atlas; sourceTree = "<group>"; };
+		C2535D3822A3C1490064B0B6 /* blackboard.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = blackboard.atlas; sourceTree = "<group>"; };
+		C2535D3A22A3C62C0064B0B6 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		C2A872FB22A39556002ADE95 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 		C2A872FC22A39557002ADE95 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
 		C2A8730722A396E9002ADE95 /* alarm.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alarm.atlas; sourceTree = "<group>"; };
@@ -81,8 +87,6 @@
 		C2A8732122A397E7002ADE95 /* laptop.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = laptop.atlas; sourceTree = "<group>"; };
 		C2A8732222A397E8002ADE95 /* tvbed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tvbed.atlas; sourceTree = "<group>"; };
 		C2A8732322A397E8002ADE95 /* bed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bed.atlas; sourceTree = "<group>"; };
-		C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ScenarioBg.atlas; sourceTree = "<group>"; };
-		C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ResultsBg.atlas; sourceTree = "<group>"; };
 		C2A8733122A3A624002ADE95 /* mainmenubg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mainmenubg.atlas; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,9 +141,9 @@
 		C2A8730022A395E0002ADE95 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				C2535D3622A3B8ED0064B0B6 /* r.atlas */,
+				C2535D3422A3B7690064B0B6 /* scenario.atlas */,
 				C2A8733122A3A624002ADE95 /* mainmenubg.atlas */,
-				C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */,
-				C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */,
 				C2A8730522A396A5002ADE95 /* Bedroom */,
 				C2A8730622A396A6002ADE95 /* Classroom */,
 				C2A8730322A396A4002ADE95 /* LivingRoom */,
@@ -183,6 +187,7 @@
 		C2A8730622A396A6002ADE95 /* Classroom */ = {
 			isa = PBXGroup;
 			children = (
+				C2535D3822A3C1490064B0B6 /* blackboard.atlas */,
 				C2A8730E22A39732002ADE95 /* classroomdoor.atlas */,
 				C2A8730F22A39733002ADE95 /* pencilcase.atlas */,
 				C2A8730D22A39732002ADE95 /* snack.atlas */,
@@ -225,6 +230,7 @@
 				D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */,
 				D6841AA7229BDB2600815540 /* Info.plist */,
 				D6E15AD822A2A3B0002692FD /* SpriteController.swift */,
+				C2535D3A22A3C62C0064B0B6 /* AudioController.swift */,
 				D6841ACD229BEC2200815540 /* Constants.swift */,
 				D6BDC385229D673300373FBA /* Choice.swift */,
 				D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */,
@@ -313,9 +319,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2535D3922A3C1490064B0B6 /* blackboard.atlas in Resources */,
 				C2A8734922A3A6D3002ADE95 /* MainMenu.sks in Resources */,
 				C2A8734A22A3A6D3002ADE95 /* ScenarioMenu.sks in Resources */,
 				C2A8734B22A3A6D3002ADE95 /* Prelude.sks in Resources */,
+				C2535D3522A3B7690064B0B6 /* scenario.atlas in Resources */,
 				C2A8734C22A3A6D3002ADE95 /* Morning.sks in Resources */,
 				C2A8734D22A3A6D3002ADE95 /* Class.sks in Resources */,
 				C2A8734E22A3A6D3002ADE95 /* Afternoon.sks in Resources */,
@@ -328,8 +336,6 @@
 				C2A8735522A3A6D3002ADE95 /* Assets.xcassets in Resources */,
 				C2A8735622A3A6D3002ADE95 /* LaunchScreen.storyboard in Resources */,
 				C2A8733422A3A6BA002ADE95 /* mainmenubg.atlas in Resources */,
-				C2A8733522A3A6BA002ADE95 /* ResultsBg.atlas in Resources */,
-				C2A8733622A3A6BA002ADE95 /* ScenarioBg.atlas in Resources */,
 				C2A8733722A3A6BA002ADE95 /* alarm.atlas in Resources */,
 				C2A8733822A3A6BA002ADE95 /* backpack.atlas in Resources */,
 				C2A8733922A3A6BA002ADE95 /* phone.atlas in Resources */,
@@ -340,6 +346,7 @@
 				C2A8733E22A3A6BA002ADE95 /* textbook.atlas in Resources */,
 				C2A8733F22A3A6BA002ADE95 /* basketball.atlas in Resources */,
 				C2A8734022A3A6BA002ADE95 /* couch.atlas in Resources */,
+				C2535D3722A3B8ED0064B0B6 /* r.atlas in Resources */,
 				C2A8734122A3A6BA002ADE95 /* food.atlas in Resources */,
 				C2A8734222A3A6BA002ADE95 /* frontdoor.atlas in Resources */,
 				C2A8734322A3A6BA002ADE95 /* Tvlivingroom.atlas in Resources */,
@@ -364,6 +371,7 @@
 				D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */,
 				D6841ABB229BDC5E00815540 /* Night.swift in Sources */,
 				B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */,
+				C2535D3B22A3C62C0064B0B6 /* AudioController.swift in Sources */,
 				D6841ABD229BDC7200815540 /* Result.swift in Sources */,
 				D6BDC386229D673300373FBA /* Choice.swift in Sources */,
 				D6841AB1229BDBD700815540 /* Prelude.swift in Sources */,

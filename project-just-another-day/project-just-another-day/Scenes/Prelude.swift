@@ -43,7 +43,7 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
         if let view = self.view {
             if let morningScene = SKScene(fileNamed: Scene.MORNING_SCENE) {
                 morningScene.scaleMode = .aspectFill
-                view.presentScene(morningScene)
+                view.presentScene(morningScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }
@@ -52,7 +52,7 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
         if let view = self.view {
             if let scenarioScene = SKScene(fileNamed: Scene.SCENARIO_MENU) {
                 scenarioScene.scaleMode = .aspectFill
-                view.presentScene(scenarioScene)
+                view.presentScene(scenarioScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }

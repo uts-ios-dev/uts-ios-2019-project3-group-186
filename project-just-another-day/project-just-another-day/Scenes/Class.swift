@@ -24,6 +24,7 @@ class Class: SKScene {
     var classroomSnacksFrames: [SKTexture] = []
     var classroomTextbookFrames: [SKTexture] = []
     var friendFrames: [SKTexture] = []
+    var blackboardFrames: [SKTexture] = []
     var timeLabel: SKLabelNode = SKLabelNode()
     var actionLabel: SKLabelNode = SKLabelNode()
     var hadLunch = false
@@ -39,7 +40,8 @@ class Class: SKScene {
 
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
-            
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BLACKBOARD, interactableFrames: &blackboardFrames)
+            SpriteController.animateInteractable(interactable: blackboard, interactableFrames: blackboardFrames, timeInterval: 0.025)
         }
         
         if let classroomDoorNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_DOOR) as? SKSpriteNode {
@@ -179,7 +181,7 @@ class Class: SKScene {
         if let view = self.view {
             if let afternoonScene = SKScene(fileNamed: Scene.AFTERNOON_SCENE) {
                 afternoonScene.scaleMode = .aspectFill
-                view.presentScene(afternoonScene)
+                view.presentScene(afternoonScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }

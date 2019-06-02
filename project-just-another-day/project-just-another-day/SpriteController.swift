@@ -25,7 +25,7 @@ class SpriteController {
     
     static func animateInteractable(interactable: SKSpriteNode, interactableFrames: [SKTexture], timeInterval: Double) {
         interactable.run(SKAction.repeatForever(
-            SKAction.animate(with: interactableFrames, timePerFrame: 0.5, resize: false, restore: true)))
+            SKAction.animate(with: interactableFrames, timePerFrame: timeInterval, resize: false, restore: true)))
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 struct Background {
     static let MORNING_BEDROOM = "BEDROOM"
@@ -22,7 +23,9 @@ struct Backdrops{
 
 struct Interactable {
     static let MAINMENU = "mainmenubg"
-    static let SCENARIO = "scenarioBg"
+    static let SCENARIO = "scenario"
+    static let RESULTS = "r"
+
     //Morning
     static let BACKPACK = "backpack"
     static let MORNING_ALARM = "morningAlarm"
@@ -98,6 +101,7 @@ struct SpriteAtlas {
     static let CLASSROOM_DOOR = "classroomdoor"
     static let CLASSROOM_SNACKS = "snack"
     static let CLASSROOM_TEXTBOOK = "textbook"
+    static let BLACKBOARD = "blackboard"
     static let TEACHER = "teacher"
     static let FRIEND = "pencilcase"
     static let BASKETBALL = "basketball"
@@ -110,8 +114,8 @@ struct SpriteAtlas {
     static let TV_BED = "tvbed"
     
     static let MAINMENU = "mainmenubg"
-    static let SCENARIO = "ScenarioBg"
-    static let RESULTS = "ResultsBg"
+    static let SCENARIO = "scenario"
+    static let RESULTS = "r"
 
 }
 
@@ -120,4 +124,14 @@ struct SceneNumber {
     static let CLASS = 1
     static let AFTERNOON = 2
     static let NIGHT = 3
+}
+
+struct Audios {
+    static let mainmenufx = AVAudioPlayer()
+    static let resultsfx = AVAudioPlayer()
+}
+
+struct AudioNams {
+    static let mainmenuNm = "music1"
+    static let resultNm = "music2"
 }

@@ -127,7 +127,7 @@ class Night: SKScene {
         if let view = self.view {
             if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
                 resultScene.scaleMode = .aspectFill
-                view.presentScene(resultScene)
+                view.presentScene(resultScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }
