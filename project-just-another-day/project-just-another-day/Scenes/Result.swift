@@ -78,7 +78,4 @@ class Result: SKScene {
         
         
     }
-    
-    //have a func that has a switch case where if the user scores within a certain range:
-    //e.g. 85 - 100, comment on their good sense of judgement on managing time, etc.. and their circumstances
 }

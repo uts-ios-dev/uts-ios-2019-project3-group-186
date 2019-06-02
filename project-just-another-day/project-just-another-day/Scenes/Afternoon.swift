@@ -12,16 +12,17 @@ import SpriteKit
 class Afternoon: SKScene {
     
     var basketball: SKSpriteNode = SKSpriteNode()
-    var basketballFrames: [SKTexture] = []
     var sofa: SKSpriteNode = SKSpriteNode()
-    var sofaFrames: [SKTexture] = []
     var food: SKSpriteNode = SKSpriteNode()
-    var foodFrames: [SKTexture] = []
     var frontDoor: SKSpriteNode = SKSpriteNode()
-    var frontDoorFrames: [SKTexture] = []
     var television: SKSpriteNode = SKSpriteNode()
-    var televisionFrames: [SKTexture] = []
     var textbook: SKSpriteNode = SKSpriteNode()
+   
+    var basketballFrames: [SKTexture] = []
+    var sofaFrames: [SKTexture] = []
+    var foodFrames: [SKTexture] = []
+    var frontDoorFrames: [SKTexture] = []
+    var televisionFrames: [SKTexture] = []
     var textbookFrames: [SKTexture] = []
     
     var timeLabel: SKLabelNode = SKLabelNode()

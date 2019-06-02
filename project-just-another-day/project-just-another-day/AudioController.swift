@@ -10,18 +10,35 @@ import Foundation
 import AVFoundation
 
 class AudioController {
+    static let shared = AudioController()
+    public var backgroundAudioPlayer: AVAudioPlayer?
 
-    static func playAudio(audioFX: AVAudioPlayer, audioName: String) {
+//    static func playAudio(audioFX: AVAudioPlayer, audioName: String) {
+//        let audio = Bundle.main.url(forResource: audioName, withExtension: "mp3")
+//
+//        do {
+//            let audioFX = try AVAudioPlayer(contentsOf: audio!)
+//            audioFX.play()
+//            print("audio playing: \(audioName)")
+//        }
+//        catch {
+//            print(error.localizedDescription)
+//
+//        }
+//    }
+    
+    public func playAudio(audioName: String) {
         let audio = Bundle.main.url(forResource: audioName, withExtension: "mp3")
-        
+        var error: NSError? = nil
         do {
-            let audioFX = try AVAudioPlayer(contentsOf: audio!)
-            audioFX.play()
+            backgroundAudioPlayer = try AVAudioPlayer(contentsOf: audio!)
+            backgroundAudioPlayer!.play()
             print("audio playing: \(audioName)")
         }
-        catch {
-            print(error.localizedDescription)
-            
+        catch let audioPlayerError as NSError {
+            error = audioPlayerError
+            backgroundAudioPlayer = nil
+            print("Cannot create an audio player: \(String(describing: error))")
         }
     }
 }

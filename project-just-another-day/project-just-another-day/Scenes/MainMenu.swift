@@ -32,9 +32,8 @@ class MainMenu: SKScene {
     }
 
     override func sceneDidLoad() {
-        AudioController.playAudio(audioFX: Audios.mainmenufx, audioName: AudioNams.mainmenuNm)
+        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
         //playBackgroundMusic()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,10 +66,10 @@ class MainMenu: SKScene {
     }
     
     func playBackgroundMusic() {
-        let backgroudAudio = Bundle.main.url(forResource: "music1", withExtension: "mp3")
+        let backgroundAudio = Bundle.main.url(forResource: "music1", withExtension: "mp3")
         
         do {
-            try backgroundFx = AVAudioPlayer(contentsOf: backgroudAudio!)
+            try backgroundFx = AVAudioPlayer(contentsOf: backgroundAudio!)
             backgroundFx?.play()
         }
         catch {
