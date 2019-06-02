@@ -65,7 +65,7 @@
 		B9779045229E80BF00BD8E04 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		B9779048229E81D900BD8E04 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
-		C2535D3422A3B7690064B0B6 /* scenario.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = scenario.atlas; path = "../../../../../../Desktop/Animated Sprites/scenario.atlas"; sourceTree = "<group>"; };
+		C2535D3422A3B7690064B0B6 /* scenario.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = scenario.atlas; sourceTree = "<group>"; };
 		C2535D3622A3B8ED0064B0B6 /* r.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = r.atlas; sourceTree = "<group>"; };
 		C2535D3822A3C1490064B0B6 /* blackboard.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = blackboard.atlas; sourceTree = "<group>"; };
 		C2535D3A22A3C62C0064B0B6 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
