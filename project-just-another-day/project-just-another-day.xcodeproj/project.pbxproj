@@ -8,46 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9779045229E80BF00BD8E04 /* ChoiceController.swift */; };
+		C2A8733422A3A6BA002ADE95 /* mainmenubg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8733122A3A624002ADE95 /* mainmenubg.atlas */; };
+		C2A8733522A3A6BA002ADE95 /* ResultsBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */; };
+		C2A8733622A3A6BA002ADE95 /* ScenarioBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */; };
+		C2A8733722A3A6BA002ADE95 /* alarm.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730722A396E9002ADE95 /* alarm.atlas */; };
+		C2A8733822A3A6BA002ADE95 /* backpack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730822A396EA002ADE95 /* backpack.atlas */; };
+		C2A8733922A3A6BA002ADE95 /* phone.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730922A396EB002ADE95 /* phone.atlas */; };
+		C2A8733A22A3A6BA002ADE95 /* classroomdoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730E22A39732002ADE95 /* classroomdoor.atlas */; };
+		C2A8733B22A3A6BA002ADE95 /* pencilcase.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730F22A39733002ADE95 /* pencilcase.atlas */; };
+		C2A8733C22A3A6BA002ADE95 /* snack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8730D22A39732002ADE95 /* snack.atlas */; };
+		C2A8733D22A3A6BA002ADE95 /* teacher.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731022A39733002ADE95 /* teacher.atlas */; };
+		C2A8733E22A3A6BA002ADE95 /* textbook.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731122A39734002ADE95 /* textbook.atlas */; };
+		C2A8733F22A3A6BA002ADE95 /* basketball.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731922A39785002ADE95 /* basketball.atlas */; };
+		C2A8734022A3A6BA002ADE95 /* couch.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731A22A39785002ADE95 /* couch.atlas */; };
+		C2A8734122A3A6BA002ADE95 /* food.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731722A39784002ADE95 /* food.atlas */; };
+		C2A8734222A3A6BA002ADE95 /* frontdoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731822A39784002ADE95 /* frontdoor.atlas */; };
+		C2A8734322A3A6BA002ADE95 /* Tvlivingroom.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8731B22A39786002ADE95 /* Tvlivingroom.atlas */; };
+		C2A8734422A3A6BA002ADE95 /* bed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732322A397E8002ADE95 /* bed.atlas */; };
+		C2A8734522A3A6BA002ADE95 /* laptop.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732122A397E7002ADE95 /* laptop.atlas */; };
+		C2A8734622A3A6BA002ADE95 /* tvbed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2A8732222A397E8002ADE95 /* tvbed.atlas */; };
+		C2A8734722A3A6BA002ADE95 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2A872FC22A39557002ADE95 /* music1.mp3 */; };
+		C2A8734822A3A6BA002ADE95 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2A872FB22A39556002ADE95 /* music2.mp3 */; };
+		C2A8734922A3A6D3002ADE95 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ABF229BDFE200815540 /* MainMenu.sks */; };
+		C2A8734A22A3A6D3002ADE95 /* ScenarioMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */; };
+		C2A8734B22A3A6D3002ADE95 /* Prelude.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC1229BDFF800815540 /* Prelude.sks */; };
+		C2A8734C22A3A6D3002ADE95 /* Morning.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC3229BE10900815540 /* Morning.sks */; };
+		C2A8734D22A3A6D3002ADE95 /* Class.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC5229BE12100815540 /* Class.sks */; };
+		C2A8734E22A3A6D3002ADE95 /* Afternoon.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC7229BE13600815540 /* Afternoon.sks */; };
+		C2A8734F22A3A6D3002ADE95 /* Night.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC9229BE14F00815540 /* Night.sks */; };
+		C2A8735022A3A6D3002ADE95 /* Result.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ACB229BE16300815540 /* Result.sks */; };
+		C2A8735122A3A6D3002ADE95 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
+		C2A8735222A3A6D3002ADE95 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9779048229E81D900BD8E04 /* digital-7.ttf */; };
+		C2A8735322A3A6D3002ADE95 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B977904A229E820100BD8E04 /* kindergarten.ttf */; };
+		C2A8735422A3A6D3002ADE95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841A9F229BDB2400815540 /* Main.storyboard */; };
+		C2A8735522A3A6D3002ADE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA2229BDB2600815540 /* Assets.xcassets */; };
+		C2A8735622A3A6D3002ADE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */; };
 		C2DB416622A1F06300B060FA /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AB2229BDBE500815540 /* Morning.swift */; };
-		C2ECB7F122A365B90063F8D2 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */; };
-		C2ECB7F222A365B90063F8D2 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */; };
-		C2ECB80722A367170063F8D2 /* Resultsbg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82BB22A1D1E400BDDFD5 /* Resultsbg.atlas */; };
-		C2ECB80822A367170063F8D2 /* ScenarioBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E824D22A161A800BDDFD5 /* ScenarioBg.atlas */; };
-		C2ECB80922A367170063F8D2 /* MainMenuBg.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C24E527222A12DAE001132C6 /* MainMenuBg.atlas */; };
-		C2ECB80A22A3672A0063F8D2 /* alarm.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5622A3268600AB86CA /* alarm.atlas */; };
-		C2ECB80B22A3672A0063F8D2 /* backpack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C2601BBB22A216D700093629 /* backpack.atlas */; };
-		C2ECB80C22A3672A0063F8D2 /* phone.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E829C22A1B6B100BDDFD5 /* phone.atlas */; };
-		C2ECB80D22A3672A0063F8D2 /* blackboard.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE6122A326BB00AB86CA /* blackboard.atlas */; };
-		C2ECB80E22A3672A0063F8D2 /* classroomdoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE6222A326BB00AB86CA /* classroomdoor.atlas */; };
-		C2ECB80F22A3672A0063F8D2 /* teacher.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE6322A326BB00AB86CA /* teacher.atlas */; };
-		C2ECB81022A3672A0063F8D2 /* textbook.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE6022A326BB00AB86CA /* textbook.atlas */; };
-		C2ECB81122A3672A0063F8D2 /* pencilcase.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A122A1B79200BDDFD5 /* pencilcase.atlas */; };
-		C2ECB81222A3672A0063F8D2 /* snack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82A422A1B79300BDDFD5 /* snack.atlas */; };
-		C2ECB81322A3672A0063F8D2 /* couch.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5822A3269E00AB86CA /* couch.atlas */; };
-		C2ECB81422A3672A0063F8D2 /* frontdoor.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5B22A3269E00AB86CA /* frontdoor.atlas */; };
-		C2ECB81522A3672A0063F8D2 /* food.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5922A3269E00AB86CA /* food.atlas */; };
-		C2ECB81622A3672A0063F8D2 /* Tvlivingroom.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5A22A3269E00AB86CA /* Tvlivingroom.atlas */; };
-		C2ECB81722A3672A0063F8D2 /* basketball.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D6E15ADA22A2A48D002692FD /* basketball.atlas */; };
-		C2ECB81822A3672A0063F8D2 /* tvbed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5422A3256900AB86CA /* tvbed.atlas */; };
-		C2ECB81922A3672A0063F8D2 /* bed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C260EE5222A3240200AB86CA /* bed.atlas */; };
-		C2ECB81A22A3672A0063F8D2 /* laptop.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C22E82B522A1B7A400BDDFD5 /* laptop.atlas */; };
-		C2ECB81B22A3673F0063F8D2 /* kindergarten.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B977904A229E820100BD8E04 /* kindergarten.ttf */; };
-		C2ECB81C22A3674A0063F8D2 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9779048229E81D900BD8E04 /* digital-7.ttf */; };
-		C2ECB81D22A367570063F8D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841A9F229BDB2400815540 /* Main.storyboard */; };
-		C2ECB81E22A3679F0063F8D2 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ABF229BDFE200815540 /* MainMenu.sks */; };
-		C2ECB81F22A3679F0063F8D2 /* ScenarioMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */; };
-		C2ECB82022A3679F0063F8D2 /* Prelude.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC1229BDFF800815540 /* Prelude.sks */; };
-		C2ECB82122A3679F0063F8D2 /* Morning.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC3229BE10900815540 /* Morning.sks */; };
-		C2ECB82222A3679F0063F8D2 /* Class.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC5229BE12100815540 /* Class.sks */; };
-		C2ECB82322A3679F0063F8D2 /* Afternoon.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC7229BE13600815540 /* Afternoon.sks */; };
-		C2ECB82422A3679F0063F8D2 /* Night.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841AC9229BE14F00815540 /* Night.sks */; };
-		C2ECB82522A3679F0063F8D2 /* Result.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841ACB229BE16300815540 /* Result.sks */; };
-		C2ECB82622A3679F0063F8D2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6841A99229BDB2400815540 /* Actions.sks */; };
-		C2ECB82722A367AB0063F8D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */; };
-		C2ECB82C22A36DC80063F8D2 /* Bedroom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ECB82822A36DC70063F8D2 /* Bedroom.png */; };
-		C2ECB82D22A36DC80063F8D2 /* Livingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ECB82922A36DC70063F8D2 /* Livingroom.png */; };
-		C2ECB82E22A36DC80063F8D2 /* Classroom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ECB82A22A36DC70063F8D2 /* Classroom.png */; };
-		C2ECB83122A36F700063F8D2 /* Studyroom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ECB83022A36F700063F8D2 /* Studyroom.png */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9D229BDB2400815540 /* GameViewController.swift */; };
 		D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AAE229BDBAD00815540 /* MainMenu.swift */; };
@@ -67,31 +63,27 @@
 		B9779045229E80BF00BD8E04 /* ChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		B9779048229E81D900BD8E04 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B977904A229E820100BD8E04 /* kindergarten.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kindergarten.ttf; sourceTree = "<group>"; };
-		C22E824D22A161A800BDDFD5 /* ScenarioBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ScenarioBg.atlas; sourceTree = "<group>"; };
-		C22E829C22A1B6B100BDDFD5 /* phone.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = phone.atlas; sourceTree = "<group>"; };
-		C22E82A122A1B79200BDDFD5 /* pencilcase.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pencilcase.atlas; sourceTree = "<group>"; };
-		C22E82A422A1B79300BDDFD5 /* snack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snack.atlas; sourceTree = "<group>"; };
-		C22E82B522A1B7A400BDDFD5 /* laptop.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = laptop.atlas; sourceTree = "<group>"; };
-		C22E82BB22A1D1E400BDDFD5 /* Resultsbg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Resultsbg.atlas; sourceTree = "<group>"; };
-		C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
-		C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
-		C24E527222A12DAE001132C6 /* MainMenuBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenuBg.atlas; sourceTree = "<group>"; };
-		C2601BBB22A216D700093629 /* backpack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = backpack.atlas; sourceTree = "<group>"; };
-		C260EE5222A3240200AB86CA /* bed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bed.atlas; sourceTree = "<group>"; };
-		C260EE5422A3256900AB86CA /* tvbed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tvbed.atlas; sourceTree = "<group>"; };
-		C260EE5622A3268600AB86CA /* alarm.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alarm.atlas; sourceTree = "<group>"; };
-		C260EE5822A3269E00AB86CA /* couch.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = couch.atlas; sourceTree = "<group>"; };
-		C260EE5922A3269E00AB86CA /* food.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = food.atlas; sourceTree = "<group>"; };
-		C260EE5A22A3269E00AB86CA /* Tvlivingroom.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Tvlivingroom.atlas; sourceTree = "<group>"; };
-		C260EE5B22A3269E00AB86CA /* frontdoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = frontdoor.atlas; sourceTree = "<group>"; };
-		C260EE6022A326BB00AB86CA /* textbook.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = textbook.atlas; sourceTree = "<group>"; };
-		C260EE6122A326BB00AB86CA /* blackboard.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = blackboard.atlas; sourceTree = "<group>"; };
-		C260EE6222A326BB00AB86CA /* classroomdoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = classroomdoor.atlas; sourceTree = "<group>"; };
-		C260EE6322A326BB00AB86CA /* teacher.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = teacher.atlas; sourceTree = "<group>"; };
-		C2ECB82822A36DC70063F8D2 /* Bedroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bedroom.png; sourceTree = "<group>"; };
-		C2ECB82922A36DC70063F8D2 /* Livingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Livingroom.png; sourceTree = "<group>"; };
-		C2ECB82A22A36DC70063F8D2 /* Classroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Classroom.png; sourceTree = "<group>"; };
-		C2ECB83022A36F700063F8D2 /* Studyroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Studyroom.png; sourceTree = "<group>"; };
+		C2A872FB22A39556002ADE95 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
+		C2A872FC22A39557002ADE95 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
+		C2A8730722A396E9002ADE95 /* alarm.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alarm.atlas; sourceTree = "<group>"; };
+		C2A8730822A396EA002ADE95 /* backpack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = backpack.atlas; sourceTree = "<group>"; };
+		C2A8730922A396EB002ADE95 /* phone.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = phone.atlas; sourceTree = "<group>"; };
+		C2A8730D22A39732002ADE95 /* snack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = snack.atlas; sourceTree = "<group>"; };
+		C2A8730E22A39732002ADE95 /* classroomdoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = classroomdoor.atlas; sourceTree = "<group>"; };
+		C2A8730F22A39733002ADE95 /* pencilcase.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pencilcase.atlas; sourceTree = "<group>"; };
+		C2A8731022A39733002ADE95 /* teacher.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = teacher.atlas; sourceTree = "<group>"; };
+		C2A8731122A39734002ADE95 /* textbook.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = textbook.atlas; sourceTree = "<group>"; };
+		C2A8731722A39784002ADE95 /* food.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = food.atlas; sourceTree = "<group>"; };
+		C2A8731822A39784002ADE95 /* frontdoor.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = frontdoor.atlas; sourceTree = "<group>"; };
+		C2A8731922A39785002ADE95 /* basketball.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = basketball.atlas; sourceTree = "<group>"; };
+		C2A8731A22A39785002ADE95 /* couch.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = couch.atlas; sourceTree = "<group>"; };
+		C2A8731B22A39786002ADE95 /* Tvlivingroom.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Tvlivingroom.atlas; sourceTree = "<group>"; };
+		C2A8732122A397E7002ADE95 /* laptop.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = laptop.atlas; sourceTree = "<group>"; };
+		C2A8732222A397E8002ADE95 /* tvbed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tvbed.atlas; sourceTree = "<group>"; };
+		C2A8732322A397E8002ADE95 /* bed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bed.atlas; sourceTree = "<group>"; };
+		C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ScenarioBg.atlas; sourceTree = "<group>"; };
+		C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ResultsBg.atlas; sourceTree = "<group>"; };
+		C2A8733122A3A624002ADE95 /* mainmenubg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mainmenubg.atlas; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6841A99229BDB2400815540 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -120,7 +112,6 @@
 		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
 		D6E15AD822A2A3B0002692FD /* SpriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteController.swift; sourceTree = "<group>"; };
-		D6E15ADA22A2A48D002692FD /* basketball.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = basketball.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,86 +125,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C22E82BD22A1EB2700BDDFD5 /* Audio */ = {
+		C2A872FF22A395A9002ADE95 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				C22E82BE22A1EB5900BDDFD5 /* music1.mp3 */,
-				C22E82BF22A1EB5A00BDDFD5 /* music2.mp3 */,
+				C2A872FC22A39557002ADE95 /* music1.mp3 */,
+				C2A872FB22A39556002ADE95 /* music2.mp3 */,
 			);
-			name = Audio;
-			path = "../Images/New Group";
+			path = music;
 			sourceTree = "<group>";
 		};
-		C24E525822A11ECD001132C6 /* assets */ = {
+		C2A8730022A395E0002ADE95 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				C22E82BD22A1EB2700BDDFD5 /* Audio */,
-				C24E527122A12D9F001132C6 /* Backdrops */,
-				C24E525A22A11EDD001132C6 /* Bedroom */,
-				C24E525B22A11EE3001132C6 /* Classroom */,
-				C24E525C22A11EE8001132C6 /* LivingRoom */,
-				C24E525D22A11EED001132C6 /* StudyRoom */,
+				C2A8733122A3A624002ADE95 /* mainmenubg.atlas */,
+				C2A8732B22A399F8002ADE95 /* ResultsBg.atlas */,
+				C2A8732922A398E1002ADE95 /* ScenarioBg.atlas */,
+				C2A8730522A396A5002ADE95 /* Bedroom */,
+				C2A8730622A396A6002ADE95 /* Classroom */,
+				C2A8730322A396A4002ADE95 /* LivingRoom */,
+				C2A8730422A396A5002ADE95 /* StudyRoom */,
 			);
-			path = assets;
+			path = Sprites;
 			sourceTree = "<group>";
 		};
-		C24E525A22A11EDD001132C6 /* Bedroom */ = {
+		C2A8730322A396A4002ADE95 /* LivingRoom */ = {
 			isa = PBXGroup;
 			children = (
-				C260EE5622A3268600AB86CA /* alarm.atlas */,
-				C2601BBB22A216D700093629 /* backpack.atlas */,
-				C22E829C22A1B6B100BDDFD5 /* phone.atlas */,
-			);
-			path = Bedroom;
-			sourceTree = "<group>";
-		};
-		C24E525B22A11EE3001132C6 /* Classroom */ = {
-			isa = PBXGroup;
-			children = (
-				C260EE6122A326BB00AB86CA /* blackboard.atlas */,
-				C260EE6222A326BB00AB86CA /* classroomdoor.atlas */,
-				C260EE6322A326BB00AB86CA /* teacher.atlas */,
-				C260EE6022A326BB00AB86CA /* textbook.atlas */,
-				C22E82A122A1B79200BDDFD5 /* pencilcase.atlas */,
-				C22E82A422A1B79300BDDFD5 /* snack.atlas */,
-			);
-			path = Classroom;
-			sourceTree = "<group>";
-		};
-		C24E525C22A11EE8001132C6 /* LivingRoom */ = {
-			isa = PBXGroup;
-			children = (
-				C260EE5822A3269E00AB86CA /* couch.atlas */,
-				C260EE5B22A3269E00AB86CA /* frontdoor.atlas */,
-				C260EE5922A3269E00AB86CA /* food.atlas */,
-				C260EE5A22A3269E00AB86CA /* Tvlivingroom.atlas */,
-				D6E15ADA22A2A48D002692FD /* basketball.atlas */,
+				C2A8731922A39785002ADE95 /* basketball.atlas */,
+				C2A8731A22A39785002ADE95 /* couch.atlas */,
+				C2A8731722A39784002ADE95 /* food.atlas */,
+				C2A8731822A39784002ADE95 /* frontdoor.atlas */,
+				C2A8731B22A39786002ADE95 /* Tvlivingroom.atlas */,
 			);
 			path = LivingRoom;
 			sourceTree = "<group>";
 		};
-		C24E525D22A11EED001132C6 /* StudyRoom */ = {
+		C2A8730422A396A5002ADE95 /* StudyRoom */ = {
 			isa = PBXGroup;
 			children = (
-				C260EE5422A3256900AB86CA /* tvbed.atlas */,
-				C260EE5222A3240200AB86CA /* bed.atlas */,
-				C22E82B522A1B7A400BDDFD5 /* laptop.atlas */,
+				C2A8732322A397E8002ADE95 /* bed.atlas */,
+				C2A8732122A397E7002ADE95 /* laptop.atlas */,
+				C2A8732222A397E8002ADE95 /* tvbed.atlas */,
 			);
 			path = StudyRoom;
 			sourceTree = "<group>";
 		};
-		C24E527122A12D9F001132C6 /* Backdrops */ = {
+		C2A8730522A396A5002ADE95 /* Bedroom */ = {
 			isa = PBXGroup;
 			children = (
-				C2ECB83022A36F700063F8D2 /* Studyroom.png */,
-				C2ECB82822A36DC70063F8D2 /* Bedroom.png */,
-				C2ECB82A22A36DC70063F8D2 /* Classroom.png */,
-				C2ECB82922A36DC70063F8D2 /* Livingroom.png */,
-				C22E82BB22A1D1E400BDDFD5 /* Resultsbg.atlas */,
-				C22E824D22A161A800BDDFD5 /* ScenarioBg.atlas */,
-				C24E527222A12DAE001132C6 /* MainMenuBg.atlas */,
+				C2A8730722A396E9002ADE95 /* alarm.atlas */,
+				C2A8730822A396EA002ADE95 /* backpack.atlas */,
+				C2A8730922A396EB002ADE95 /* phone.atlas */,
 			);
-			path = Backdrops;
+			path = Bedroom;
+			sourceTree = "<group>";
+		};
+		C2A8730622A396A6002ADE95 /* Classroom */ = {
+			isa = PBXGroup;
+			children = (
+				C2A8730E22A39732002ADE95 /* classroomdoor.atlas */,
+				C2A8730F22A39733002ADE95 /* pencilcase.atlas */,
+				C2A8730D22A39732002ADE95 /* snack.atlas */,
+				C2A8731022A39733002ADE95 /* teacher.atlas */,
+				C2A8731122A39734002ADE95 /* textbook.atlas */,
+			);
+			path = Classroom;
 			sourceTree = "<group>";
 		};
 		D6841A89229BDB2300815540 = {
@@ -235,7 +211,8 @@
 		D6841A94229BDB2400815540 /* project-just-another-day */ = {
 			isa = PBXGroup;
 			children = (
-				C24E525822A11ECD001132C6 /* assets */,
+				C2A8730022A395E0002ADE95 /* Sprites */,
+				C2A872FF22A395A9002ADE95 /* music */,
 				D6841AAD229BDB7100815540 /* Scenes */,
 				D6841A95229BDB2400815540 /* AppDelegate.swift */,
 				D6841A99229BDB2400815540 /* Actions.sks */,
@@ -336,45 +313,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2ECB82722A367AB0063F8D2 /* LaunchScreen.storyboard in Resources */,
-				C2ECB81E22A3679F0063F8D2 /* MainMenu.sks in Resources */,
-				C2ECB81F22A3679F0063F8D2 /* ScenarioMenu.sks in Resources */,
-				C2ECB82022A3679F0063F8D2 /* Prelude.sks in Resources */,
-				C2ECB82122A3679F0063F8D2 /* Morning.sks in Resources */,
-				C2ECB82222A3679F0063F8D2 /* Class.sks in Resources */,
-				C2ECB82322A3679F0063F8D2 /* Afternoon.sks in Resources */,
-				C2ECB82422A3679F0063F8D2 /* Night.sks in Resources */,
-				C2ECB82522A3679F0063F8D2 /* Result.sks in Resources */,
-				C2ECB82622A3679F0063F8D2 /* Actions.sks in Resources */,
-				C2ECB82C22A36DC80063F8D2 /* Bedroom.png in Resources */,
-				C2ECB83122A36F700063F8D2 /* Studyroom.png in Resources */,
-				C2ECB81D22A367570063F8D2 /* Main.storyboard in Resources */,
-				C2ECB81C22A3674A0063F8D2 /* digital-7.ttf in Resources */,
-				C2ECB82D22A36DC80063F8D2 /* Livingroom.png in Resources */,
-				C2ECB81B22A3673F0063F8D2 /* kindergarten.ttf in Resources */,
-				C2ECB80A22A3672A0063F8D2 /* alarm.atlas in Resources */,
-				C2ECB80B22A3672A0063F8D2 /* backpack.atlas in Resources */,
-				C2ECB80C22A3672A0063F8D2 /* phone.atlas in Resources */,
-				C2ECB80D22A3672A0063F8D2 /* blackboard.atlas in Resources */,
-				C2ECB80E22A3672A0063F8D2 /* classroomdoor.atlas in Resources */,
-				C2ECB80F22A3672A0063F8D2 /* teacher.atlas in Resources */,
-				C2ECB81022A3672A0063F8D2 /* textbook.atlas in Resources */,
-				C2ECB81122A3672A0063F8D2 /* pencilcase.atlas in Resources */,
-				C2ECB81222A3672A0063F8D2 /* snack.atlas in Resources */,
-				C2ECB81322A3672A0063F8D2 /* couch.atlas in Resources */,
-				C2ECB81422A3672A0063F8D2 /* frontdoor.atlas in Resources */,
-				C2ECB81522A3672A0063F8D2 /* food.atlas in Resources */,
-				C2ECB81622A3672A0063F8D2 /* Tvlivingroom.atlas in Resources */,
-				C2ECB81722A3672A0063F8D2 /* basketball.atlas in Resources */,
-				C2ECB81822A3672A0063F8D2 /* tvbed.atlas in Resources */,
-				C2ECB81922A3672A0063F8D2 /* bed.atlas in Resources */,
-				C2ECB81A22A3672A0063F8D2 /* laptop.atlas in Resources */,
-				C2ECB80722A367170063F8D2 /* Resultsbg.atlas in Resources */,
-				C2ECB80822A367170063F8D2 /* ScenarioBg.atlas in Resources */,
-				C2ECB80922A367170063F8D2 /* MainMenuBg.atlas in Resources */,
-				C2ECB82E22A36DC80063F8D2 /* Classroom.png in Resources */,
-				C2ECB7F122A365B90063F8D2 /* music1.mp3 in Resources */,
-				C2ECB7F222A365B90063F8D2 /* music2.mp3 in Resources */,
+				C2A8734922A3A6D3002ADE95 /* MainMenu.sks in Resources */,
+				C2A8734A22A3A6D3002ADE95 /* ScenarioMenu.sks in Resources */,
+				C2A8734B22A3A6D3002ADE95 /* Prelude.sks in Resources */,
+				C2A8734C22A3A6D3002ADE95 /* Morning.sks in Resources */,
+				C2A8734D22A3A6D3002ADE95 /* Class.sks in Resources */,
+				C2A8734E22A3A6D3002ADE95 /* Afternoon.sks in Resources */,
+				C2A8734F22A3A6D3002ADE95 /* Night.sks in Resources */,
+				C2A8735022A3A6D3002ADE95 /* Result.sks in Resources */,
+				C2A8735122A3A6D3002ADE95 /* Actions.sks in Resources */,
+				C2A8735222A3A6D3002ADE95 /* digital-7.ttf in Resources */,
+				C2A8735322A3A6D3002ADE95 /* kindergarten.ttf in Resources */,
+				C2A8735422A3A6D3002ADE95 /* Main.storyboard in Resources */,
+				C2A8735522A3A6D3002ADE95 /* Assets.xcassets in Resources */,
+				C2A8735622A3A6D3002ADE95 /* LaunchScreen.storyboard in Resources */,
+				C2A8733422A3A6BA002ADE95 /* mainmenubg.atlas in Resources */,
+				C2A8733522A3A6BA002ADE95 /* ResultsBg.atlas in Resources */,
+				C2A8733622A3A6BA002ADE95 /* ScenarioBg.atlas in Resources */,
+				C2A8733722A3A6BA002ADE95 /* alarm.atlas in Resources */,
+				C2A8733822A3A6BA002ADE95 /* backpack.atlas in Resources */,
+				C2A8733922A3A6BA002ADE95 /* phone.atlas in Resources */,
+				C2A8733A22A3A6BA002ADE95 /* classroomdoor.atlas in Resources */,
+				C2A8733B22A3A6BA002ADE95 /* pencilcase.atlas in Resources */,
+				C2A8733C22A3A6BA002ADE95 /* snack.atlas in Resources */,
+				C2A8733D22A3A6BA002ADE95 /* teacher.atlas in Resources */,
+				C2A8733E22A3A6BA002ADE95 /* textbook.atlas in Resources */,
+				C2A8733F22A3A6BA002ADE95 /* basketball.atlas in Resources */,
+				C2A8734022A3A6BA002ADE95 /* couch.atlas in Resources */,
+				C2A8734122A3A6BA002ADE95 /* food.atlas in Resources */,
+				C2A8734222A3A6BA002ADE95 /* frontdoor.atlas in Resources */,
+				C2A8734322A3A6BA002ADE95 /* Tvlivingroom.atlas in Resources */,
+				C2A8734422A3A6BA002ADE95 /* bed.atlas in Resources */,
+				C2A8734522A3A6BA002ADE95 /* laptop.atlas in Resources */,
+				C2A8734622A3A6BA002ADE95 /* tvbed.atlas in Resources */,
+				C2A8734722A3A6BA002ADE95 /* music1.mp3 in Resources */,
+				C2A8734822A3A6BA002ADE95 /* music2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ class MainMenu: SKScene {
     
     var startButton = SKLabelNode()
     var exitButton = SKLabelNode()
-    var mainmenuBg = SKSpriteNode()
+    var mainmenuBg: SKSpriteNode = SKSpriteNode()
     var mainemnuBgFrames: [SKTexture] = []
     
     public var backgroundFx: AVAudioPlayer?
@@ -24,14 +24,23 @@ class MainMenu: SKScene {
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
-        mainmenuBg = self.childNode(withName: "mainmenuBg") as! SKSpriteNode
+        mainmenuBg = self.childNode(withName: "mainmenubg") as! SKSpriteNode
         
         createBackdrop()
         animateBackdrop()
+        
+    /* if let mainMenuNode = self.childNode(withName: Interactable.MAINMENU) as? SKSpriteNode {
+            mainmenuBg = mainMenuNode
+            SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.MAINMENU, interactableFrames: &mainemnuBgFrames)
+            SpriteController.animateInteractable(interactable: mainmenuBg, interactableFrames: mainemnuBgFrames, timeInterval: 0.025)
+        }*/
     }
     
     override func sceneDidLoad() {
         playBackgroundMusic()
+        if let mainMenuNode = self.childNode(withName:  Interactable.MAINMENU) as? SKSpriteNode {
+            mainmenuBg = mainMenuNode
+        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
@@ -50,12 +59,12 @@ class MainMenu: SKScene {
     }
     
     func createBackdrop() {
-        let mainmenuAtlas = SKTextureAtlas(named: "MainMenuBg")
+        let mainmenuAtlas = SKTextureAtlas(named: "mainmenubg")
         var menuFrames: [SKTexture] = []
         
         let noOfFrames = mainmenuAtlas.textureNames.count
         for i in 1...noOfFrames {
-            let menuTextureNames = "menu\(i)"
+            let menuTextureNames = "mainmenubg\(i)"
             menuFrames.append(mainmenuAtlas.textureNamed(menuTextureNames))
         }
         mainemnuBgFrames = menuFrames

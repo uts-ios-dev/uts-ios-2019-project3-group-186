@@ -26,6 +26,12 @@ class ScenarioMenu: SKScene {
         
         createBackdrop()
         animateBackdrop()
+        
+        /* if let scenarioNode = self.childNode(withName: Interactable.SCENARIO) as? SKSpriteNode {
+         scenarioBg = scenarioNode
+         SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.SCENARIO, interactableFrames: &scenarioBgFrames)
+         SpriteController.animateInteractable(interactable: scenarioBg, interactableFrames: scenarioBgFrames, timeInterval: 0.025)
+         }*/
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

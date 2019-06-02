@@ -15,7 +15,14 @@ struct Background {
     static let STUDY_ROOM = "STUDYROOM"
 }
 
+struct Backdrops{
+    static let MAINMENU = "mainmenubg"
+    static let SCENARIO = "scenarioBg"
+}
+
 struct Interactable {
+    static let MAINMENU = "mainmenubg"
+    static let SCENARIO = "scenarioBg"
     //Morning
     static let BACKPACK = "backpack"
     static let MORNING_ALARM = "morningAlarm"
@@ -101,6 +108,11 @@ struct SpriteAtlas {
     static let BED = "bed"
     static let LAPTOP = "laptop"
     static let TV_BED = "tvbed"
+    
+    static let MAINMENU = "mainmenubg"
+    static let SCENARIO = "ScenarioBg"
+    static let RESULTS = "ResultsBg"
+
 }
 
 struct SceneNumber {
