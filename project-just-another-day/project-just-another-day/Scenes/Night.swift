@@ -78,7 +78,7 @@ class Night: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to go to sleep!"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 switchScene()
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
@@ -86,27 +86,27 @@ class Night: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to go on your laptop! +45 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_BACKPACK)
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to pack your bag for tomorrow! +20 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to Netflix and chill! +20 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case Interactable.NIGHT_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 7, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_TEXTBOOK)
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to revise from your textbook! +60 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             default:
                 break
             }

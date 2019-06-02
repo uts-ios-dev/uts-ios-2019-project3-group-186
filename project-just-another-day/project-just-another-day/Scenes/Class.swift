@@ -93,9 +93,9 @@ class Class: SKScene {
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.BLACKBOARD)
                 
                 actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to write down important notes from the blackboard! +100 mins"
+                actionLabel.text = "You've decided to copy exam notes from the blackboard! +100 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 
             case Interactable.CLASSROOM_DOOR:
                 game.updateTime(addMinutes: 35)
@@ -104,7 +104,7 @@ class Class: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to go outside for a toilet break! + 35 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 
             case Interactable.CLASSROOM_PHONE:
                 game.updateTime(addMinutes: 20)
@@ -113,7 +113,7 @@ class Class: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to play on your phone during class! +20 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 
             case Interactable.CLASSROOM_SNACKS:
                 game.updateTime(addMinutes: 25)
@@ -122,16 +122,16 @@ class Class: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to eat your snacks during class! +25 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 
             case Interactable.CLASSROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_TEXTBOOK)
                 
                 actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to read and make notes from your textbook! +25 mins"
+                actionLabel.text = "You've decided to read from your textbook! +25 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 // add points
             case Interactable.FRIEND:
                 game.updateTime(addMinutes: 100)
@@ -140,15 +140,15 @@ class Class: SKScene {
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to play Pokemon Go with your friend! +100 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case Interactable.TEACHER:
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.TEACHER)
                 
                 actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to ask the teacher for some exam tips! +100 mins"
+                actionLabel.text = "You've decided to ask the teacher for exam tips! +100 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 // add points
             default:
                 break

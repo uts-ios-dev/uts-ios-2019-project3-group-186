@@ -80,7 +80,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to pack your bag for school! +30 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -88,10 +88,11 @@ class Morning: SKScene { //7am?
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
+                
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to check your phone! +30 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
             case "snooze":
                 snoozeCounter = +1
                 game.updateTime(addMinutes: 25)
@@ -100,7 +101,7 @@ class Morning: SKScene { //7am?
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to snooze the alarm! +25 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 
             case "turnAlarmOff":
                 hideAlarmChoice(true)
@@ -108,12 +109,14 @@ class Morning: SKScene { //7am?
                 game.updateTime(addMinutes: 10)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
-                alarmOff = true
                 
                 actionLabel.alpha = 1.0
                 actionLabel.text = "You've decided to turn off the alarm! +10 mins"
                 actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 3))
+                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                
+                alarmOff = true
+          
                 
             default:
                 hideAlarmChoice(true)
