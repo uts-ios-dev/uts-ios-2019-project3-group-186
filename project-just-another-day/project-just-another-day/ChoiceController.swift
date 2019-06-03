@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SpriteKit
 
 class ChoiceController {
     
@@ -90,5 +90,12 @@ class ChoiceController {
     func setTimeRaw(time :Int) {
         currentTime = time
         actions = []
+    }
+    
+    func updateAction(_ labelNode: SKLabelNode, message: String) {
+        labelNode.alpha = 1.0
+        labelNode.text = message
+        labelNode.isHidden = false
+        labelNode.run(SKAction.fadeOut(withDuration: 4))
     }
 }

@@ -79,38 +79,23 @@ class Afternoon: SKScene {
             case Interactable.KITCHEN_TABLE:
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.KITCHEN_TABLE)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to grab some food! +20 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                game.updateAction(actionLabel, message: "You've decided to grab some food! +20 mins")
             case Interactable.LIVING_ROOM_DOOR:
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 2, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.LIVING_ROOM_DOOR)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to go on a Maccas run! +60 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                game.updateAction(actionLabel, message: "You've decided to go on a Maccas run! +60 mins")
             case Interactable.LIVING_ROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.LIVING_ROOM_TEXTBOOK)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to read your textbook! +60 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                game.updateAction(actionLabel, message: "You've decided to read your textbook! +60 mins")
             case Interactable.SOFA:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 2, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SOFA)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to take a nap on the sofa! +30 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                game.updateAction(actionLabel, message: "You've decided to take a nap on the sofa! +30 mins")
             case Interactable.SPORT_EQUIPMENT:
                 game.updateTime(addMinutes: 90)
                 game.addPoints(numberOfPoints: 4, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SPORT_EQUIPMENT)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to go and shoot some hoops! +90 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                game.updateAction(actionLabel, message: "You've decided to go and shoot some hoops! +90 mins")
             default:
                 break
             }
@@ -118,7 +103,6 @@ class Afternoon: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
         timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 1830 {
             print("Dinner Time~")

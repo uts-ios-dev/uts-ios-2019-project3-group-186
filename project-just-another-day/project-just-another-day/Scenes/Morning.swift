@@ -81,7 +81,8 @@ class Morning: SKScene { //7am?
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
-                updateAction("You've decided to pack your bag for school! +30 mins")
+                //updateAction("You've decided to pack your bag for school! +30 mins")
+                game.updateAction(actionLabel, message: "You've decided to pack your bag for school! +30 mins")
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -89,12 +90,14 @@ class Morning: SKScene { //7am?
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
-                updateAction("You've decided to check your phone! +30 mins")
+                //updateAction("You've decided to check your phone! +30 mins")
+                game.updateAction(actionLabel, message: "You've decided to check your phone! +30 mins")
             case "snooze":
                 snoozeCounter = snoozeCounter + 1
                 game.updateTime(addMinutes: 25)
                 hideAlarmChoice(true)
-                updateAction( "You've decided to snooze the alarm! +25 mins")
+                //updateAction( "You've decided to snooze the alarm! +25 mins")
+                game.updateAction(actionLabel, message: "You've decided to snooze the alarm! +25 mins")
             case "turnAlarmOff":
                 hideAlarmChoice(true)
                 //stop this from being interactable
@@ -102,7 +105,8 @@ class Morning: SKScene { //7am?
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
 
-                updateAction("You've decided to turn off the alarm! +10 mins")
+                //updateAction("You've decided to turn off the alarm! +10 mins")
+                game.updateAction(actionLabel, message: "You've decided to turn off the alarm! +10 mins")
                 alarmOff = true
           
             default:
@@ -122,26 +126,10 @@ class Morning: SKScene { //7am?
         timeLabel.text = game.getCurrentTime()
         if snoozeCounter >= 3 {
             game.addFeedback("You have overslept, then you decided to not study.")
-            switchScene(Scene.RESULT_SCENE)
+            SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
         }
         else if game.getTimeRaw() >= 830 {
-            switchScene(Scene.CLASS_SCENE)
+            SceneController.shared.switchScene(sceneName: Scene.CLASS_SCENE, sceneView: self)
         }
-    }
-    
-    func switchScene(_ sceneName: String) {
-        if let view = self.view {
-            if let Scene = SKScene(fileNamed: sceneName) {
-                Scene.scaleMode = .aspectFill
-                view.presentScene(Scene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
-    }
-    private func updateAction(_ actionText :String){
-        actionLabel.alpha = 1.0
-        actionLabel.text = actionText
-        actionLabel.isHidden = false
-        actionLabel.run(SKAction.fadeOut(withDuration: 4))
-    }
-    
+    }    
 }

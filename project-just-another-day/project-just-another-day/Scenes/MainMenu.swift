@@ -43,38 +43,13 @@ class MainMenu: SKScene {
             switch touchedLocation.name {
             case startButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                switchScene()
+                SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             case exitButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 exit(1)
             default:
                 break
             }
-        }
-    }
-    
-    func switchScene() {
-        if let view = self.view {
-            if let preludeScene = SKScene(fileNamed: Scene.SCENARIO_MENU) {
-                preludeScene.scaleMode = .aspectFill
-                view.presentScene(preludeScene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
-    
-    func playBackgroundMusic() {
-        let backgroundAudio = Bundle.main.url(forResource: "music1", withExtension: "mp3")
-        
-        do {
-            try backgroundFx = AVAudioPlayer(contentsOf: backgroundAudio!)
-            backgroundFx?.play()
-        }
-        catch {
-            print(error.localizedDescription)
         }
     }
 }
