@@ -172,7 +172,7 @@ class Class: SKScene {
             // TODO
             // tranisition to afterschool?
             //switchScene()
-            SceneController.shared.switchScene(sceneName: Scene.AFTERNOON_SCENE)
+            SceneController.shared.switchScene(sceneName: Scene.AFTERNOON_SCENE, sceneView: self)
             print("school finished")
         }
     }

@@ -50,26 +50,13 @@ class Result: SKScene {
             switch touchedLocation.name {
             case mainMenuButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                switchScene()
+                SceneController.shared.switchScene(sceneName: Scene.MAIN_MENU, sceneView: self)
             default:
                 break
             }
         }
     }
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
-    
-    func switchScene() {
-        if let view = self.view {
-            if let mainMenuScene = SKScene(fileNamed: Scene.MAIN_MENU) {
-                mainMenuScene.scaleMode = .aspectFill
-                view.presentScene(mainMenuScene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
-    }
-    
+
     func loadScores(){
         let score  = game.getScore()
         

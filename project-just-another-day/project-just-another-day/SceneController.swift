@@ -13,13 +13,12 @@ class SceneController: SKScene {
     
     static let shared = SceneController()
     
-    public func switchScene(sceneName: String) {
-        if let view = self.view {
+    public func switchScene(sceneName: String, sceneView: SKScene) {
+        if let view = sceneView.view {
             if let sceneToSwitch = SKScene(fileNamed: sceneName) {
                 sceneToSwitch.scaleMode = .aspectFill
                 view.presentScene(sceneToSwitch, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
-    
     }
 }

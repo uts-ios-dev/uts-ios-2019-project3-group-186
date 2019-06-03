@@ -27,38 +27,13 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
             switch touchedLocation.name {
             case startButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                //switchScene()
-                SceneController.shared.switchScene(sceneName: Scene.MORNING_SCENE)
+                SceneController.shared.switchScene(sceneName: Scene.MORNING_SCENE, sceneView: self)
             case backButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU)
+                SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             default:
                 break
             }
         }
     }
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
-    
-    
-    
-//    func switchScene() {
-//        if let view = self.view {
-//            if let morningScene = SKScene(fileNamed: Scene.MORNING_SCENE) {
-//                morningScene.scaleMode = .aspectFill
-//                view.presentScene(morningScene, transition: SKTransition.crossFade(withDuration: 0.5))
-//            }
-//        }
-//    }
-//
-//    func switchToScenarioMenuScene() {
-//        if let view = self.view {
-//            if let scenarioScene = SKScene(fileNamed: Scene.SCENARIO_MENU) {
-//                scenarioScene.scaleMode = .aspectFill
-//                view.presentScene(scenarioScene, transition: SKTransition.crossFade(withDuration: 0.5))
-//            }
-//        }
-//    }
 }

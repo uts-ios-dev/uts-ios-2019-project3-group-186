@@ -80,7 +80,7 @@ class Night: SKScene {
                 actionLabel.isHidden = false
                 actionLabel.run(SKAction.fadeOut(withDuration: 4))
                 //switchScene()
-                SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE)
+                SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
                 game.addPoints(numberOfPoints: 6, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
@@ -120,17 +120,7 @@ class Night: SKScene {
         if game.getTimeRaw() >= 2300 {
             print("Bed time~ ZZZzzz")
             //switchScene()
-            SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE)
+            SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE,sceneView: self)
         }
     }
-    
-//    func switchScene() {
-//        print("Score for Night Scene= " + String(game.getPoints(sceneNumber: SceneNumber.NIGHT)))
-//        if let view = self.view {
-//            if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
-//                resultScene.scaleMode = .aspectFill
-//                view.presentScene(resultScene, transition: SKTransition.crossFade(withDuration: 0.5))
-//            }
-//        }
-//    }
 }
