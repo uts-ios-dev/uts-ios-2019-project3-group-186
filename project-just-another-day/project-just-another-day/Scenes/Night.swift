@@ -34,10 +34,10 @@ class Night: SKScene {
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
-        watchYoutube = self.childNode(withName: "//watchYoutube") as! SKLabelNode
-        study = self.childNode(withName: "//study") as! SKLabelNode
-        nap = self.childNode(withName: "//nap") as! SKLabelNode
-        sleep = self.childNode(withName: "//sleep") as! SKLabelNode
+        watchYoutube = self.childNode(withName: Laptop.WATCH_YOUTUBE) as! SKLabelNode
+        study = self.childNode(withName: Laptop.STUDY) as! SKLabelNode
+        nap = self.childNode(withName: Bed.NAP) as! SKLabelNode
+        sleep = self.childNode(withName: Bed.SLEEP) as! SKLabelNode
         
         actionLabel.isHidden = true
         game.setTimeRaw(time: 1930)
@@ -72,12 +72,12 @@ class Night: SKScene {
             SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.0025)
         }
         
-        if let laptopChoiceNode = self.childNode(withName: "laptopChoice") as? SKSpriteNode {
+        if let laptopChoiceNode = self.childNode(withName: Laptop.CHOICE) as? SKSpriteNode {
             laptopPopUp = laptopChoiceNode
             
         }
         
-        if let bedChoiceNode = self.childNode(withName: "bedChoice") as? SKSpriteNode {
+        if let bedChoiceNode = self.childNode(withName: Bed.CHOICE) as? SKSpriteNode {
             bedPopUp = bedChoiceNode
         }
         game.hideChoice(laptopPopUp, watchYoutube, study, true)

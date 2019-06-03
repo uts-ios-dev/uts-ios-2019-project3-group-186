@@ -40,10 +40,10 @@ class Class: SKScene {
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
-        doorToilet = self.childNode(withName: "//toiletBreak") as! SKLabelNode
-        doorCanteen = self.childNode(withName: "//goCanteen") as! SKLabelNode
-        phoneYoutube = self.childNode(withName: "//watchYoutube") as! SKLabelNode
-        phoneCalculator = self.childNode(withName: "//onlineCalculator") as! SKLabelNode
+        doorToilet = self.childNode(withName: Door.TOILET_BREAK) as! SKLabelNode
+        doorCanteen = self.childNode(withName: Door.CANTEEN) as! SKLabelNode
+        phoneYoutube = self.childNode(withName: Phone.WATCH_YOUTUBE) as! SKLabelNode
+        phoneCalculator = self.childNode(withName: Phone.ONLINE_CALCULATOR) as! SKLabelNode
         actionLabel.isHidden = true
         game.setTimeRaw(time: 900)
      
@@ -90,10 +90,10 @@ class Class: SKScene {
              SpriteController.animateInteractable(interactable: teacher, interactableFrames: teacherFrames, timeInterval: 0.025)
         }
         
-        if let doorPopUpNode: SKSpriteNode = self.childNode(withName: "doorChoice") as? SKSpriteNode {
+        if let doorPopUpNode: SKSpriteNode = self.childNode(withName: Door.CHOICE) as? SKSpriteNode {
             doorPopUp = doorPopUpNode
         }
-        if let phonePopUpNode: SKSpriteNode = self.childNode(withName: "phoneChoice") as? SKSpriteNode {
+        if let phonePopUpNode: SKSpriteNode = self.childNode(withName: Phone.CHOICE) as? SKSpriteNode {
             phonePopUp = phonePopUpNode
         }
         game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
