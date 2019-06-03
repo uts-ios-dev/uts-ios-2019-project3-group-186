@@ -110,7 +110,6 @@ class Morning: SKScene { //7am?
                 snoozeCounter = snoozeCounter + 1
                 game.updateTime(addMinutes: 25)
                 hideAlarmChoice(true)
-                //updateAction( "You've decided to snooze the alarm! +25 mins")
                 game.updateAction(actionLabel, message: "You've decided to snooze the alarm! +25 mins")
             case "turnAlarmOff":
                 hideAlarmChoice(true)
@@ -118,8 +117,6 @@ class Morning: SKScene { //7am?
                 game.updateTime(addMinutes: 10)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
-
-                //updateAction("You've decided to turn off the alarm! +10 mins")
                 game.updateAction(actionLabel, message: "You've decided to turn off the alarm! +10 mins")
                 alarmOff = true
           
