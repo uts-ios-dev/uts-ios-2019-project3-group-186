@@ -107,4 +107,5 @@ class ChoiceController {
         firstChoice.isHidden = hide
         secondChoice.isHidden = hide
     }
+
 }
