@@ -23,15 +23,25 @@ class Night: SKScene {
     var actionLabel: SKLabelNode = SKLabelNode()
     var timeLabel: SKLabelNode = SKLabelNode()
     
+    var laptopPopUp: SKSpriteNode = SKSpriteNode()
+    var watchYoutube: SKLabelNode = SKLabelNode()
+    var study: SKLabelNode = SKLabelNode()
+    
+    var bedPopUp: SKSpriteNode = SKSpriteNode()
+    var nap: SKLabelNode = SKLabelNode()
+    var sleep: SKLabelNode = SKLabelNode()
+    
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
+        watchYoutube = self.childNode(withName: "//watchYoutube") as! SKLabelNode
+        study = self.childNode(withName: "//study") as! SKLabelNode
+        nap = self.childNode(withName: "//nap") as! SKLabelNode
+        sleep = self.childNode(withName: "//sleep") as! SKLabelNode
         
         actionLabel.isHidden = true
-
         game.setTimeRaw(time: 1930)
 
-        
         if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
             bed = bedNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BED, interactableFrames: &bedFrames)
@@ -62,6 +72,16 @@ class Night: SKScene {
             SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.0025)
         }
         
+        if let laptopChoiceNode = self.childNode(withName: "laptopChoice") as? SKSpriteNode {
+            laptopPopUp = laptopChoiceNode
+            
+        }
+        
+        if let bedChoiceNode = self.childNode(withName: "bedChoice") as? SKSpriteNode {
+            bedPopUp = bedChoiceNode
+        }
+        game.hideChoice(laptopPopUp, watchYoutube, study, true)
+        game.hideChoice(bedPopUp, nap, sleep, true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,14 +92,9 @@ class Night: SKScene {
             
             switch touchedLocation.name {
             case Interactable.BED:
-                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
-                print("Bed time~ ZZZzzz")
-                game.updateAction(actionLabel, message: "You've decided to go to sleep!")
-                SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
+                game.hideChoice(bedPopUp, nap, sleep, false)
             case Interactable.LAPTOP:
-                game.updateTime(addMinutes: 45)
-                game.addPoints(numberOfPoints: 6, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
-                game.updateAction(actionLabel, message: "You've decided to go on your laptop! +45 mins")
+                game.hideChoice(laptopPopUp, watchYoutube, study, false)
             case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_BACKPACK)
@@ -87,10 +102,19 @@ class Night: SKScene {
             case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
                 game.updateAction(actionLabel, message: "You've decided to Netflix and chill! +20 mins")
-            case Interactable.NIGHT_TEXTBOOK:
+            case "watchYoutube":
+                game.updateTime(addMinutes: 30)
+                game.updateAction(actionLabel, message: "You've decided to watch some Youtube videos! +30 mins")
+            case "study":
                 game.updateTime(addMinutes: 60)
-                game.addPoints(numberOfPoints: 7, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_TEXTBOOK)
-                game.updateAction(actionLabel, message: "You've decided to revise from your textbook! +60 mins")
+                game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
+                game.updateAction(actionLabel, message: "You've decided to study some more! +60 mins")
+            case "nap":
+                game.updateTime(addMinutes: 30)
+                game.updateAction(actionLabel, message: "You've decided to take a nap! +30 mins")
+            case "sleep":
+                game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
+                SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
             default:
                 break
             }
@@ -98,11 +122,9 @@ class Night: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
         timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 2300 {
             print("Bed time~ ZZZzzz")
-            //switchScene()
             SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE,sceneView: self)
         }
     }
