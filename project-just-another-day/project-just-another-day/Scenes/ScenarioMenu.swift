@@ -23,7 +23,7 @@ class ScenarioMenu: SKScene {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
         courtesy = self.childNode(withName: Scenario.COURTESY) as! SKLabelNode
         backButton = self.childNode(withName: Button.BACK_TO_MAIN_MENU_BUTTON) as! SKLabelNode
-        feedbackLabel = self.childNode(withName: "feedback" ) as! SKLabelNode
+        feedbackLabel = self.childNode(withName: Label.FEEDBACK ) as! SKLabelNode
         
         if let scenarioNode = self.childNode(withName: Interactable.SCENARIO) as? SKSpriteNode {
          scenarioBg = scenarioNode

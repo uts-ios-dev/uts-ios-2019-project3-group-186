@@ -24,13 +24,13 @@ class MainMenu: SKScene {
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
-     if let mainMenuNode = self.childNode(withName: Interactable.MAINMENU) as? SKSpriteNode {
+        if let mainMenuNode = self.childNode(withName: Interactable.MAINMENU) as? SKSpriteNode {
             mainmenuBg = mainMenuNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.MAINMENU, interactableFrames: &mainemnuBgFrames)
             SpriteController.animateInteractable(interactable: mainmenuBg, interactableFrames: mainemnuBgFrames, timeInterval: 0.025)
         }
     }
-
+    
     override func sceneDidLoad() {
         AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
     }
@@ -39,7 +39,7 @@ class MainMenu: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedLocation = self.atPoint(location)
-    
+            
             switch touchedLocation.name {
             case startButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)

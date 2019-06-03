@@ -63,6 +63,7 @@ struct Label {
     static let TIME = "//timeLabel"
     static let TITLE = "title"
     static let ACTION = "//actionNotifier"
+    static let FEEDBACK = "feedback"
 }
 
 struct Font {

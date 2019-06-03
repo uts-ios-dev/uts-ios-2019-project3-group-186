@@ -32,7 +32,7 @@ class Result: SKScene {
         resultLabel4 = self.childNode(withName: "resultScore4") as! SKLabelNode
         loadScores()
         
-        feedback = self.childNode(withName: "feedBackText") as! SKLabelNode
+        feedback = self.childNode(withName: Label.FEEDBACK) as! SKLabelNode
         feedback.text = game.getFeedback()
         
         if let resultNode = self.childNode(withName: Interactable.RESULTS) as? SKSpriteNode {
