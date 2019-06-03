@@ -18,8 +18,12 @@ class Morning: SKScene { //7am?
     var morningAlarmFrames: [SKTexture] = []
     
     var alarmPopUp: SKSpriteNode = SKSpriteNode()
-    var snooze: SKLabelNode = SKLabelNode()
+    var alarmSnooze: SKLabelNode = SKLabelNode()
     var turnAlarmOff: SKLabelNode = SKLabelNode()
+    
+    var phonePopUp: SKSpriteNode = SKSpriteNode()
+    var phoneSnapchat: SKLabelNode = SKLabelNode()
+    var phoneTimetable: SKLabelNode = SKLabelNode()
     
     var phone: SKSpriteNode = SKSpriteNode()
     var phoneFrames: [SKTexture] = []
@@ -32,12 +36,12 @@ class Morning: SKScene { //7am?
     
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
-        snooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
-        turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
+        alarmSnooze = self.childNode(withName: Alarm.SNOOZE) as! SKLabelNode
+        turnAlarmOff = self.childNode(withName: Alarm.TURN_ALARM_OFF) as! SKLabelNode
+        phoneSnapchat = self.childNode(withName: "//snapchat") as! SKLabelNode
+        phoneTimetable = self.childNode(withName: "//checkTimetable") as! SKLabelNode
         
-        snooze.isHidden = true
-        turnAlarmOff.isHidden = true
         backpack.isHidden = false
         actionLabel.isHidden = true
 
@@ -64,8 +68,14 @@ class Morning: SKScene { //7am?
 
         if let alarmPopUpNode: SKSpriteNode = self.childNode(withName: Alarm.CHOICE) as? SKSpriteNode {
             alarmPopUp = alarmPopUpNode
-            alarmPopUp.isHidden = true
+            
         }
+        hideAlarmChoice(true)
+        
+        if let phonePopUpNode: SKSpriteNode = self.childNode(withName: "phoneChoice") as? SKSpriteNode {
+            phonePopUp = phonePopUpNode
+        }
+        hidePhoneChoice(true)
     }
     
     override func sceneDidLoad() {
@@ -81,17 +91,21 @@ class Morning: SKScene { //7am?
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
-                //updateAction("You've decided to pack your bag for school! +30 mins")
                 game.updateAction(actionLabel, message: "You've decided to pack your bag for school! +30 mins")
             case Interactable.MORNING_ALARM:
-                if (!alarmOff) {
-                    hideAlarmChoice(false)
-                }
+                if (!alarmOff) { hideAlarmChoice(false) }
             case Interactable.MORNING_PHONE:
+                hidePhoneChoice(false)
+            case "snapchat":
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
-                //updateAction("You've decided to check your phone! +30 mins")
-                game.updateAction(actionLabel, message: "You've decided to check your phone! +30 mins")
+                game.updateAction(actionLabel, message: "You've decided to check Snapchat! +30 mins")
+                hidePhoneChoice(true)
+            case "checkTimetable":
+                game.updateTime(addMinutes: 30)
+                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
+                game.updateAction(actionLabel, message: "You've decided to check your timetable on your phone! +30 mins")
+                hidePhoneChoice(true)
             case "snooze":
                 snoozeCounter = snoozeCounter + 1
                 game.updateTime(addMinutes: 25)
@@ -111,6 +125,7 @@ class Morning: SKScene { //7am?
           
             default:
                 hideAlarmChoice(true)
+                hidePhoneChoice(true)
                 break
             }
         }
@@ -118,8 +133,13 @@ class Morning: SKScene { //7am?
     
     private func hideAlarmChoice(_ hide : Bool){
         alarmPopUp.isHidden = hide
-        snooze.isHidden = hide
+        alarmSnooze.isHidden = hide
         turnAlarmOff.isHidden = hide
+    }
+    private func hidePhoneChoice(_ hide : Bool ){
+        phonePopUp.isHidden = hide
+        phoneSnapchat.isHidden = hide
+        phoneTimetable.isHidden = hide
     }
     
     override func update(_ currentTime: TimeInterval) {
