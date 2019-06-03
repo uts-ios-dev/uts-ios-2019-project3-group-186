@@ -33,7 +33,6 @@ class MainMenu: SKScene {
 
     override func sceneDidLoad() {
         AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
-        //playBackgroundMusic()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,8 +42,10 @@ class MainMenu: SKScene {
     
             switch touchedLocation.name {
             case startButton.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchScene()
             case exitButton.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 exit(1)
             default:
                 break

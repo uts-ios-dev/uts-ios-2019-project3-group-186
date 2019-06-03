@@ -12,20 +12,6 @@ import AVFoundation
 class AudioController {
     static let shared = AudioController()
     public var backgroundAudioPlayer: AVAudioPlayer?
-
-//    static func playAudio(audioFX: AVAudioPlayer, audioName: String) {
-//        let audio = Bundle.main.url(forResource: audioName, withExtension: "mp3")
-//
-//        do {
-//            let audioFX = try AVAudioPlayer(contentsOf: audio!)
-//            audioFX.play()
-//            print("audio playing: \(audioName)")
-//        }
-//        catch {
-//            print(error.localizedDescription)
-//
-//        }
-//    }
     
     public func playAudio(audioName: String) {
         let audio = Bundle.main.url(forResource: audioName, withExtension: "mp3")

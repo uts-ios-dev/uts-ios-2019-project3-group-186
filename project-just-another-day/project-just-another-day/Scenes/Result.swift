@@ -45,6 +45,7 @@ class Result: SKScene {
             
             switch touchedLocation.name {
             case mainMenuButton.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchScene()
             default:
                 break

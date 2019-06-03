@@ -46,6 +46,7 @@
 		C2EBCB7422A3E4C200D9F276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841A9F229BDB2400815540 /* Main.storyboard */; };
 		C2EBCB7522A3E4C200D9F276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA2229BDB2600815540 /* Assets.xcassets */; };
 		C2EBCB7622A3E4C200D9F276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6841AA4229BDB2600815540 /* LaunchScreen.storyboard */; };
+		C2EBCB7822A495F700D9F276 /* ButtonTap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2EBCB7722A495F600D9F276 /* ButtonTap.mp3 */; };
 		D6841A96229BDB2400815540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A95229BDB2400815540 /* AppDelegate.swift */; };
 		D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841A9D229BDB2400815540 /* GameViewController.swift */; };
 		D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841AAE229BDBAD00815540 /* MainMenu.swift */; };
@@ -88,6 +89,7 @@
 		C2A8732222A397E8002ADE95 /* tvbed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = tvbed.atlas; sourceTree = "<group>"; };
 		C2A8732322A397E8002ADE95 /* bed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bed.atlas; sourceTree = "<group>"; };
 		C2A8733122A3A624002ADE95 /* mainmenubg.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = mainmenubg.atlas; sourceTree = "<group>"; };
+		C2EBCB7722A495F600D9F276 /* ButtonTap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonTap.mp3; sourceTree = "<group>"; };
 		D6841A92229BDB2400815540 /* project-just-another-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-just-another-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6841A95229BDB2400815540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6841A99229BDB2400815540 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		C2A872FF22A395A9002ADE95 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				C2EBCB7722A495F600D9F276 /* ButtonTap.mp3 */,
 				C2A872FC22A39557002ADE95 /* music1.mp3 */,
 				C2A872FB22A39556002ADE95 /* music2.mp3 */,
 			);
@@ -348,6 +351,7 @@
 				C2EBCB5F22A3E4A600D9F276 /* basketball.atlas in Resources */,
 				C2EBCB6022A3E4A600D9F276 /* couch.atlas in Resources */,
 				C2EBCB6122A3E4A600D9F276 /* food.atlas in Resources */,
+				C2EBCB7822A495F700D9F276 /* ButtonTap.mp3 in Resources */,
 				C2EBCB6222A3E4A600D9F276 /* frontdoor.atlas in Resources */,
 				C2EBCB6322A3E4A600D9F276 /* Tvlivingroom.atlas in Resources */,
 				C2EBCB6422A3E4A600D9F276 /* bed.atlas in Resources */,
