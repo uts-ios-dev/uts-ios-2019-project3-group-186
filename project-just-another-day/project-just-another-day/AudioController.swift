@@ -18,6 +18,8 @@ class AudioController {
         var error: NSError? = nil
         do {
             backgroundAudioPlayer = try AVAudioPlayer(contentsOf: audio!)
+            backgroundAudioPlayer?.numberOfLoops = -1
+            backgroundAudioPlayer?.prepareToPlay()
             backgroundAudioPlayer!.play()
             print("audio playing: \(audioName)")
         }
