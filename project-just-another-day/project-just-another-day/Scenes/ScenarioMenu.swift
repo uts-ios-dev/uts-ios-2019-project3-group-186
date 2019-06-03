@@ -39,38 +39,21 @@ class ScenarioMenu: SKScene {
             
             switch touchedLocation.name {
             case timeManagement.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 SceneController.shared.switchScene(sceneName: Scene.PRELUDE_SCENE, sceneView: self)
             case courtesy.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 feedbackLabel.text = "Coming soon"
                 feedbackLabel.alpha = 1
                 feedbackLabel.run(SKAction.sequence([SKAction.wait(forDuration: 1.0),
                                    SKAction.fadeOut(withDuration: 1)]))
             case backButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.MAIN_MENU, sceneView: self)
                 menuaudio.backgroundFx?.setVolume(0, fadeDuration: 5)
             default:
                 break
             }
         }
-    }
-    
-    func createBackdrop(){
-        let scenarioAtlas = SKTextureAtlas(named: "ScenarioBg")
-        var scenarioFrames: [SKTexture] = []
-        
-        let noOfFrames = scenarioAtlas.textureNames.count
-        for i in 1...noOfFrames {
-            let scenarioTextureNames = "scenario\(i)"
-            scenarioFrames.append(scenarioAtlas.textureNamed(scenarioTextureNames))
-        }
-        scenarioBgFrames = scenarioFrames
-    }
-    
-    func animateBackdrop() {
-        scenarioBg.run(SKAction.repeatForever(
-            SKAction.animate(with: scenarioBgFrames, timePerFrame: 0.05, resize: false, restore: true)))
     }
 }

@@ -26,10 +26,10 @@ class Prelude: SKScene { //Scene to introduce the user to the scenario / context
            
             switch touchedLocation.name {
             case startButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.MORNING_SCENE, sceneView: self)
             case backButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             default:
                 break

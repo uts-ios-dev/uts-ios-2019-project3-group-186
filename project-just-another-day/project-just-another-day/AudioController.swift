@@ -13,7 +13,7 @@ class AudioController {
     static let shared = AudioController()
     public var backgroundAudioPlayer: AVAudioPlayer?
     
-    public func playAudio(audioName: String) {
+    public func playAudio(audioName: String, waitForCompletion: Bool) {
         let audio = Bundle.main.url(forResource: audioName, withExtension: "mp3")
         var error: NSError? = nil
         do {
