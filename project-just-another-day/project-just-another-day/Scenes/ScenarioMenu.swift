@@ -17,11 +17,14 @@ class ScenarioMenu: SKScene {
     var scenarioBg = SKSpriteNode()
     var scenarioBgFrames: [SKTexture] = []
     var menuaudio = MainMenu()
+    var feedbackLabel = SKLabelNode()
     
     override func didMove(to view: SKView) {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
         courtesy = self.childNode(withName: Scenario.COURTESY) as! SKLabelNode
         backButton = self.childNode(withName: Button.BACK_TO_MAIN_MENU_BUTTON) as! SKLabelNode
+        feedbackLabel = self.childNode(withName: "feedback" ) as! SKLabelNode
+        feedbackLabel.isHidden = true
         
         if let scenarioNode = self.childNode(withName: Interactable.SCENARIO) as? SKSpriteNode {
          scenarioBg = scenarioNode
@@ -41,7 +44,8 @@ class ScenarioMenu: SKScene {
                 switchToTimeManagementScenario()
             case courtesy.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                switchToCourtesyScenario()
+                feedbackLabel.text = "Coming soon"
+                feedbackLabel.run(SKAction.fadeOut(withDuration: 4))
             case backButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchToMainMenuScene()
@@ -81,12 +85,6 @@ class ScenarioMenu: SKScene {
                 preludeScene.scaleMode = .aspectFill
                 view.presentScene(preludeScene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
-        }
-    }
-    
-    func switchToCourtesyScenario() {
-        if let view = self.view {
-            
         }
     }
     
