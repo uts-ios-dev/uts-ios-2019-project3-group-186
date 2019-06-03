@@ -28,9 +28,22 @@ class Afternoon: SKScene {
     var timeLabel: SKLabelNode = SKLabelNode()
     var actionLabel: SKLabelNode = SKLabelNode()
     
+    var doorPopUp: SKSpriteNode = SKSpriteNode()
+    var maccasRun: SKLabelNode = SKLabelNode()
+    var hangout: SKLabelNode = SKLabelNode()
+    
+    var sofaPopUp: SKSpriteNode = SKSpriteNode()
+    var nap: SKLabelNode = SKLabelNode()
+    var sleep: SKLabelNode = SKLabelNode()
+    
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
+        maccasRun = self.childNode(withName: "//maccasRun") as! SKLabelNode
+        hangout = self.childNode(withName: "//hangout") as! SKLabelNode
+        nap = self.childNode(withName: "//nap") as! SKLabelNode
+        sleep = self.childNode(withName: "//sleep") as! SKLabelNode
+        
         game.setTimeRaw(time: 1600)
         timeLabel.text = game.getCurrentTime()
         actionLabel.isHidden = true
@@ -67,6 +80,13 @@ class Afternoon: SKScene {
             textbook = textbookNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_TEXTBOOK, interactableFrames: &textbookFrames)
             SpriteController.animateInteractable(interactable: textbook, interactableFrames:textbookFrames, timeInterval: 0.0025)
+        }
+        
+        if let doorChoiceNode = self.childNode(withName: "//doorChoice") as? SKSpriteNode {
+            doorPopUp = doorChoiceNode
+        }
+        if let sofaChoiceNode = self.childNode(withName: "//sofaChoice") as? SKSpriteNode {
+            sofaPopUp = sofaChoiceNode
         }
         
     }
