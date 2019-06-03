@@ -16,11 +16,6 @@ struct Background {
     static let STUDY_ROOM = "STUDYROOM"
 }
 
-struct Backdrops{
-    static let MAINMENU = "mainmenubg"
-    static let SCENARIO = "scenarioBg"
-}
-
 struct Interactable {
     static let MAINMENU = "mainmenubg"
     static let SCENARIO = "scenario"
@@ -134,4 +129,5 @@ struct Audios {
 struct AudioNams {
     static let mainmenuNm = "music1"
     static let resultNm = "music2"
+    static let ButtonNm = "ButtonTap"
 }

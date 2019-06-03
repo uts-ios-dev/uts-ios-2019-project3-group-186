@@ -37,10 +37,13 @@ class ScenarioMenu: SKScene {
             
             switch touchedLocation.name {
             case timeManagement.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchToTimeManagementScenario()
             case courtesy.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchToCourtesyScenario()
             case backButton.name:
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 switchToMainMenuScene()
             default:
                 break
