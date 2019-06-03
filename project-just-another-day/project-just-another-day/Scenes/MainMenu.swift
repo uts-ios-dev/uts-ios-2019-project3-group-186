@@ -32,7 +32,7 @@ class MainMenu: SKScene {
     }
     
     override func sceneDidLoad() {
-        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
+        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm, waitForCompletion: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,10 +42,10 @@ class MainMenu: SKScene {
             
             switch touchedLocation.name {
             case startButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             case exitButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 exit(1)
             default:
                 break

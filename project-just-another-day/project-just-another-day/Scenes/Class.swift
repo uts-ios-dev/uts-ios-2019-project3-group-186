@@ -29,15 +29,24 @@ class Class: SKScene {
     var actionLabel: SKLabelNode = SKLabelNode()
     var hadLunch = false
     
+    var doorPopUp: SKSpriteNode = SKSpriteNode()
+    var doorToilet: SKLabelNode = SKLabelNode()
+    var doorCanteen: SKLabelNode = SKLabelNode()
+    
+    var phonePopUp: SKSpriteNode = SKSpriteNode()
+    var phoneYoutube: SKLabelNode = SKLabelNode()
+    var phoneCalculator: SKLabelNode = SKLabelNode()
+    
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
-        
+        doorToilet = self.childNode(withName: "//toiletBreak") as! SKLabelNode
+        doorCanteen = self.childNode(withName: "//goCanteen") as! SKLabelNode
+        phoneYoutube = self.childNode(withName: "//watchYoutube") as! SKLabelNode
+        phoneCalculator = self.childNode(withName: "//onlineCalculator") as! SKLabelNode
         actionLabel.isHidden = true
-        
         game.setTimeRaw(time: 900)
      
-
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BLACKBOARD, interactableFrames: &blackboardFrames)
@@ -50,13 +59,11 @@ class Class: SKScene {
              SpriteController.animateInteractable(interactable: classroomDoor, interactableFrames: classroomDoorFrames, timeInterval: 0.025)
         }
         
-        
         if let classroomPhoneNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_PHONE) as? SKSpriteNode {
             classroomPhone = classroomPhoneNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.PHONE, interactableFrames: &classroomPhoneFrames)
              SpriteController.animateInteractable(interactable: classroomPhone, interactableFrames: classroomPhoneFrames, timeInterval: 0.025)
         }
-        
         
         if let classroomSnacksNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_SNACKS) as? SKSpriteNode {
             classroomSnacks = classroomSnacksNode
@@ -82,6 +89,15 @@ class Class: SKScene {
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TEACHER, interactableFrames: &teacherFrames)
              SpriteController.animateInteractable(interactable: teacher, interactableFrames: teacherFrames, timeInterval: 0.025)
         }
+        
+        if let doorPopUpNode: SKSpriteNode = self.childNode(withName: "doorChoice") as? SKSpriteNode {
+            doorPopUp = doorPopUpNode
+        }
+        if let phonePopUpNode: SKSpriteNode = self.childNode(withName: "phoneChoice") as? SKSpriteNode {
+            phonePopUp = phonePopUpNode
+        }
+        game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
+        game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -95,13 +111,28 @@ class Class: SKScene {
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.BLACKBOARD)
                 game.updateAction(actionLabel, message: "You've decided to copy exam notes from the blackboard! +100 mins")
             case Interactable.CLASSROOM_DOOR:
+                game.hideChoice(doorPopUp, doorCanteen, doorToilet, false)
+            case "toiletBreak":
                 game.updateTime(addMinutes: 35)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_DOOR)
                   game.updateAction(actionLabel, message: "You've decided to go outside for a toilet break! + 35 mins")
+                game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
+            case "goCanteen":
+                game.updateTime(addMinutes: 35)
+                game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_DOOR)
+                game.updateAction(actionLabel, message: "You've decided to go outside for a snack break! + 35 mins")
+                game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
             case Interactable.CLASSROOM_PHONE:
+                game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, false)
+            case "watchYoutube":
                 game.updateTime(addMinutes: 20)
-                game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_PHONE)
-                game.updateAction(actionLabel, message: "You've decided to play on your phone during class! +20 mins")
+                game.updateAction(actionLabel, message: "You've decided to watch Youtube on your phone during class! +20 mins")
+                game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
+            case "onlineCalculator":
+                game.updateTime(addMinutes: 20)
+                game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_PHONE)
+                game.updateAction(actionLabel, message: "You've decided to do some calculations your phone during class! +20 mins")
+                game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
             case Interactable.CLASSROOM_SNACKS:
                 game.updateTime(addMinutes: 25)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_SNACKS)
@@ -121,6 +152,8 @@ class Class: SKScene {
                 
                 game.updateAction(actionLabel, message: "You've decided to ask the teacher for exam tips! +100 mins")
             default:
+                game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
+                game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
                 break
             }
         }
@@ -128,7 +161,6 @@ class Class: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
-
         if game.getTimeRaw() >= 1500 {
             SceneController.shared.switchScene(sceneName: Scene.AFTERNOON_SCENE, sceneView: self)
             print("school finished")
