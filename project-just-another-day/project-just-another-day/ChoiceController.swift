@@ -15,12 +15,14 @@ class ChoiceController {
     private var currentScore: Int
     private var actions: [String]
     private var points: [Int]
+    private var feedback: String
     
     init() {
         currentTime = 700
         currentScore = 0
         actions = []
         points = [0, 0, 0, 0]
+        feedback = ""
     }
     
     func addPoints(numberOfPoints: Int, sceneNumber: Int, object: String){
@@ -76,6 +78,12 @@ class ChoiceController {
     func getPoints(sceneNumber: Int)->Int {
         return points[sceneNumber]
     }
+    
+    func addFeedback(_ text: String) {
+        feedback.append(text)
+    }
+    
+    func getFeedback()->String { return feedback }
     
     func getTimeRaw()-> Int { return currentTime }
     

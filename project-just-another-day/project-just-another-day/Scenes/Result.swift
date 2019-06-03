@@ -20,6 +20,7 @@ class Result: SKScene {
     var resultLabel2 = SKLabelNode()
     var resultLabel3 = SKLabelNode()
     var resultLabel4 = SKLabelNode()
+    var feedback = SKLabelNode()
     
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
@@ -30,6 +31,9 @@ class Result: SKScene {
         resultLabel3 = self.childNode(withName: "resultScore3") as! SKLabelNode
         resultLabel4 = self.childNode(withName: "resultScore4") as! SKLabelNode
         loadScores()
+        
+        feedback = self.childNode(withName: "feedBackText") as! SKLabelNode
+        feedback.text = game.getFeedback()
         
         if let resultNode = self.childNode(withName: Interactable.RESULTS) as? SKSpriteNode {
             resultsBg = resultNode

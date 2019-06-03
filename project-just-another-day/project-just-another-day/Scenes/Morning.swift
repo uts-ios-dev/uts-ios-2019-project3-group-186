@@ -137,7 +137,10 @@ class Morning: SKScene { //7am?
     
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
-        if snoozeCounter >= 3 { endGame() }
+        if snoozeCounter >= 3 {
+            game.addFeedback("You have overslept, then you decided to not study.")
+            endGame()
+        }
         else if game.getTimeRaw() >= 830 {
             // do something
             // maybe something to say it is time for school?
@@ -155,7 +158,6 @@ class Morning: SKScene { //7am?
         }
     }
     func endGame(){
-        print("you have overslept")
         if let view = self.view {
             if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
                 resultScene.scaleMode = .aspectFill
