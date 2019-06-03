@@ -56,8 +56,6 @@
 		D6841ABB229BDC5E00815540 /* Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ABA229BDC5E00815540 /* Night.swift */; };
 		D6841ABD229BDC7200815540 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ABC229BDC7200815540 /* Result.swift */; };
 		D6841ACE229BEC2200815540 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6841ACD229BEC2200815540 /* Constants.swift */; };
-		D6BDC386229D673300373FBA /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC385229D673300373FBA /* Choice.swift */; };
-		D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */; };
 		D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC389229D78D800373FBA /* ScenarioMenu.swift */; };
 		D6E15AD922A2A3B2002692FD /* SpriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E15AD822A2A3B0002692FD /* SpriteController.swift */; };
 		D6E15B1A22A4E7C3002692FD /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E15B1922A4E7C3002692FD /* SceneController.swift */; };
@@ -114,8 +112,6 @@
 		D6841AC9229BE14F00815540 /* Night.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Night.sks; sourceTree = "<group>"; };
 		D6841ACB229BE16300815540 /* Result.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Result.sks; sourceTree = "<group>"; };
 		D6841ACD229BEC2200815540 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D6BDC385229D673300373FBA /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
-		D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceValue.swift; sourceTree = "<group>"; };
 		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
 		D6E15AD822A2A3B0002692FD /* SpriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteController.swift; sourceTree = "<group>"; };
@@ -237,8 +233,6 @@
 				D6E15AD822A2A3B0002692FD /* SpriteController.swift */,
 				C2535D3A22A3C62C0064B0B6 /* AudioController.swift */,
 				D6841ACD229BEC2200815540 /* Constants.swift */,
-				D6BDC385229D673300373FBA /* Choice.swift */,
-				D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */,
 				D6E15B1922A4E7C3002692FD /* SceneController.swift */,
 			);
 			path = "project-just-another-day";
@@ -375,13 +369,11 @@
 				D6841ACE229BEC2200815540 /* Constants.swift in Sources */,
 				D6E15B1A22A4E7C3002692FD /* SceneController.swift in Sources */,
 				D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */,
-				D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */,
 				D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */,
 				D6841ABB229BDC5E00815540 /* Night.swift in Sources */,
 				B9779046229E80BF00BD8E04 /* ChoiceController.swift in Sources */,
 				C2535D3B22A3C62C0064B0B6 /* AudioController.swift in Sources */,
 				D6841ABD229BDC7200815540 /* Result.swift in Sources */,
-				D6BDC386229D673300373FBA /* Choice.swift in Sources */,
 				D6841AB1229BDBD700815540 /* Prelude.swift in Sources */,
 				D6841AAF229BDBAD00815540 /* MainMenu.swift in Sources */,
 				D6841A9E229BDB2400815540 /* GameViewController.swift in Sources */,
