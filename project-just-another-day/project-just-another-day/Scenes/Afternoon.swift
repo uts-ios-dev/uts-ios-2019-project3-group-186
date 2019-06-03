@@ -122,17 +122,18 @@ class Afternoon: SKScene {
         timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 1830 {
             print("Dinner Time~")
-            switchScene()
+            //switchScene()
+            SceneController.shared.switchScene(sceneName: Scene.NIGHT_SCENE)
         }
     }
     
-    func switchScene() {
-        print("Score for afternoon Scene= " + String(game.getPoints(sceneNumber: SceneNumber.AFTERNOON)))
-        if let view = self.view {
-            if let nightScene = SKScene(fileNamed: Scene.NIGHT_SCENE) {
-                nightScene.scaleMode = .aspectFill
-                view.presentScene(nightScene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
-    }
+//    func switchScene() {
+//        print("Score for afternoon Scene= " + String(game.getPoints(sceneNumber: SceneNumber.AFTERNOON)))
+//        if let view = self.view {
+//            if let nightScene = SKScene(fileNamed: Scene.NIGHT_SCENE) {
+//                nightScene.scaleMode = .aspectFill
+//                view.presentScene(nightScene, transition: SKTransition.crossFade(withDuration: 0.5))
+//            }
+//        }
+//    }
 }

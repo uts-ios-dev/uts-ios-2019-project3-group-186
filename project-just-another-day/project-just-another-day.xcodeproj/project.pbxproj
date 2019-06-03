@@ -60,6 +60,7 @@
 		D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */; };
 		D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDC389229D78D800373FBA /* ScenarioMenu.swift */; };
 		D6E15AD922A2A3B2002692FD /* SpriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E15AD822A2A3B0002692FD /* SpriteController.swift */; };
+		D6E15B1A22A4E7C3002692FD /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E15B1922A4E7C3002692FD /* SceneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		D6BDC389229D78D800373FBA /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		D6BDC38B229D7C2600373FBA /* ScenarioMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ScenarioMenu.sks; sourceTree = "<group>"; };
 		D6E15AD822A2A3B0002692FD /* SpriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteController.swift; sourceTree = "<group>"; };
+		D6E15B1922A4E7C3002692FD /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				D6841ACD229BEC2200815540 /* Constants.swift */,
 				D6BDC385229D673300373FBA /* Choice.swift */,
 				D6BDC387229D6AFD00373FBA /* ChoiceValue.swift */,
+				D6E15B1922A4E7C3002692FD /* SceneController.swift */,
 			);
 			path = "project-just-another-day";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6841ACE229BEC2200815540 /* Constants.swift in Sources */,
+				D6E15B1A22A4E7C3002692FD /* SceneController.swift in Sources */,
 				D6BDC38A229D78D800373FBA /* ScenarioMenu.swift in Sources */,
 				D6BDC388229D6AFD00373FBA /* ChoiceValue.swift in Sources */,
 				D6841AB9229BDC4200815540 /* Afternoon.swift in Sources */,

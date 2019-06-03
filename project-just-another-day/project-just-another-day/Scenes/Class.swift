@@ -171,18 +171,19 @@ class Class: SKScene {
         if game.getTimeRaw() >= 1500 {
             // TODO
             // tranisition to afterschool?
-            switchScene()
+            //switchScene()
+            SceneController.shared.switchScene(sceneName: Scene.AFTERNOON_SCENE)
             print("school finished")
         }
     }
     
-    func switchScene() {
-        print("Score for Class Scene = " + String(game.getPoints(sceneNumber: SceneNumber.CLASS)))
-        if let view = self.view {
-            if let afternoonScene = SKScene(fileNamed: Scene.AFTERNOON_SCENE) {
-                afternoonScene.scaleMode = .aspectFill
-                view.presentScene(afternoonScene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
-    }
+//    func switchScene() {
+//        print("Score for Class Scene = " + String(game.getPoints(sceneNumber: SceneNumber.CLASS)))
+//        if let view = self.view {
+//            if let afternoonScene = SKScene(fileNamed: Scene.AFTERNOON_SCENE) {
+//                afternoonScene.scaleMode = .aspectFill
+//                view.presentScene(afternoonScene, transition: SKTransition.crossFade(withDuration: 0.5))
+//            }
+//        }
+//    }
 }
