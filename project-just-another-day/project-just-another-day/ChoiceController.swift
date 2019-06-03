@@ -24,7 +24,10 @@ class ChoiceController {
         points = [0, 0, 0, 0]
         feedback = ""
     }
-    
+    /*
+    This func adds the points to the scene and stores the objact interacted with
+    I
+    */
     func addPoints(numberOfPoints: Int, sceneNumber: Int, object: String){
         var pointsToAdd = numberOfPoints
         var  times = countAction(objectName: object)
