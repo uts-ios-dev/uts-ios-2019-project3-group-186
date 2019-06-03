@@ -81,10 +81,7 @@ class Morning: SKScene { //7am?
             case Interactable.BACKPACK:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to pack your bag for school! +30 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                updateAction("You've decided to pack your bag for school! +30 mins")
             case Interactable.MORNING_ALARM:
                 if (!alarmOff) {
                     hideAlarmChoice(false)
@@ -92,44 +89,30 @@ class Morning: SKScene { //7am?
             case Interactable.MORNING_PHONE:
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
-                
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to check your phone! +30 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
+                updateAction("You've decided to check your phone! +30 mins")
             case "snooze":
                 snoozeCounter = snoozeCounter + 1
                 game.updateTime(addMinutes: 25)
                 hideAlarmChoice(true)
-                
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to snooze the alarm! +25 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
-                
+                updateAction( "You've decided to snooze the alarm! +25 mins")
             case "turnAlarmOff":
                 hideAlarmChoice(true)
                 //stop this from being interactable
                 game.updateTime(addMinutes: 10)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
-                
-                actionLabel.alpha = 1.0
-                actionLabel.text = "You've decided to turn off the alarm! +10 mins"
-                actionLabel.isHidden = false
-                actionLabel.run(SKAction.fadeOut(withDuration: 4))
-                
+
+                updateAction("You've decided to turn off the alarm! +10 mins")
                 alarmOff = true
           
             default:
                 hideAlarmChoice(true)
                 break
             }
-            print(game.getPoints(sceneNumber: SceneNumber.MORNING))
         }
     }
     
-    func hideAlarmChoice(_ hide : Bool){
+    private func hideAlarmChoice(_ hide : Bool){
         alarmPopUp.isHidden = hide
         snooze.isHidden = hide
         turnAlarmOff.isHidden = hide
@@ -139,31 +122,26 @@ class Morning: SKScene { //7am?
         timeLabel.text = game.getCurrentTime()
         if snoozeCounter >= 3 {
             game.addFeedback("You have overslept, then you decided to not study.")
-            endGame()
+            switchScene(Scene.RESULT_SCENE)
         }
         else if game.getTimeRaw() >= 830 {
-            // do something
-            // maybe something to say it is time for school?
-            switchScene()
+            switchScene(Scene.CLASS_SCENE)
         }
     }
     
-    func switchScene() {
-        print("Score for Morning Scene= " + String(game.getPoints(sceneNumber: SceneNumber.MORNING)))
+    func switchScene(_ sceneName: String) {
         if let view = self.view {
-            if let schoolScene = SKScene(fileNamed: Scene.CLASS_SCENE) {
-                schoolScene.scaleMode = .aspectFill
-                view.presentScene(schoolScene, transition: SKTransition.crossFade(withDuration: 0.5))
+            if let Scene = SKScene(fileNamed: sceneName) {
+                Scene.scaleMode = .aspectFill
+                view.presentScene(Scene, transition: SKTransition.crossFade(withDuration: 0.5))
             }
         }
     }
-    func endGame(){
-        if let view = self.view {
-            if let resultScene = SKScene(fileNamed: Scene.RESULT_SCENE) {
-                resultScene.scaleMode = .aspectFill
-                view.presentScene(resultScene, transition: SKTransition.crossFade(withDuration: 0.5))
-            }
-        }
+    private func updateAction(_ actionText :String){
+        actionLabel.alpha = 1.0
+        actionLabel.text = actionText
+        actionLabel.isHidden = false
+        actionLabel.run(SKAction.fadeOut(withDuration: 4))
     }
     
 }
