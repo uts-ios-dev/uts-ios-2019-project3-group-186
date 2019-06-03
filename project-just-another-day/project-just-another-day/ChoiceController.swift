@@ -101,4 +101,10 @@ class ChoiceController {
         labelNode.isHidden = false
         labelNode.run(SKAction.fadeOut(withDuration: 4))
     }
+    
+    func hideChoice(_ popUp: SKSpriteNode, _ firstChoice: SKLabelNode, _ secondChoice: SKLabelNode, _ hide: Bool) {
+        popUp.isHidden = hide
+        firstChoice.isHidden = hide
+        secondChoice.isHidden = hide
+    }
 }
