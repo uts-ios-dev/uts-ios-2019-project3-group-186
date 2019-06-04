@@ -22,9 +22,10 @@ class Result: SKScene {
     var resultLabel4 = SKLabelNode()
     var feedback = SKLabelNode()
     
+    let mainmenufx = MainMenu()
+    
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
-        
         resultLabelTotal = self.childNode(withName: "resultScoreTotal") as! SKLabelNode
         resultLabel1 = self.childNode(withName: "resultScore1") as! SKLabelNode
         resultLabel2 = self.childNode(withName: "resultScore2") as! SKLabelNode
@@ -34,6 +35,8 @@ class Result: SKScene {
         
         feedback = self.childNode(withName: Label.FEEDBACK) as! SKLabelNode
         feedback.text = game.getFeedback()
+        
+        AudioController.shared.playAudio(audioName: AudioNams.resultNm)
         
         if let resultNode = self.childNode(withName: Interactable.RESULTS) as? SKSpriteNode {
             resultsBg = resultNode
@@ -49,7 +52,8 @@ class Result: SKScene {
             
             switch touchedLocation.name {
             case mainMenuButton.name:
-                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                AudioController.shared.backgroundAudioPlayer?.stop()
                 SceneController.shared.switchScene(sceneName: Scene.MAIN_MENU, sceneView: self)
             default:
                 break

@@ -122,11 +122,6 @@ struct SceneNumber {
     static let NIGHT = 3
 }
 
-struct Audios {
-    static let mainmenufx = AVAudioPlayer()
-    static let resultsfx = AVAudioPlayer()
-}
-
 struct AudioNams {
     static let mainmenuNm = "music1"
     static let resultNm = "music2"

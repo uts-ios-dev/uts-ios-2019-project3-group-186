@@ -39,7 +39,7 @@ class ScenarioMenu: SKScene {
             
             switch touchedLocation.name {
             case timeManagement.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 SceneController.shared.switchScene(sceneName: Scene.PRELUDE_SCENE, sceneView: self)
             case courtesy.name:
                 //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
@@ -50,7 +50,7 @@ class ScenarioMenu: SKScene {
             case backButton.name:
                 //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.MAIN_MENU, sceneView: self)
-                menuaudio.backgroundFx?.setVolume(0, fadeDuration: 5)
+                //menuaudio.backgroundFx?.setVolume(0, fadeDuration: 5)
             default:
                 break
             }

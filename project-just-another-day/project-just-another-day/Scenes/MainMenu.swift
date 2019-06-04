@@ -11,6 +11,7 @@ import SpriteKit
 import AVFoundation
 
 var game = ChoiceController()
+var backgroundFX: SKAudioNode!
 
 class MainMenu: SKScene {
     
@@ -18,8 +19,6 @@ class MainMenu: SKScene {
     var exitButton = SKLabelNode()
     var mainmenuBg: SKSpriteNode = SKSpriteNode()
     var mainemnuBgFrames: [SKTexture] = []
-    
-    public var backgroundFx: AVAudioPlayer?
     
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
@@ -29,10 +28,14 @@ class MainMenu: SKScene {
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.MAINMENU, interactableFrames: &mainemnuBgFrames)
             SpriteController.animateInteractable(interactable: mainmenuBg, interactableFrames: mainemnuBgFrames, timeInterval: 0.025)
         }
+        
+        //let action: SKAction = SKAction.playSoundFileNamed("music2.mp3", waitForCompletion: true)
+        //self.run(action, withKey:"backgroundFX")
     }
     
     override func sceneDidLoad() {
-        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm, waitForCompletion: true)
+        super.sceneDidLoad()
+        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,10 +45,10 @@ class MainMenu: SKScene {
             
             switch touchedLocation.name {
             case startButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             case exitButton.name:
-                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
+                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 exit(1)
             default:
                 break

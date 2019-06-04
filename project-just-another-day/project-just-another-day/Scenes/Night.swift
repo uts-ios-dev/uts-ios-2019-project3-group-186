@@ -75,6 +75,7 @@ class Night: SKScene {
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 print("Bed time~ ZZZzzz")
                 game.updateAction(actionLabel, message: "You've decided to go to sleep!")
+                AudioController.shared.backgroundAudioPlayer?.stop()
                 SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
             case Interactable.LAPTOP:
                 game.updateTime(addMinutes: 45)
@@ -102,7 +103,6 @@ class Night: SKScene {
         timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 2300 {
             print("Bed time~ ZZZzzz")
-            //switchScene()
             SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE,sceneView: self)
         }
     }
