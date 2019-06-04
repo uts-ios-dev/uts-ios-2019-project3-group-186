@@ -76,9 +76,42 @@ struct Scenario {
 }
 
 struct Alarm {
-    static let CHOICE = "morningAlarmChoice"
+    static let CHOICE = "//morningAlarmChoice"
     static let SNOOZE = "//snooze"
     static let TURN_ALARM_OFF = "//turnAlarmOff"
+}
+
+struct Phone {
+    static let CHOICE = "//phoneChoice"
+    static let CHECK_TIMETABLE = "//checkTimetable"
+    static let SNAPCHAT = "//snapchat"
+    static let WATCH_YOUTUBE = "//watchYoutube"
+    static let ONLINE_CALCULATOR = "//onlineCalculator"
+}
+struct Bed {
+    static let CHOICE = "//bedChoice"
+    static let NAP = "//nap"
+    static let SLEEP = "//sleep"
+}
+
+struct Sofa {
+    static let CHOICE = "//sofaChoice"
+    static let NAP = "//nap"
+    static let SLEEP = "//sleep"
+}
+
+struct Door {
+    static let CHOICE = "//doorChoice"
+    static let TOILET_BREAK = "//toiletBreak"
+    static let CANTEEN = "//goCanteen"
+    static let MACCAS_RUN = "//maccasRun"
+    static let HANGOUT = "//hangout"
+}
+
+struct Laptop {
+    static let CHOICE = "//laptopChoice"
+    static let WATCH_YOUTUBE = "//watchYoutube"
+    static let STUDY = "//study"
 }
 
 struct Button {
