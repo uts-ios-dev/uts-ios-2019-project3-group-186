@@ -9,16 +9,18 @@
 import Foundation
 import SpriteKit
 
-class Prelude: SKScene { //Scene to introduce the user to the scenario / context
+//This class handles the backend functionality of the Prelude Scene and the Prelude.sks file handles the visual elements of the scene
+class Prelude: SKScene {
     
     var startButton = SKLabelNode()
     var backButton = SKLabelNode()
     
+    //This function connects the functionality to the label nodes created from the Prelude.sks file
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.START_BUTTON) as! SKLabelNode
         backButton = self.childNode(withName: Button.BACK_TO_SCENARIO_MENU_BUTTON) as! SKLabelNode
     }
-    
+    //This function handles the touch events when the user touches on a node
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)

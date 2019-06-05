@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 
+//Constants file
 struct Background {
     static let MORNING_BEDROOM = "BEDROOM"
     static let CLASSROOM = "CLASSROOM"

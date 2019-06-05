@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+//This class handles the backend functionality of the Scenario Menu scene and the ScenarioMenu.sks file handles the visual elements of the scene
 class ScenarioMenu: SKScene {
    
     var timeManagement = SKLabelNode()
@@ -19,6 +20,7 @@ class ScenarioMenu: SKScene {
     var menuaudio = MainMenu()
     var feedbackLabel = SKLabelNode()
     
+    //This function connects the functionality to the label and sprite nodes created from the ScenarioMenu.sks file and sets up the animation for the background image
     override func didMove(to view: SKView) {
         timeManagement = self.childNode(withName: Scenario.TIME_MANAGEMENT) as! SKLabelNode
         courtesy = self.childNode(withName: Scenario.COURTESY) as! SKLabelNode
@@ -31,7 +33,8 @@ class ScenarioMenu: SKScene {
          SpriteController.animateInteractable(interactable: scenarioBg, interactableFrames: scenarioBgFrames, timeInterval: 0.025)
         }
     }
-    
+    //This function handles the touch events when the user touches on a node
+    //For extensibility, a new case would be added into this class and into the Scenario Menu for future scenarios such as Cyber-bullying and etc. As there are more scenarios, the list will utilise an UI scroll view  controller (under the UIKit framework) so the user can access to all the playable scenarios.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)

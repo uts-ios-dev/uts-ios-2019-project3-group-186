@@ -92,6 +92,7 @@ class ChoiceController {
         actions = []
     }
     
+    //This function updates the animation (fade) of the action/choice notifier label for all scenes
     func updateAction(_ labelNode: SKLabelNode, message: String) {
         labelNode.removeAllActions()
         labelNode.alpha = 1.0
@@ -104,6 +105,7 @@ class ChoiceController {
         labelNode.run(sequence)
     }
     
+    //This function controls the pop-up UI for interactables if they have a choice
     func hideChoice(_ popUp: SKSpriteNode, _ firstChoice: SKLabelNode, _ secondChoice: SKLabelNode, _ hide: Bool) {
         popUp.isHidden = hide
         firstChoice.isHidden = hide

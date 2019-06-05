@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+//This class handles the backend functionality of the Class Scene and the Class.sks file handles the visual elements of the scene
 class Class: SKScene {
     
     var blackboard: SKSpriteNode = SKSpriteNode()
@@ -37,6 +38,7 @@ class Class: SKScene {
     var phoneYoutube: SKLabelNode = SKLabelNode()
     var phoneCalculator: SKLabelNode = SKLabelNode()
     
+     //This function connects the functionality to the label and interactable nodes created from the Class.sks file and also setup the animation for the interactables
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
@@ -99,7 +101,7 @@ class Class: SKScene {
         game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
         game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
     }
-    
+    //This function handles the touch events when the user touches on an interactable
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -168,7 +170,7 @@ class Class: SKScene {
             }
         }
     }
-    
+    //This function runs every frame of the game and updates the scene time and checks if the time reaches the time limit switch to the Afternoon scene
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
         if game.getTimeRaw() >= 1500 {

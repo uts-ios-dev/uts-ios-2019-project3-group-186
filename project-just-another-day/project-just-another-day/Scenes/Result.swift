@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+//This class handles the backend functionality of the Result Scene and the Result.sks file handles the visual elements of the scene
 class Result: SKScene {
     
     var mainMenuButton = SKLabelNode()
@@ -21,7 +22,8 @@ class Result: SKScene {
     var resultLabel3 = SKLabelNode()
     var resultLabel4 = SKLabelNode()
     var feedback = SKLabelNode()
-        
+    
+    //This function connects the functionality to the label nodes created from the Result.sks file and also setup the animation for the background image as well as load up the resulting scores from the user's choices
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
         resultLabelTotal = self.childNode(withName: "resultScoreTotal") as! SKLabelNode
@@ -40,7 +42,7 @@ class Result: SKScene {
             SpriteController.animateInteractable(interactable: resultsBg, interactableFrames: resultBgFrames, timeInterval: 0.1)
         }
     }
-        
+    //This function handles the touch events when the user touches on an interactable
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)

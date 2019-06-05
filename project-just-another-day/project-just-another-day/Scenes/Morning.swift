@@ -9,7 +9,9 @@
 import Foundation
 import SpriteKit
 
-class Morning: SKScene { //7am?
+
+//This class handles the backend functionality of the Morning Scene and the Morning.sks file handles the visual elements of the scene
+class Morning: SKScene {
     
     var backpack: SKSpriteNode = SKSpriteNode()
     var backpackFrames: [SKTexture] = []
@@ -34,6 +36,7 @@ class Morning: SKScene { //7am?
     public var snoozeCounter = 0
     var alarmOff: Bool = false
     
+     //This function connects the functionality to the label and interactable nodes created from the Morning.sks file and also setup the animation for the interactables
     override func didMove(to view: SKView) {
         timeLabel = self.childNode(withName: Label.TIME) as! SKLabelNode
         actionLabel = self.childNode(withName: Label.ACTION) as! SKLabelNode
@@ -78,10 +81,7 @@ class Morning: SKScene { //7am?
         game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)
     }
     
-    override func sceneDidLoad() {
-        print("lod")
-    }
-    
+    //This function handles the touch events when the user touches on an interactable
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -133,7 +133,7 @@ class Morning: SKScene { //7am?
             }
         }
     }
-    
+    //This function runs every frame of the game and updates the scene time and checks if the user has selected the snooze option 3 times and instantly giving the user a zero score or else if the time reaches the time limit, switch to the classroom scene
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
         if snoozeCounter >= 3 {

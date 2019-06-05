@@ -13,6 +13,7 @@ import AVFoundation
 var game = ChoiceController()
 public var backgroundFX: SKAudioNode!
 
+//This class handles the backend functionality of the Main Menu Scene and the MainMenu.sks file handles the visual elements of the scene
 class MainMenu: SKScene {
     
     var startButton = SKLabelNode()
@@ -20,7 +21,7 @@ class MainMenu: SKScene {
     var mainmenuBg: SKSpriteNode = SKSpriteNode()
     var mainemnuBgFrames: [SKTexture] = []
     
-    
+    //This function connects all the nodes created from the MainMenu.sks file and also setup the animation of the background image
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
@@ -31,12 +32,13 @@ class MainMenu: SKScene {
         }
     }
     
+    //This function handles the background music audio after the scene loads
     override func sceneDidLoad() {
         super.sceneDidLoad()
         let action: SKAction = SKAction.playSoundFileNamed("music1.mp3", waitForCompletion: true)
         self.run(action, withKey:"backgroundFX")
     }
-    
+    //This function handles the touch events when the user touches on an interactable
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
