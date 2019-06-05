@@ -51,25 +51,25 @@ class Afternoon: SKScene {
         if let basketballNode = self.childNode(withName: Interactable.SPORT_EQUIPMENT) as? SKSpriteNode {
             basketball = basketballNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BASKETBALL, interactableFrames: &basketballFrames)
-            SpriteController.animateInteractable(interactable: basketball, interactableFrames:basketballFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: basketball, interactableFrames:basketballFrames, timeInterval: 0.25)
         }
         
         if let sofaNode = self.childNode(withName: Interactable.SOFA) as? SKSpriteNode {
             sofa = sofaNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.SOFA, interactableFrames: &sofaFrames)
-            SpriteController.animateInteractable(interactable: sofa, interactableFrames:sofaFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: sofa, interactableFrames:sofaFrames, timeInterval: 0.25)
         }
         
         if let foodNode = self.childNode(withName: Interactable.KITCHEN_TABLE) as? SKSpriteNode {
             food = foodNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FOOD, interactableFrames: &foodFrames)
-            SpriteController.animateInteractable(interactable: food, interactableFrames:foodFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: food, interactableFrames:foodFrames, timeInterval: 0.25)
         }
         
         if let frontDoorNode = self.childNode(withName: Interactable.LIVING_ROOM_DOOR) as? SKSpriteNode {
             frontDoor = frontDoorNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FRONT_DOOR, interactableFrames: &frontDoorFrames)
-            SpriteController.animateInteractable(interactable: frontDoor, interactableFrames:frontDoorFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: frontDoor, interactableFrames:frontDoorFrames, timeInterval: 0.25)
         }
         
         if let televisionNode = self.childNode(withName: Interactable.LIVING_ROOM_TEXTBOOK) as? SKSpriteNode {
@@ -79,7 +79,7 @@ class Afternoon: SKScene {
         if let textbookNode = self.childNode(withName: Interactable.LIVING_ROOM_TEXTBOOK) as? SKSpriteNode {
             textbook = textbookNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_TEXTBOOK, interactableFrames: &textbookFrames)
-            SpriteController.animateInteractable(interactable: textbook, interactableFrames:textbookFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: textbook, interactableFrames:textbookFrames, timeInterval: 0.25)
         }
         
         if let doorChoiceNode = self.childNode(withName: Door.CHOICE) as? SKSpriteNode {

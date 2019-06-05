@@ -50,44 +50,44 @@ class Class: SKScene {
         if let blackboardNode: SKSpriteNode = self.childNode(withName: Interactable.BLACKBOARD) as? SKSpriteNode {
             blackboard = blackboardNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BLACKBOARD, interactableFrames: &blackboardFrames)
-            SpriteController.animateInteractable(interactable: blackboard, interactableFrames: blackboardFrames, timeInterval: 0.025)
+            SpriteController.animateInteractable(interactable: blackboard, interactableFrames: blackboardFrames, timeInterval: 0.25)
         }
         
         if let classroomDoorNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_DOOR) as? SKSpriteNode {
             classroomDoor = classroomDoorNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_DOOR, interactableFrames: &classroomDoorFrames)
-             SpriteController.animateInteractable(interactable: classroomDoor, interactableFrames: classroomDoorFrames, timeInterval: 0.025)
+             SpriteController.animateInteractable(interactable: classroomDoor, interactableFrames: classroomDoorFrames, timeInterval: 0.25)
         }
         
         if let classroomPhoneNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_PHONE) as? SKSpriteNode {
             classroomPhone = classroomPhoneNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.PHONE, interactableFrames: &classroomPhoneFrames)
-             SpriteController.animateInteractable(interactable: classroomPhone, interactableFrames: classroomPhoneFrames, timeInterval: 0.025)
+             SpriteController.animateInteractable(interactable: classroomPhone, interactableFrames: classroomPhoneFrames, timeInterval: 0.25)
         }
         
         if let classroomSnacksNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_SNACKS) as? SKSpriteNode {
             classroomSnacks = classroomSnacksNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_SNACKS, interactableFrames: &classroomSnacksFrames)
-             SpriteController.animateInteractable(interactable: classroomSnacks, interactableFrames: classroomSnacksFrames, timeInterval: 0.025)
+             SpriteController.animateInteractable(interactable: classroomSnacks, interactableFrames: classroomSnacksFrames, timeInterval: 0.25)
         }
         
         
         if let classroomTextbookNode: SKSpriteNode = self.childNode(withName: Interactable.CLASSROOM_TEXTBOOK) as? SKSpriteNode {
             classroomTextbook = classroomTextbookNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.CLASSROOM_TEXTBOOK, interactableFrames: &classroomTextbookFrames)
-            SpriteController.animateInteractable(interactable: classroomTextbook, interactableFrames: classroomTextbookFrames, timeInterval: 0.025)
+            SpriteController.animateInteractable(interactable: classroomTextbook, interactableFrames: classroomTextbookFrames, timeInterval: 0.25)
         }
         
         if let friendNode: SKSpriteNode = self.childNode(withName: Interactable.FRIEND) as? SKSpriteNode {
             friend = friendNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.FRIEND, interactableFrames: &friendFrames)
-             SpriteController.animateInteractable(interactable: friend, interactableFrames: friendFrames, timeInterval: 0.025)
+             SpriteController.animateInteractable(interactable: friend, interactableFrames: friendFrames, timeInterval: 0.25)
         }
         
         if let teacherNode: SKSpriteNode = self.childNode(withName: Interactable.TEACHER) as? SKSpriteNode {
             teacher = teacherNode
              SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TEACHER, interactableFrames: &teacherFrames)
-             SpriteController.animateInteractable(interactable: teacher, interactableFrames: teacherFrames, timeInterval: 0.025)
+             SpriteController.animateInteractable(interactable: teacher, interactableFrames: teacherFrames, timeInterval: 0.25)
         }
         
         if let doorPopUpNode: SKSpriteNode = self.childNode(withName: Door.CHOICE) as? SKSpriteNode {

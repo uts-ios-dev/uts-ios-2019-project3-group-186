@@ -65,6 +65,7 @@ class Result: SKScene {
         resultLabel4.text = "Night Scene = " + String(score[SceneNumber.NIGHT]) + "/30"
         
         let totalScore = score[SceneNumber.MORNING] + score[SceneNumber.CLASS] + score[SceneNumber.AFTERNOON] + score[SceneNumber.NIGHT]
+
         resultLabelTotal.text = ("Score = " + String(totalScore) + "/ 100")
         
         

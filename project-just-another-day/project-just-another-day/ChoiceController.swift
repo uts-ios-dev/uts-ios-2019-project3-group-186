@@ -24,10 +24,7 @@ class ChoiceController {
         points = [0, 0, 0, 0]
         feedback = ""
     }
-    /*
-    This func adds the points to the scene and stores the objact interacted with
-    I
-    */
+
     func addPoints(numberOfPoints: Int, sceneNumber: Int, object: String){
         var pointsToAdd = numberOfPoints
         var  times = countAction(objectName: object)
@@ -100,7 +97,8 @@ class ChoiceController {
         labelNode.alpha = 1.0
         labelNode.text = message
         labelNode.isHidden = false
-        let wait = SKAction.wait(forDuration: 2)
+        labelNode.fontSize = 50
+        let wait = SKAction.wait(forDuration: 3)
         let fade = SKAction.fadeOut(withDuration: 3)
         let sequence = SKAction.sequence([wait, fade])
         labelNode.run(sequence)
@@ -111,5 +109,4 @@ class ChoiceController {
         firstChoice.isHidden = hide
         secondChoice.isHidden = hide
     }
-
 }

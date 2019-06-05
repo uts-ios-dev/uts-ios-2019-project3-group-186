@@ -17,7 +17,7 @@ class SceneController: SKScene {
         if let view = sceneView.view {
             if let sceneToSwitch = SKScene(fileNamed: sceneName) {
                 sceneToSwitch.scaleMode = .aspectFill
-                view.presentScene(sceneToSwitch, transition: SKTransition.crossFade(withDuration: 0.5))
+                view.presentScene(sceneToSwitch, transition: SKTransition.crossFade(withDuration: 0.8))
             }
         }
     }

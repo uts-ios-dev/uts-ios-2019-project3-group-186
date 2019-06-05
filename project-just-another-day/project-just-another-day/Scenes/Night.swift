@@ -45,31 +45,31 @@ class Night: SKScene {
         if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
             bed = bedNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BED, interactableFrames: &bedFrames)
-            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.25)
         }
         
         if let laptopNode = self.childNode(withName: Interactable.LAPTOP) as? SKSpriteNode {
             laptop = laptopNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.LAPTOP, interactableFrames: &laptopFrames)
-            SpriteController.animateInteractable(interactable: laptop, interactableFrames:laptopFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: laptop, interactableFrames:laptopFrames, timeInterval: 0.25)
         }
         
         if let backpackNode = self.childNode(withName: Interactable.NIGHT_BACKPACK) as? SKSpriteNode {
             backpack = backpackNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BACKPACK, interactableFrames: &backpackFrames)
-            SpriteController.animateInteractable(interactable: backpack, interactableFrames:backpackFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: backpack, interactableFrames:backpackFrames, timeInterval: 0.25)
         }
         
         if let bedNode = self.childNode(withName: Interactable.BED) as? SKSpriteNode {
             bed = bedNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.BED, interactableFrames: &bedFrames)
-            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: bed, interactableFrames:bedFrames, timeInterval: 0.25)
         }
         
         if let televisionNode = self.childNode(withName: Interactable.NIGHT_TELEVISION) as? SKSpriteNode {
             television = televisionNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.TV_BED, interactableFrames: &televisionFrames)
-            SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.0025)
+            SpriteController.animateInteractable(interactable: television, interactableFrames:televisionFrames, timeInterval: 0.25)
         }
         
         if let laptopChoiceNode = self.childNode(withName: Laptop.CHOICE) as? SKSpriteNode {
@@ -114,21 +114,26 @@ class Night: SKScene {
                 game.updateTime(addMinutes: 30)
                 game.updateAction(actionLabel, message: "You've decided to watch some Youtube videos! +30 mins")
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                game.hideChoice(laptopPopUp, watchYoutube, study, true)
             case "study":
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
                 game.updateAction(actionLabel, message: "You've decided to study some more! +60 mins")
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                game.hideChoice(laptopPopUp, watchYoutube, study, true)
             case "nap":
                 game.updateTime(addMinutes: 30)
                 game.updateAction(actionLabel, message: "You've decided to take a nap! +30 mins")
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                game.hideChoice(bedPopUp, nap, sleep, true)
             case "sleep":
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                game.hideChoice(bedPopUp, nap, sleep, true)
             default:
-                break
+                game.hideChoice(laptopPopUp, watchYoutube, study, true)
+                game.hideChoice(bedPopUp, nap, sleep, true)
             }
         }
     }
