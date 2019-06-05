@@ -40,11 +40,7 @@ class Result: SKScene {
             SpriteController.animateInteractable(interactable: resultsBg, interactableFrames: resultBgFrames, timeInterval: 0.1)
         }
     }
-    
-    override func sceneDidLoad() {
-        AudioController.shared.playAudio(audioName: AudioNams.resultNm)
-    }
-    
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
@@ -53,7 +49,6 @@ class Result: SKScene {
             switch touchedLocation.name {
             case mainMenuButton.name:
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
-                AudioController.shared.backgroundAudioPlayer?.stop()
                 SceneController.shared.switchScene(sceneName: Scene.MAIN_MENU, sceneView: self)
             default:
                 break

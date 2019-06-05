@@ -24,11 +24,6 @@ class GameViewController: UIViewController {
                 view.presentScene(mainMenuScene)
                 
                 view.ignoresSiblingOrder = true
-                // not too sure if you need this
-                //^yes it helps with the performance side of things
-                //but the bottom 2 no for the final product
-                view.showsFPS = true
-                view.showsNodeCount = true
             }
         }
     }

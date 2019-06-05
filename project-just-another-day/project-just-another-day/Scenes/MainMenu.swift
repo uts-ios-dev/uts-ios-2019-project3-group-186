@@ -20,6 +20,7 @@ class MainMenu: SKScene {
     var mainmenuBg: SKSpriteNode = SKSpriteNode()
     var mainemnuBgFrames: [SKTexture] = []
     
+    
     override func didMove(to view: SKView) {
         startButton = self.childNode(withName: Button.MENU_START_BUTTON) as! SKLabelNode
         exitButton = self.childNode(withName: Button.MENU_EXIT_BUTTON) as! SKLabelNode
