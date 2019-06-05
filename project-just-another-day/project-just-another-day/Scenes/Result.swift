@@ -44,8 +44,7 @@ class Result: SKScene {
     }
     
     override func sceneDidLoad() {
-        self.run(SKAction.stop(), withKey: "<#T##String#>")
-        AudioController.shared.backgroundAudioPlayer?.stop()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

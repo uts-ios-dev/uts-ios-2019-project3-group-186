@@ -99,7 +99,10 @@ class ChoiceController {
         labelNode.alpha = 1.0
         labelNode.text = message
         labelNode.isHidden = false
-        labelNode.run(SKAction.fadeOut(withDuration: 4))
+        let wait = SKAction.wait(forDuration: 2)
+        let fade = SKAction.fadeOut(withDuration: 3)
+        let sequence = SKAction.sequence([wait, fade])
+        labelNode.run(sequence)
     }
     
     func hideChoice(_ popUp: SKSpriteNode, _ firstChoice: SKLabelNode, _ secondChoice: SKLabelNode, _ hide: Bool) {
