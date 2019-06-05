@@ -5,7 +5,7 @@ ________________________________________________________________________________
 
 Game made by:
 - Alex Au - 12609703
-- Ling Lau (Yuen) - 
+- Yuen ling lau - 98126079
 - Natassja Sundara - 12569036
 
 ## Overview
@@ -42,7 +42,7 @@ Each time you interact with an object, time will pass based on the time you spen
 You will transition to a new part of your day as time passes. Continue to play and see the impact of your actions.
 
 ### Results ### 
-6. You will be welcomed with the 'Results' displaying how well you went in each scene, through a background scoring system that was running during gameplay. This will showcase how your decisions can impact how well you will do per scenario. Our extensibility for the game in results is elaborated in our **comments**.
+6. You will be welcomed with the 'Results' displaying how well you went in each scene, through a background scoring system that was running during gameplay. This will showcase how your decisions can impact how well you will do per scenario. Our extensibility for the game for our results and scenario is elaborated in our **comments**.
 
 Thanks!
 
