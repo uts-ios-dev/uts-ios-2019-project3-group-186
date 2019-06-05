@@ -26,7 +26,7 @@ class ChoiceController {
         feedback = ""
     }
 
-    //This function handles adding the points to each specific choice interaction
+    //This function handles adding the points to each specific choice interaction and adjust the points
     func addPoints(numberOfPoints: Int, sceneNumber: Int, object: String){
         var pointsToAdd = numberOfPoints
         var  times = countAction(objectName: object)
@@ -114,7 +114,7 @@ class ChoiceController {
         labelNode.run(sequence)
     }
     
-    //This function controls the pop-up UI for interactables if they have a choice
+    //This function hides and unhides the pop-up UI for interactables if they have a choice
     func hideChoice(_ popUp: SKSpriteNode, _ firstChoice: SKLabelNode, _ secondChoice: SKLabelNode, _ hide: Bool) {
         popUp.isHidden = hide
         firstChoice.isHidden = hide

@@ -179,5 +179,4 @@ class Class: SKScene {
             print("school finished")
         }
     }
-
 }

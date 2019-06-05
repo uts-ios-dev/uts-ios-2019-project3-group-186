@@ -88,6 +88,7 @@ class Afternoon: SKScene {
         if let doorChoiceNode = self.childNode(withName: Door.CHOICE) as? SKSpriteNode {
             doorPopUp = doorChoiceNode
         }
+        
         if let sofaChoiceNode = self.childNode(withName: Sofa.CHOICE) as? SKSpriteNode {
             sofaPopUp = sofaChoiceNode
         }

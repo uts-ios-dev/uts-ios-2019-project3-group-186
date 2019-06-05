@@ -77,7 +77,6 @@ class Night: SKScene {
         
         if let laptopChoiceNode = self.childNode(withName: Laptop.CHOICE) as? SKSpriteNode {
             laptopPopUp = laptopChoiceNode
-            
         }
         
         if let bedChoiceNode = self.childNode(withName: Bed.CHOICE) as? SKSpriteNode {
