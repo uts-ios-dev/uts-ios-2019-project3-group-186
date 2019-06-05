@@ -102,34 +102,43 @@ class Afternoon: SKScene {
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.KITCHEN_TABLE)
                 game.updateAction(actionLabel, message: "You've decided to grab some food! +20 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.LIVING_ROOM_DOOR:
                 game.hideChoice(doorPopUp, maccasRun, hangout, false)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.LIVING_ROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.LIVING_ROOM_TEXTBOOK)
                 game.updateAction(actionLabel, message: "You've decided to read your textbook! +60 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.SOFA:
                  game.hideChoice(sofaPopUp, nap, sleep, false)
+                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.SPORT_EQUIPMENT:
                 game.updateTime(addMinutes: 90)
                 game.addPoints(numberOfPoints: 4, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SPORT_EQUIPMENT)
                 game.updateAction(actionLabel, message: "You've decided to go and shoot some hoops! +90 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "maccasRun":
                 game.updateTime(addMinutes: 60)
                 game.updateAction(actionLabel, message: "You've decided to go for a Maccas run! +60 mins")
                 game.hideChoice(doorPopUp, maccasRun, hangout, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "hangout":
                 game.updateTime(addMinutes: 60)
                 game.updateAction(actionLabel, message: "You've decided to hangout with your friends! +60 mins")
                 game.hideChoice(doorPopUp, maccasRun, hangout, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "nap":
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 2, sceneNumber: SceneNumber.AFTERNOON, object: Interactable.SOFA)
                 game.updateAction(actionLabel, message: "You've decided to take a nap! +30 mins")
                 game.hideChoice(sofaPopUp, nap, sleep, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "sleep":
                 SceneController.shared.switchScene(sceneName: Scene.NIGHT_SCENE, sceneView: self)
                 game.hideChoice(sofaPopUp, nap, sleep, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             default:
                 game.hideChoice(doorPopUp, maccasRun, hangout, true)
                 game.hideChoice(sofaPopUp, nap, sleep, true)

@@ -110,50 +110,60 @@ class Class: SKScene {
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.BLACKBOARD)
                 game.updateAction(actionLabel, message: "You've decided to copy exam notes from the blackboard! +100 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.CLASSROOM_DOOR:
                 game.hideChoice(doorPopUp, doorCanteen, doorToilet, false)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "toiletBreak":
                 game.updateTime(addMinutes: 35)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_DOOR)
                   game.updateAction(actionLabel, message: "You've decided to go outside for a toilet break! + 35 mins")
                 game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "goCanteen":
                 game.updateTime(addMinutes: 35)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_DOOR)
                 game.updateAction(actionLabel, message: "You've decided to go outside for a snack break! + 35 mins")
                 game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.CLASSROOM_PHONE:
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, false)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "watchYoutube":
                 game.updateTime(addMinutes: 20)
                 game.updateAction(actionLabel, message: "You've decided to watch Youtube on your phone during class! +20 mins")
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "onlineCalculator":
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_PHONE)
                 game.updateAction(actionLabel, message: "You've decided to do some calculations your phone during class! +20 mins")
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.CLASSROOM_SNACKS:
                 game.updateTime(addMinutes: 25)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_SNACKS)
                 game.updateAction(actionLabel, message: "You've decided to eat your snacks during class! +25 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.CLASSROOM_TEXTBOOK:
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_TEXTBOOK)
                 game.updateAction(actionLabel, message: "You've decided to read from your textbook! +25 mins")
-                
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.FRIEND:
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.CLASS, object: Interactable.FRIEND)
                 game.updateAction(actionLabel, message: "You've decided to play Pokemon Go with your friend! +100 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.TEACHER:
                 game.updateTime(addMinutes: 100)
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.CLASS, object: Interactable.TEACHER)
-                
                 game.updateAction(actionLabel, message: "You've decided to ask the teacher for exam tips! +100 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             default:
                 game.hideChoice(doorPopUp, doorCanteen, doorToilet, true)
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 break
             }
         }

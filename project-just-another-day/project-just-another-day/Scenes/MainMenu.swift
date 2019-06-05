@@ -28,14 +28,11 @@ class MainMenu: SKScene {
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.MAINMENU, interactableFrames: &mainemnuBgFrames)
             SpriteController.animateInteractable(interactable: mainmenuBg, interactableFrames: mainemnuBgFrames, timeInterval: 0.025)
         }
-        
-        //let action: SKAction = SKAction.playSoundFileNamed("music2.mp3", waitForCompletion: true)
-        //self.run(action, withKey:"backgroundFX")
     }
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        AudioController.shared.playAudio(audioName: AudioNams.mainmenuNm)
+        self.run(SKAction.playSoundFileNamed("music1.mp3", waitForCompletion: false))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,10 +42,9 @@ class MainMenu: SKScene {
             
             switch touchedLocation.name {
             case startButton.name:
-                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.SCENARIO_MENU, sceneView: self)
             case exitButton.name:
-                //AudioController.shared.playAudio(audioName: AudioNams.ButtonNm, waitForCompletion: true)
                 exit(1)
             default:
                 break

@@ -92,34 +92,40 @@ class Morning: SKScene { //7am?
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.MORNING, object: Interactable.BACKPACK)
                 game.updateAction(actionLabel, message: "You've decided to pack your bag for school! +30 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.MORNING_ALARM:
-                if (!alarmOff) { game.hideChoice(alarmPopUp, alarmSnooze, turnAlarmOff, false) }
+                if (!alarmOff) { game.hideChoice(alarmPopUp, alarmSnooze, turnAlarmOff, false)
+                    AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
+                }
             case Interactable.MORNING_PHONE:
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, false)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "snapchat":
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 game.updateAction(actionLabel, message: "You've decided to check Snapchat! +30 mins")
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "checkTimetable":
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 game.updateAction(actionLabel, message: "You've decided to check your timetable on your phone! +30 mins")
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "snooze":
                 snoozeCounter = snoozeCounter + 1
                 game.updateTime(addMinutes: 25)
                 game.hideChoice(alarmPopUp, alarmSnooze, turnAlarmOff, true)
                 game.updateAction(actionLabel, message: "You've decided to snooze the alarm! +25 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "turnAlarmOff":
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)
-                //stop this from being interactable
                 game.updateTime(addMinutes: 10)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
                 morningAlarm.removeAllActions()
                 game.updateAction(actionLabel, message: "You've decided to turn off the alarm! +10 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 alarmOff = true
-          
             default:
                 game.hideChoice(alarmPopUp, alarmSnooze, turnAlarmOff, true)
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)

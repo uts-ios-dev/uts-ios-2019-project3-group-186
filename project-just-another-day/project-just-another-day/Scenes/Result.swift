@@ -36,13 +36,16 @@ class Result: SKScene {
         feedback = self.childNode(withName: Label.FEEDBACK) as! SKLabelNode
         feedback.text = game.getFeedback()
         
-        AudioController.shared.playAudio(audioName: AudioNams.resultNm)
-        
         if let resultNode = self.childNode(withName: Interactable.RESULTS) as? SKSpriteNode {
             resultsBg = resultNode
             SpriteController.createInteractableSpriteAtlas(atlasName: SpriteAtlas.RESULTS, interactableFrames: &resultBgFrames)
             SpriteController.animateInteractable(interactable: resultsBg, interactableFrames: resultBgFrames, timeInterval: 0.1)
         }
+    }
+    
+    override func sceneDidLoad() {
+        self.run(SKAction.stop(), withKey: "<#T##String#>")
+        AudioController.shared.backgroundAudioPlayer?.stop()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

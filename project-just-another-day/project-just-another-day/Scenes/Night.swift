@@ -92,37 +92,41 @@ class Night: SKScene {
             
             switch touchedLocation.name {
             case Interactable.BED:
-<<<<<<< HEAD
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 print("Bed time~ ZZZzzz")
                 game.updateAction(actionLabel, message: "You've decided to go to sleep!")
-                AudioController.shared.backgroundAudioPlayer?.stop()
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
                 SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
-=======
                 game.hideChoice(bedPopUp, nap, sleep, false)
->>>>>>> f805bb2787e519b50ed7070670630f63f83477eb
             case Interactable.LAPTOP:
                 game.hideChoice(laptopPopUp, watchYoutube, study, false)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.NIGHT_BACKPACK:
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.NIGHT, object: Interactable.NIGHT_BACKPACK)
                 game.updateAction(actionLabel, message: "You've decided to pack your bag for tomorrow! +20 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.NIGHT_TELEVISION:
                 game.updateTime(addMinutes: 20)
                 game.updateAction(actionLabel, message: "You've decided to Netflix and chill! +20 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "watchYoutube":
                 game.updateTime(addMinutes: 30)
                 game.updateAction(actionLabel, message: "You've decided to watch some Youtube videos! +30 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "study":
                 game.updateTime(addMinutes: 60)
                 game.addPoints(numberOfPoints: 5, sceneNumber: SceneNumber.NIGHT, object: Interactable.LAPTOP)
                 game.updateAction(actionLabel, message: "You've decided to study some more! +60 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "nap":
                 game.updateTime(addMinutes: 30)
                 game.updateAction(actionLabel, message: "You've decided to take a nap! +30 mins")
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "sleep":
                 game.addPoints(numberOfPoints: 15, sceneNumber: SceneNumber.NIGHT, object: Interactable.BED)
                 SceneController.shared.switchScene(sceneName: Scene.RESULT_SCENE, sceneView: self)
+                AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             default:
                 break
             }
