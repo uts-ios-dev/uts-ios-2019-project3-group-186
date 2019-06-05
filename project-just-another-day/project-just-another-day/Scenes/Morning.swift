@@ -109,7 +109,7 @@ class Morning: SKScene { //7am?
             case "checkTimetable":
                 game.updateTime(addMinutes: 30)
                 game.addPoints(numberOfPoints: 1, sceneNumber: SceneNumber.MORNING, object: Interactable.MORNING_PHONE)
-                game.updateAction(actionLabel, message: "You've decided to check your timetable on your phone! +30 mins")
+                game.updateAction(actionLabel, message: "You've decided to check your timetable! +30 mins")
                 game.hideChoice(phonePopUp, phoneTimetable, phoneSnapchat, true)
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "snooze":

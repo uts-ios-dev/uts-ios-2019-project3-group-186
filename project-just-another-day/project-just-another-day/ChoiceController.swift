@@ -96,6 +96,7 @@ class ChoiceController {
     }
     
     func updateAction(_ labelNode: SKLabelNode, message: String) {
+        labelNode.removeAllActions()
         labelNode.alpha = 1.0
         labelNode.text = message
         labelNode.isHidden = false

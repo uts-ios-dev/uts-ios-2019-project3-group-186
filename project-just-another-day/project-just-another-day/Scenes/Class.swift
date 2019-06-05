@@ -131,13 +131,13 @@ class Class: SKScene {
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "watchYoutube":
                 game.updateTime(addMinutes: 20)
-                game.updateAction(actionLabel, message: "You've decided to watch Youtube on your phone during class! +20 mins")
+                game.updateAction(actionLabel, message: "You've decided to watch Youtube during class! +20 mins")
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case "onlineCalculator":
                 game.updateTime(addMinutes: 20)
                 game.addPoints(numberOfPoints: 3, sceneNumber: SceneNumber.CLASS, object: Interactable.CLASSROOM_PHONE)
-                game.updateAction(actionLabel, message: "You've decided to do some calculations your phone during class! +20 mins")
+                game.updateAction(actionLabel, message: "You've decided to use your phone calculator! +20 mins")
                 game.hideChoice(phonePopUp, phoneCalculator, phoneYoutube, true)
                 AudioController.shared.playAudio(audioName: AudioNams.ButtonNm)
             case Interactable.CLASSROOM_SNACKS:
