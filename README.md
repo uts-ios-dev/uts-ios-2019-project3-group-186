@@ -1,3 +1,3 @@
-# Project 3
+# Project - "Just Another Day"
 
-Populate this README.md file with relevant information about your project.
+# An interactive adverture learning game 
