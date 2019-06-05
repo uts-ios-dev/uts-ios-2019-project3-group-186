@@ -9,7 +9,8 @@
 import Foundation
 import SpriteKit
 
-//This classs handles the animation of the sprite nodes (Interactables) and backgrounds (Main menu, scenario menu and results scene) and creating the sprite atlas for each node
+/*This classs handles the animation of the sprite nodes (Interactables) and backgrounds (Main menu, scenario menu and results scene) and creating the sprite atlas for each node
+ */
 class SpriteController {
     //This function makes the sprite atlas (folder) for the interactable sprite by getting and storing all the individual images (frames) of the sprite into the atlas
     static func createInteractableSpriteAtlas(atlasName: String, interactableFrames: inout [SKTexture]) {

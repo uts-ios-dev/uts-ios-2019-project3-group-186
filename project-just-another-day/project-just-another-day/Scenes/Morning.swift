@@ -2,7 +2,7 @@
 //  Morning.swift
 //  project-just-another-day
 //
-//  Created by Alex Au on 27/5/19.
+//  Created by Alex Au, Ling Lau (Yuen) and Natassja Sundara on 27/5/19.
 //  Copyright © 2019 Group-168. All rights reserved.
 //
 
@@ -10,7 +10,8 @@ import Foundation
 import SpriteKit
 
 
-//This class handles the backend functionality of the Morning Scene and the Morning.sks file handles the visual elements of the scene
+/*This class handles the backend functionality of the Morning Scene and the Morning.sks file handles the visual elements of the scene
+ */
 class Morning: SKScene {
     
     var backpack: SKSpriteNode = SKSpriteNode()
@@ -133,7 +134,9 @@ class Morning: SKScene {
             }
         }
     }
-    //This function runs every frame of the game and updates the scene time and checks if the user has selected the snooze option 3 times and instantly giving the user a zero score or else if the time reaches the time limit, switch to the classroom scene
+    /*This function runs every frame of the game and updates the scene time and checks if the user has selected the snooze option 3 times and instantly giving the user a zero score or else if the time reaches the time limit, switch to the classroom scene.
+      The zero is allocated as it is deemed as a "poor" time management choice. These decisions were well thought through in our scoring system hidden to the user initally.
+    */
     override func update(_ currentTime: TimeInterval) {
         timeLabel.text = game.getCurrentTime()
         if snoozeCounter >= 3 {

@@ -2,14 +2,15 @@
 //  ScenarioMenu.swift
 //  project-just-another-day
 //
-//  Created by Alex Au on 29/5/19.
+//  Created by Alex Au, Ling Lau (Yuen) and Natassja Sundara on 27/5/19.
 //  Copyright © 2019 Group-168. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-//This class handles the backend functionality of the Scenario Menu scene and the ScenarioMenu.sks file handles the visual elements of the scene
+/*This class handles the backend functionality of the Scenario Menu scene and the ScenarioMenu.sks file handles the visual elements of the scene
+ */
 class ScenarioMenu: SKScene {
    
     var timeManagement = SKLabelNode()
@@ -33,8 +34,10 @@ class ScenarioMenu: SKScene {
          SpriteController.animateInteractable(interactable: scenarioBg, interactableFrames: scenarioBgFrames, timeInterval: 0.025)
         }
     }
-    //This function handles the touch events when the user touches on a node
-    //For extensibility, a new case would be added into this class and into the Scenario Menu for future scenarios such as Cyber-bullying and etc. As there are more scenarios, the list will utilise an UI scroll view  controller (under the UIKit framework) so the user can access to all the playable scenarios.
+    /*This function handles the touch events when the user touches on a node.
+     
+      For extensibility, a new case can simply be added into this class and into the Scenario Menu for future scenarios such as Cyber-bullying, Mental Health, Seeking Career opportunities and etc. As there are more scenarios, the list will utilise an UI scroll view controller (under the UIKit framework) so the user can access to all the playable scenarios.
+    */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)

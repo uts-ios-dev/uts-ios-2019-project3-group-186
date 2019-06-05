@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+//This class is designed for the interactables that have a choice option, handling the scores and displays.
 class ChoiceController {
     
     private var currentTime: Int
@@ -25,6 +26,7 @@ class ChoiceController {
         feedback = ""
     }
 
+    //This function handles adding the points to each specific choice interaction
     func addPoints(numberOfPoints: Int, sceneNumber: Int, object: String){
         var pointsToAdd = numberOfPoints
         var  times = countAction(objectName: object)
@@ -36,6 +38,7 @@ class ChoiceController {
         actions.append(object)
     }
     
+    //This function counts the number of interactions with a specific choice
     func countAction(objectName: String)->Int{
         var count : Int = 0
         for i in actions {
@@ -46,6 +49,7 @@ class ChoiceController {
         return count
     }
     
+    //This function handles the time (top right) being updated
     func updateTime(addMinutes: Int){
         let minutes = currentTime % 100
         var addMinutes = minutes + addMinutes
@@ -56,6 +60,7 @@ class ChoiceController {
         currentTime = hours + addMinutes
     }
     
+    //This fuction handles displaying the time in 12hr format
     func getCurrentTime() -> String {
         var hours = currentTime / 100
         let tenMinutes = (currentTime / 10) % 10
@@ -67,6 +72,8 @@ class ChoiceController {
         
         return time
     }
+    
+    //This function handles grabbing the score the player achieved during the gameplay
     func getScore()->[Int]{
         points[SceneNumber.MORNING] = points[SceneNumber.MORNING] < 10 ? points[SceneNumber.MORNING] : 10
         points[SceneNumber.CLASS] = points[SceneNumber.CLASS] < 50 ? points[SceneNumber.CLASS] : 50
@@ -75,6 +82,8 @@ class ChoiceController {
         
         return points
     }
+    
+    //This function handles attaining the points from each scene
     func getPoints(sceneNumber: Int)->Int {
         return points[sceneNumber]
     }

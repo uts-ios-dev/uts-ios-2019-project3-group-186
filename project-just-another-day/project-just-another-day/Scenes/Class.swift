@@ -2,14 +2,15 @@
 //  Class.swift
 //  project-just-another-day
 //
-//  Created by Alex Au on 27/5/19.
+//  Created by Alex Au, Ling Lau (Yuen) and Natassja Sundara on 27/5/19.
 //  Copyright © 2019 Group-168. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-//This class handles the backend functionality of the Class Scene and the Class.sks file handles the visual elements of the scene
+/*This class handles the backend functionality of the Class Scene and the Class.sks file handles the visual elements of the scene
+ */
 class Class: SKScene {
     
     var blackboard: SKSpriteNode = SKSpriteNode()

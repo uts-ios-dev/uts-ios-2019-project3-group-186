@@ -2,14 +2,15 @@
 //  Result.swift
 //  project-just-another-day
 //
-//  Created by Alex Au on 27/5/19.
+//  Created by Alex Au, Ling Lau (Yuen) and Natassja Sundara on 27/5/19.
 //  Copyright © 2019 Group-168. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-//This class handles the backend functionality of the Result Scene and the Result.sks file handles the visual elements of the scene
+/*This class handles the backend functionality of the Result Scene and the Result.sks file handles the visual elements of the scene
+ */
 class Result: SKScene {
     
     var mainMenuButton = SKLabelNode()
@@ -58,6 +59,12 @@ class Result: SKScene {
         }
     }
 
+    /* This function grabs the players scores throughout the gameplay and displays them on the Results scene.
+     
+     For extensibility, the results (with more time) can also display a path listing all the prior decisions made by the player during the game, to highlight where they have done well or poorly, in turn helping with future decision making when playing the scenario again. Many adventure story games showcase a butterfly effect of outcomes (action and consequence) which we could not implement due to time.
+     
+     The results can also be extended upon by adding each players score for each scenario to a database, and showcasing in the results other high scoring players - allowing players to compare their scores to others.
+    */
     func loadScores(){
         let score  = game.getScore()
         
@@ -69,7 +76,5 @@ class Result: SKScene {
         let totalScore = score[SceneNumber.MORNING] + score[SceneNumber.CLASS] + score[SceneNumber.AFTERNOON] + score[SceneNumber.NIGHT]
 
         resultLabelTotal.text = ("Score = " + String(totalScore) + "/ 100")
-        
-        
     }
 }

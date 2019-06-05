@@ -10,19 +10,17 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+// This class is the main view controller loading the Main Menu scene to begin the application.
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if let view = self.view as! SKView? {
-
             if let mainMenuScene = SKScene(fileNamed: "MainMenu") {
                 // Set the scale mode to scale to fit the window
                 mainMenuScene.scaleMode = .aspectFill
-                
                 // Present the scene
                 view.presentScene(mainMenuScene)
-                
                 view.ignoresSiblingOrder = true
             }
         }
