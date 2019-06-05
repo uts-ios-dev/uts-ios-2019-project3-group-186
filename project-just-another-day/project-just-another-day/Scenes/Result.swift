@@ -21,9 +21,7 @@ class Result: SKScene {
     var resultLabel3 = SKLabelNode()
     var resultLabel4 = SKLabelNode()
     var feedback = SKLabelNode()
-    
-    let mainmenufx = MainMenu()
-    
+        
     override func didMove(to view: SKView) {
         mainMenuButton = self.childNode(withName: Button.MAIN_MENU_BUTTON) as! SKLabelNode
         resultLabelTotal = self.childNode(withName: "resultScoreTotal") as! SKLabelNode
@@ -44,7 +42,7 @@ class Result: SKScene {
     }
     
     override func sceneDidLoad() {
-        
+        AudioController.shared.playAudio(audioName: AudioNams.resultNm)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

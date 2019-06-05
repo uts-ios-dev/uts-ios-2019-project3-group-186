@@ -11,7 +11,7 @@ import SpriteKit
 import AVFoundation
 
 var game = ChoiceController()
-var backgroundFX: SKAudioNode!
+public var backgroundFX: SKAudioNode!
 
 class MainMenu: SKScene {
     
@@ -32,7 +32,8 @@ class MainMenu: SKScene {
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        self.run(SKAction.playSoundFileNamed("music1.mp3", waitForCompletion: false))
+        let action: SKAction = SKAction.playSoundFileNamed("music1.mp3", waitForCompletion: true)
+        self.run(action, withKey:"backgroundFX")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
