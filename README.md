@@ -4,12 +4,12 @@ ________________________________________________________________________________
 ## An interactive adverture learning game 
 
 Game made by:
-Alex Au - 12609703
-Ling Lau (Yuen) - 
-Natassja Sundara - 12569036
+- Alex Au - 12609703
+- Ling Lau (Yuen) - 
+- Natassja Sundara - 12569036
 
 ## Overview
-This game is intended for a young adolescent target audience from year 7 to year 12, designed to educate students on building important decision making skills in common problems students deal with when growing up. This can range from **effectively** dealing with:
+This game is intended for a young adolescent target audience from year 7 to year 12, particularly designed to educate students on building important decision making skills in common problems students deal with when growing up. This can range from **effectively** dealing with:
 
 - Time Management
 - Cyber Bullying
@@ -29,7 +29,7 @@ Each scene has been commented to facilitate the work flow and structure of the d
 
 ### Scenarios ###
 3. You will be welcomed into the 'Scenarios', showing 2 current options available. Click 'Time Management'.
-*Clicking on 'Courtesy' will display that it is 'coming soon'! 
+*Clicking on 'Courtesy' will display that it is 'coming soon'!*
 
 ### Prelude ###
 4. The prelude provides you context of your scenario and goal. Click 'Start your Day'
