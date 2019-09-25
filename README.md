@@ -1,7 +1,7 @@
 # Project - "Just Another Day"
 ______________________________________________________________________________________________________________________________
 
-## An interactive adverture learning game 
+## An interactive adventure learning game 
 
 Game made by:
 - Alex Au - 12609703
